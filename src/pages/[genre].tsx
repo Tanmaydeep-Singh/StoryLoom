@@ -40,6 +40,8 @@ const GenrePage = () => {
             key={story.id}
             className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out"
           >
+                        <Link href={`/story/${story.id}`}>
+
             <div className="relative w-full h-48 sm:h-56 md:h-64">
               <Image
                 src={story.image}
@@ -57,6 +59,7 @@ const GenrePage = () => {
                 
               </Link>
             </div>
+            </Link>
           </div>
         ))}
       </div>
