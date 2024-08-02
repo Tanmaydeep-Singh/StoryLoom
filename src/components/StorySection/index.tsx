@@ -1,14 +1,14 @@
 import StoryCard from "./StoryCard";
 
 const stories = [
-  { id: "1", title: "Adventure", imageUrl: "https://source.unsplash.com/random/175x175?adventure" },
-  { id: "2", title: "Romance", imageUrl: "https://source.unsplash.com/random/175x175?romance" },
-  { id: "3", title: "Mystery", imageUrl: "https://source.unsplash.com/random/175x175?mystery" },
-  { id: "4", title: "Fantasy", imageUrl: "https://source.unsplash.com/random/175x175?fantasy" },
-  { id: "5", title: "Science Fiction", imageUrl: "https://source.unsplash.com/random/175x175?science-fiction" },
-  { id: "6", title: "Thriller", imageUrl: "https://source.unsplash.com/random/175x175?thriller" },
-  { id: "7", title: "Horror", imageUrl: "https://source.unsplash.com/random/175x175?horror" },
-  { id: "8", title: "Comedy", imageUrl: "https://source.unsplash.com/random/175x175?comedy" },
+  { id: "1", title: "Adventure", imageUrl: "/adventure.jpg" },
+  { id: "2", title: "Romance", imageUrl: "/romance.jpg" },
+  { id: "3", title: "Mystery", imageUrl: "/mystery.jpg" },
+  { id: "4", title: "Fantasy", imageUrl: "/fantasy.jpg" },
+  { id: "5", title: "Science Fiction", imageUrl: "/science-fiction.jpg" },
+  { id: "6", title: "Thriller", imageUrl: "/thriller.jpg" },
+  { id: "7", title: "Horror", imageUrl: "/horror.jpg" },
+  { id: "8", title: "Comedy", imageUrl: "/comedy.jpg" },
 ];
 
 export default function StorySection() {
@@ -17,7 +17,6 @@ export default function StorySection() {
       {stories.map(story => (
         <StoryCard
           key={story.id}
-          id={story.id}
           title={story.title}
           imageUrl={story.imageUrl}
         />

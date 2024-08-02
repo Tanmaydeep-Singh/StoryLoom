@@ -2,25 +2,28 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 interface StoryCardProps {
-  id: string;
   title: string;
   imageUrl: string;
 }
 
-export default function StoryCard({ id, title, imageUrl }: StoryCardProps) {
+export default function StoryCard({ title, imageUrl }: StoryCardProps) {
   return (
     <motion.div
-      whileHover={{ scale: 1.2 }}
-      whileTap={{ scale: 0.8 }}
-      className=" w-[125px] h-[125px]  md:w-[175px] md:h-[175px] bg-mediumGreen rounded-md p-2 m-2 overflow-hidden"
+      whileHover={{ scale: 1.1 }} // Slightly smaller scale for a more subtle hover effect
+      whileTap={{ scale: 0.95 }}  // Slightly smaller scale for a more subtle tap effect
+      className="relative w-[125px] h-[125px] md:w-[175px] md:h-[175px] bg-mediumGreen rounded-md overflow-hidden m-2"
     >
-      <Link href={`/story/${id}`}>
+      <Link href={`/${title}`} passHref>
+        <div className="w-full h-full">
           <img
             src={imageUrl}
             alt={title}
-            className="w-full h-[100px] object-cover rounded-md"
+            className="w-full h-full object-cover"
           />
-          <h1 className="text-white mt-2 text-center">{title}</h1>
+          <div className="absolute bottom-0 left-0 right-0 bg-opacity-50 bg-black p-2">
+            <h1 className="text-white text-center text-sm md:text-base">{title}</h1>
+          </div>
+        </div>
       </Link>
     </motion.div>
   );
