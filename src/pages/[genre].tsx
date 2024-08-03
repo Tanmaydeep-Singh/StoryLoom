@@ -2,33 +2,16 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
+import storiesData from './data.json';
+
 
 const GenrePage = () => {
   const router = useRouter();
   const { genre } = router.query;
 
   // Mock data for the stories (replace with actual data fetching logic)
-  const stories = [
-    {
-      id: 1,
-      title: "The Lost City",
-      excerpt: "An adventure through the mystical ruins of an ancient city.",
-      image: "/fantasy.jpg",
-    },
-    {
-      id: 2,
-      title: "A Love Beyond Time",
-      excerpt: "A romance that transcends time and space.",
-      image: "/fantasy.jpg",
-    },
-    {
-      id: 3,
-      title: "Mystery of the Haunted Manor",
-      excerpt: "Unravel the secrets of a haunted mansion.",
-      image: "/fantasy.jpg",
-    },
-    // Add more stories related to the genre
-  ];
+  const stories = storiesData.filter(story => story.genre === genre);
+
   return (
     <div className="w-[80vw] mx-auto mt-8">
       <h1 className="text-3xl font-bold text-darkGreen mb-6 capitalize">
@@ -53,7 +36,7 @@ const GenrePage = () => {
             </div>
             <div className="p-4">
               <h3 className="text-lg font-semibold text-teal mb-2">{story.title}</h3>
-              <p className="text-mediumGreen text-sm sm:text-base">{story.excerpt}</p>
+              <p className="text-mediumGreen text-sm sm:text-base">{story.story.slice(0, 45) + "..."}</p>
               <Link href={`/story/${story.id}`} className="text-teal hover:text-darkGreen mt-4 inline-block font-semibold">
                   Read More
                 
