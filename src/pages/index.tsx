@@ -38,7 +38,7 @@ export default function Home() {
 
 
 
-  <div className="mt-8">
+  {/* <div className="mt-8">
   <h2 className="text-xl font-bold mb-4">User Reviews</h2>
   <div className="space-y-4">
     {reviews.map((review) => (
@@ -62,7 +62,7 @@ export default function Home() {
       </div>
     ))}
   </div>
-</div>
+</div> */}
 
 
     </main>

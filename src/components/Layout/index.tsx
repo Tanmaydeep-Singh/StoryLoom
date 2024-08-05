@@ -16,11 +16,11 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <>
+    <main className='bg-gradient-to-r from-black via-gray-800 to-black shadow-md backdrop-blur-md bg-opacity-30'>
     <Navbar/>
-      <main>{children}</main>
+      {children}
     <Footer/>
-    </>
+    </main>
   );
 };
 

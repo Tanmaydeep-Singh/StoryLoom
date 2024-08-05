@@ -27,16 +27,16 @@ export default function Story() {
   }, [router.query.id]);
 
   return (
-    <div className="min-h-screen bg-lightGreen py-12 flex flex-col items-center">
-      <div className="max-w-2xl w-[80vw] bg-white rounded-lg shadow-lg overflow-hidden">
+    <div className="min-h-screen py-12 flex flex-col items-center">
+      <div className="max-w-2xl w-[80vw] rounded-lg shadow-lg overflow-hidden">
         <div className="relative w-full h-60 sm:h-72 md:h-96">
           <img src={storyImage} alt={storyTitle} className="object-cover w-full h-full" />
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="absolute inset-0  bg-opacity-50 flex items-center justify-center">
             <h1 className="text-4xl font-bold text-white text-center">{storyTitle}</h1>
           </div>
         </div>
         <div className="p-8">
-          <div className="text-lg lg:text-xl leading-relaxed">
+          <div className="text-lg lg:text-xl leading-relaxed text-white">
             <p>{story}</p>
           </div>
         </div>
