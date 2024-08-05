@@ -2,25 +2,27 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import data from '../data.json';
 
+const img = "https://images.unsplash.com/photo-1426840963626-ffdf2d7ef80b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+
 export default function Story() {
   const [storyTitle, setStoryTitle] = useState('Title Loading...');
   const [story, setStory] = useState('Story Loading...');
-  const [storyImage, setStoryImage] = useState('https://source.unsplash.com/random');
+  const [storyImage, setStoryImage] = useState(img);
   const router = useRouter();
 
   useEffect(() => {
     if (router.query.id) {
-      const storyData = data.find((s) => s.id === router.query.id);
+      const storyData = data.find((s) => s.id == router.query.id);
   
       setTimeout(() => {
         if (storyData) {
           setStoryTitle(storyData.title);
-          setStory(storyData.story);  // Assuming the key for the story content is `content`
-          setStoryImage(storyData.image);
+          setStory(storyData.story); 
+          setStoryImage(storyData.image == "/thriller.jpg" ? "/thriller.jpg" : img);
         } else {
           setStoryTitle('Story not found');
           setStory('Sorry, the story you are looking for does not exist.');
-          setStoryImage('https://source.unsplash.com/random');
+          setStoryImage('img');
         }
       }, 1000);
     }
