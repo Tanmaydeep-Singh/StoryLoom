@@ -3,7 +3,7 @@ import React from 'react';
 export default function ParallaxAbout() {
   return (
     <section className=" py-12 ">
-      <div className="relative space-x-10 flex justify-evenly	 overflow-hidden items-center whitespace-nowrap ">
+      <div className="relative space-x-10 flex justify-evenly	 overflow-hidden items-center max-w-[90vw] whitespace-nowrap ">
           <div className="flex space-x-10 animate-loop-scroll">
             <div className="text-3xl font-extrabold text-white shadow-lg">Discover the Magic</div>
             <div className="text-3xl font-extrabold text-white shadow-lg">Explore New Stories</div>
