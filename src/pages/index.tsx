@@ -1,7 +1,9 @@
 import Carousel from "@/components/Carousel";
 import FeaturedStorie from "@/components/FeaturedStories";
+import HighlightSection from "@/components/HighlightSection";
 import ParallaxAbout from "@/components/Parallex/About";
 import StorySection from "@/components/StorySection";
+import { useState, useEffect } from "react";
 
 const reviews = [
   {
@@ -26,6 +28,28 @@ const reviews = [
 
 
 export default function Home() {
+
+    const [scrollY, setScrollY] = useState(0);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        setScrollY(window.scrollY);
+        console.log(scrollY);
+      };
+  
+      handleScroll();
+  
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+  
+    }, [scrollY]);
+
+
+
+
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between md:p-24">
       <Carousel />
@@ -38,6 +62,11 @@ export default function Home() {
       </section>
 
       <section>
+        <HighlightSection/>
+      </section>
+
+   
+      <section >
         <ParallaxAbout/>
       </section>
 
