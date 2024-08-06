@@ -1,5 +1,6 @@
 import Carousel from "@/components/Carousel";
 import FeaturedStorie from "@/components/FeaturedStories";
+import ParallaxAbout from "@/components/Parallex/About";
 import StorySection from "@/components/StorySection";
 
 const reviews = [
@@ -34,6 +35,10 @@ export default function Home() {
 
       <section>
         <FeaturedStorie/>
+      </section>
+
+      <section>
+        <ParallaxAbout/>
       </section>
 
 
