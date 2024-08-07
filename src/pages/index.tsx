@@ -1,8 +1,10 @@
 import Carousel from "@/components/Carousel";
 import FeaturedStorie from "@/components/FeaturedStories";
+import Hero from "@/components/Hero";
 import HighlightSection from "@/components/HighlightSection";
 import ParallaxAbout from "@/components/Parallex/About";
-import StorySection from "@/components/StorySection";
+import StoryCategorySection from "@/components/StorySection";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const reviews = [
@@ -29,22 +31,22 @@ const reviews = [
 
 export default function Home() {
 
-    const [scrollY, setScrollY] = useState(0);
-  
-    useEffect(() => {
-      const handleScroll = () => {
-        setScrollY(window.scrollY);
-        console.log(scrollY);
-      };
-  
-      handleScroll();
-  
-      window.addEventListener("scroll", handleScroll);
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-  
-    }, [scrollY]);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+      console.log(scrollY);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+
+  }, [scrollY]);
 
 
 
@@ -52,27 +54,32 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between md:p-24">
+      {/* <Hero /> */}
+
       <Carousel />
 
       {/* Card */}
-      <StorySection />
 
-      <section>
-        <FeaturedStorie/>
+
+
+      <section className=" my-10 md:mt-20">
+        <HighlightSection />
+      </section>
+
+      <section className=" my-10 md:mt-20">
+        <StoryCategorySection />
+      </section>
+
+      <section className=" my-10 md:mt-20">
+        <ParallaxAbout />
       </section>
 
       <section>
-        <HighlightSection/>
-      </section>
-
-   
-      <section >
-        <ParallaxAbout/>
+        <FeaturedStorie />
       </section>
 
 
-
-  {/* <div className="mt-8">
+      {/* <div className="mt-8">
   <h2 className="text-xl font-bold mb-4">User Reviews</h2>
   <div className="space-y-4">
     {reviews.map((review) => (

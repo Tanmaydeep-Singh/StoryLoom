@@ -9,7 +9,7 @@ interface CarouselConfig {
     autoPlay: true,
     autoPlayInterval: 5000, // 3 seconds
     loop: true,
-    showButtons: true,
+    showButtons: false,
   };
   
   export default carouselConfig;

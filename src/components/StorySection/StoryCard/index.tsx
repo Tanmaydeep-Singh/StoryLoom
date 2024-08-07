@@ -11,17 +11,17 @@ export default function StoryCard({ title, imageUrl }: StoryCardProps) {
     <motion.div
       whileHover={{ scale: 1.1 }} // Slightly larger scale for hover effect
       whileTap={{ scale: 0.95 }}  // Slightly smaller scale for tap effect
-      className="relative w-[125px] h-[125px] md:w-[175px] md:h-[175px] bg-background-card rounded-md overflow-hidden m-2 backdrop-blur-sm"
+      className="relative w-[125px] h-[125px] md:w-[225px] md:h-[350px] bg-background-card rounded-lg overflow-hidden m-2 shadow-lg transform transition-transform duration-300"
     >
       <Link href={`/${title}`} passHref>
-        <div className="w-full h-full">
+        <div className="w-full h-full cursor-pointer">
           <img
             src={imageUrl}
             alt={title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute bottom-0 left-0 right-0 bg-background-default p-2">
-            <h1 className="text-accent-300 text-center text-sm md:text-base">{title}</h1>
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-2 backdrop-blur-md">
+            <h1 className="text-white text-center text-sm md:text-base font-semibold">{title}</h1>
           </div>
         </div>
       </Link>
