@@ -17,7 +17,7 @@ export default function StoryCategorySection() {
       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
         Choose from Various Categories
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 justify-items-center">
         {stories.map(story => (
           <StoryCard
             key={story.id}
