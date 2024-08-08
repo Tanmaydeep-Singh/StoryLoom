@@ -11,3 +11,18 @@ body {
   white-space: nowrap;
   overflow: hidden; /* Ensures the tiles don't overflow the container */
 }
+
+.word-cloud {
+  position: relative;
+  animation: float 10s ease-in-out infinite;
+  color: rgba(255, 255, 255, 0.5); /* Subtle color to blend with the background */
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0) translateX(0);
+  }
+  50% {
+      transform: translateY(-20px) translateX(20px);
+  }
+}
