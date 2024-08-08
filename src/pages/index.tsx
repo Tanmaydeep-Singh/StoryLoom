@@ -1,11 +1,14 @@
+import YTranslateCubic from "@/components/AnimationSection/YTranslateCubic";
 import Carousel from "@/components/Carousel";
+import FAQ from "@/components/FAQ";
 import FeaturedStorie from "@/components/FeaturedStories";
 import Hero from "@/components/Hero";
 import HighlightSection from "@/components/HighlightSection";
 import ParallaxAbout from "@/components/Parallex/About";
 import StoryCategorySection from "@/components/StorySection";
+import { useInView } from "framer-motion";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const reviews = [
   {
@@ -32,6 +35,10 @@ const reviews = [
 export default function Home() {
 
   const [scrollY, setScrollY] = useState(0);
+  
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,17 +61,17 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between md:p-24">
-      {/* <Hero /> */}
+      <Hero />
 
-      <Carousel />
+      {/* <Carousel /> */}
 
       {/* Card */}
 
 
 
-      <section className=" my-10 md:mt-20">
-        <HighlightSection />
-      </section>
+      <YTranslateCubic>
+           <HighlightSection />
+      </YTranslateCubic>
 
       <section className=" my-10 md:mt-20">
         <StoryCategorySection />
@@ -76,6 +83,10 @@ export default function Home() {
 
       <section>
         <FeaturedStorie />
+      </section>
+
+      <section className=" my-10 md:mt-20">
+        <FAQ/>
       </section>
 
 
