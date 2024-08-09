@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div
       className="relative top-0 flex items-center justify-center w-full h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url('/bg0temp.jpeg')` }}
+      style={{ backgroundImage: `url('/Frame.png')` }}
     >
       <div className="relative z-10 flex flex-col items-center justify-center w-[90vw] h-[60vh] text-center text-white px-4">
         <TextCycle />
