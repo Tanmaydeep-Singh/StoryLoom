@@ -1,0 +1,132 @@
+[
+    {
+        "id": "1",
+        "title": "The Lost Expedition",
+        "story": {
+            "en": "Deep in the heart of the Amazon jungle, a team of adventurers embarked on a quest to find a long-lost city rumored to be filled with ancient treasures...",
+            "es": "En lo profundo de la selva amazónica, un equipo de aventureros se embarcó en una misión para encontrar una ciudad perdida, supuestamente llena de tesoros antiguos...",
+            "de": "Tief im Herzen des Amazonas-Dschungels machte sich ein Team von Abenteurern auf die Suche nach einer lange verschollenen Stadt, die voller alter Schätze sein soll...",
+            "日本": "アマゾンの密林の奥深く、冒険者のチームは古代の財宝で満たされたと言われる失われた都市を探すために探検を開始しました...",
+            "fr": "Au cœur de la jungle amazonienne, une équipe d'aventuriers se lança dans une quête pour trouver une cité perdue, censée regorger de trésors anciens...",
+            "РУ": "В самом сердце Амазонских джунглей команда авантюристов отправилась на поиски давно затерянного города, о котором ходили слухи, что он полон древних сокровищ..."
+        },
+        "image": "/haunted_forest.jpg"
+    },
+    {
+        "id": "2",
+        "title": "A Love Beyond Time",
+        "story": {
+            "en": "In the picturesque village of Montclair, Emma found an old, leather-bound diary in her grandmother's attic...",
+            "es": "En el pintoresco pueblo de Montclair, Emma encontró un antiguo diario de cuero en el ático de su abuela...",
+            "de": "Im malerischen Dorf Montclair fand Emma in dem Dachboden ihrer Großmutter ein altes, ledergebundenes Tagebuch...",
+            "日本": "モントクレールの絵のように美しい村で、エマは祖母の屋根裏で古い革製の日記を見つけました...",
+            "fr": "Dans le pittoresque village de Montclair, Emma trouva un vieux journal relié en cuir dans le grenier de sa grand-mère...",
+            "РУ": "В живописной деревушке Монклер, Эмма нашла старый, переплетенный в кожу дневник на чердаке своей бабушки..."
+        },
+        "image": "/haunted_forest.jpg"
+    },
+    {
+        "id": "3",
+        "title": "The Phantom's Riddle",
+        "story": {
+            "en": "Detective Robert Sinclair was known for his sharp mind and unyielding determination...",
+            "es": "El detective Robert Sinclair era conocido por su mente aguda y su determinación inquebrantable...",
+            "de": "Detektiv Robert Sinclair war bekannt für seinen scharfen Verstand und seine unbeugsame Entschlossenheit...",
+            "日本": "探偵ロバート・シンクレアは、その鋭い頭脳と揺るぎない決意で知られていました...",
+            "fr": "Le détective Robert Sinclair était connu pour son esprit acéré et sa détermination inflexible...",
+            "РУ": "Детектив Роберт Синклер был известен своим острым умом и неуступчивой решимостью..."
+        },
+        "image": "/haunted_forest.jpg"
+    },
+    {
+        "id": "4",
+        "title": "The Enchanted Forest",
+        "story": {
+            "en": "Lila was a curious young girl who loved exploring her family’s countryside estate...",
+            "es": "Lila era una joven curiosa que amaba explorar la finca campestre de su familia...",
+            "de": "Lila war ein neugieriges junges Mädchen, das es liebte, das Landgut ihrer Familie zu erkunden...",
+            "日本": "ライラは、家族の田舎の屋敷を探検するのが大好きな好奇心旺盛な少女でした...",
+            "fr": "Lila était une jeune fille curieuse qui aimait explorer le domaine rural de sa famille...",
+            "РУ": "Лила была любознательной девочкой, которая любила исследовать загородное поместье своей семьи..."
+        },
+        "image": "/haunted_forest.jpg"
+    },
+    {
+        "id": "5",
+        "title": "Echoes of the Future",
+        "story": {
+            "en": "In the year 2150, the world was a place of technological marvels and societal challenges...",
+            "es": "En el año 2150, el mundo era un lugar de maravillas tecnológicas y desafíos sociales...",
+            "de": "Im Jahr 2150 war die Welt ein Ort technologischer Wunder und gesellschaftlicher Herausforderungen...",
+            "日本": "2150年、世界は技術の驚異と社会的課題の場でした...",
+            "fr": "En l'an 2150, le monde était un lieu de merveilles technologiques et de défis sociétaux...",
+            "РУ": "В 2150 году мир был местом технологических чудес и социальных вызовов..."
+        },
+        "image": "/haunted_forest.jpg"
+    },
+    {
+        "id": "6",
+        "title": "The Secret of the Crimson Lake",
+        "story": {
+            "en": "Journalist Sarah Mitchell had a reputation for uncovering hidden truths, and her latest assignment was no exception...",
+            "es": "La periodista Sarah Mitchell tenía fama de descubrir verdades ocultas, y su última asignación no fue la excepción...",
+            "de": "Journalistin Sarah Mitchell war dafür bekannt, verborgene Wahrheiten aufzudecken, und ihr letzter Auftrag war keine Ausnahme...",
+            "日本": "ジャーナリストのサラ・ミッチェルは、隠された真実を明らかにすることで評判を得ており、彼女の最新の任務も例外ではありませんでした...",
+            "fr": "La journaliste Sarah Mitchell avait la réputation de découvrir des vérités cachées, et sa dernière mission n'était pas différente...",
+            "РУ": "Журналистка Сара Митчелл была известна тем, что раскрывала скрытые истины, и ее последнее задание не стало исключением..."
+        },
+        "image": "/haunted_forest.jpg"
+    },
+    {
+        "id": "7",
+        "title": "The Haunting Melody",
+        "story": {
+            "en": "The Blackwood Mansion had always been shrouded in mystery, and when the Harper family moved in...",
+            "es": "La mansión Blackwood siempre había estado envuelta en misterio, y cuando la familia Harper se mudó...",
+            "de": "Das Blackwood-Anwesen war immer von Geheimnissen umhüllt, und als die Familie Harper einzog...",
+            "日本": "ブラックウッド・マンションは常に謎に包まれており、ハーパー家が引っ越してきたとき...",
+            "fr": "Le manoir Blackwood avait toujours été enveloppé de mystère, et lorsque la famille Harper a emménagé...",
+            "РУ": "Особняк Блэквуд всегда был окутан тайнами, и когда семья Харперов въехала..."
+        },
+        "image": "/haunted_forest.jpg"
+    },
+    {
+        "id": "8",
+        "title": "The Comedic Conspiracy",
+        "story": {
+            "en": "When a group of friends—Jake, Lily, Sam, and Nora—accidentally ended up at a high-profile charity gala...",
+            "es": "Cuando un grupo de amigos—Jake, Lily, Sam y Nora—accidentalmente terminó en una gala benéfica de alto perfil...",
+            "de": "Als eine Gruppe von Freunden—Jake, Lily, Sam und Nora—aus Versehen auf einer hochkarätigen Wohltätigkeitsgala landete...",
+            "日本": "友人のジェイク、リリー、サム、ノラが偶然、高級チャリティーガラに出席してしまったとき...",
+            "fr": "Lorsqu'un groupe d'amis—Jake, Lily, Sam et Nora—se retrouva accidentellement à un gala de charité de haut niveau...",
+            "РУ": "Когда группа друзей—Джейк, Лили, Сэм и Нора—случайно оказались на высокопрофильном благотворительном вечере..."
+        },
+        "image": "/haunted_forest.jpg"
+    },
+    {
+        "id": "9",
+        "title": "The Crystal Caverns",
+        "story": {
+            "en": "When geologist Dr. Alan Rogers discovered a hidden entrance to an underground cave system...",
+            "es": "Cuando el geólogo Dr. Alan Rogers descubrió una entrada oculta a un sistema de cuevas subterráneas...",
+            "de": "Als der Geologe Dr. Alan Rogers einen versteckten Eingang zu einem unterirdischen Höhlensystem entdeckte...",
+            "日本": "地質学者のアラン・ロジャース博士が地下洞窟システムへの隠れた入り口を発見したとき...",
+            "fr": "Lorsque le géologue Dr. Alan Rogers découvrit une entrée cachée dans un système de grottes souterraines...",
+            "РУ": "Когда геолог доктор Алан Роджерс обнаружил скрытый вход в подземную пещерную систему..."
+        },
+        "image": "/haunted_forest.jpg"
+    },
+    {
+        "id": "10",
+        "title": "The Time Traveler's Dilemma",
+        "story": {
+            "en": "Dr. Emily Harper had always been fascinated by the concept of time travel...",
+            "es": "La Dra. Emily Harper siempre había estado fascinada por el concepto de viaje en el tiempo...",
+            "de": "Dr. Emily Harper war schon immer von der Idee des Zeitreisens fasziniert...",
+            "日本": "エミリー・ハーパー博士はタイムトラベルの概念に常に魅了されていました...",
+            "fr": "Le Dr Emily Harper avait toujours été fascinée par le concept de voyage dans le temps...",
+            "РУ": "Доктор Эмили Харпер всегда была очарована концепцией путешествий во времени..."
+        },
+        "image": "/haunted_forest.jpg"
+    }
+]
