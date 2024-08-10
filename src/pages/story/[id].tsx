@@ -57,7 +57,6 @@ export default function Story() {
     if (navigator.share) {
       navigator.share({
         title: storyTitle,
-        text: story,
         url: window.location.href,
       })
       .then(() => console.log('Successful share'))
