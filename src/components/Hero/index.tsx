@@ -7,6 +7,7 @@ const Hero = () => {
     <div className="relative top-0 items-center justify-center w-full h-screen overflow-hidden">
       <Navbar />
       {/* Video Background */}
+<div className="h-[80%] ">
       <video
         autoPlay
         loop
@@ -25,6 +26,7 @@ const Hero = () => {
         <p className="text-lg md:text-2xl mt-4">
           Explore captivating stories and dive into magical worlds.
         </p>
+      </div>
       </div>
     </div>
   );
