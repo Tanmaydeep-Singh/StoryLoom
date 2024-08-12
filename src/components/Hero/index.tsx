@@ -18,9 +18,7 @@ const Hero = () => {
         Your browser does not support the video tag.
       </video>
 
-      {/* Gradient Overlay for Fade Effect */}
-      <div className="absolute top-0 left-0 w-full h-1/4 bg-gradient-to-b from-black to-transparent flex flex-col items-center justify-between md:p-24"></div>
-
+     
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center text-white px-4 text-4xl font-bold">
         <h1 className="text-5xl md:text-6xl">Discover, Read, and Learn Across Cultures.</h1>
