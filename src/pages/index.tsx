@@ -35,7 +35,7 @@ const reviews = [
 export default function Home() {
 
   const [scrollY, setScrollY] = useState(0);
-  
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -60,37 +60,39 @@ export default function Home() {
 
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between md:p-24">
+
+
+    <main className="">
       <Hero />
+      <div className="flex min-h-screen flex-col items-center justify-between md:p-24">
+        {/* <Carousel /> */}
 
-      {/* <Carousel /> */}
-
-      {/* Card */}
-
-
-
-      <YTranslateCubic>
-           <HighlightSection />
-      </YTranslateCubic>
-
-      <section className=" my-10 md:mt-20">
-        <StoryCategorySection />
-      </section>
-
-      <section className=" my-10 md:mt-20">
-        <ParallaxAbout />
-      </section>
-
-      <section>
-        <FeaturedStorie />
-      </section>
-
-      <section className=" my-10 md:mt-20">
-        <FAQ/>
-      </section>
+        {/* Card */}
 
 
-      {/* <div className="mt-8">
+
+        <YTranslateCubic>
+          <HighlightSection />
+        </YTranslateCubic>
+
+        <section className=" my-10 md:mt-20">
+          <StoryCategorySection />
+        </section>
+
+        <section className=" my-10 md:mt-20">
+          <ParallaxAbout />
+        </section>
+
+        <section>
+          <FeaturedStorie />
+        </section>
+
+        <section className=" my-10 md:mt-20">
+          <FAQ />
+        </section>
+
+
+        {/* <div className="mt-8">
   <h2 className="text-xl font-bold mb-4">User Reviews</h2>
   <div className="space-y-4">
     {reviews.map((review) => (
@@ -116,7 +118,7 @@ export default function Home() {
   </div>
 </div> */}
 
-
+      </div>
     </main>
   );
 }
