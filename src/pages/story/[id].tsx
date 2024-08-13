@@ -9,7 +9,7 @@ import SaveIcon from '/public/Logos/share.svg';
 
 const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1426840963626-ffdf2d7ef80b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
-type LanguageCode = 'en' | 'es' | 'de' | '日本' | 'fr' | 'РУ';
+type LanguageCode = 'en' | 'es' | 'de'  | 'fr' | 'РУ';
 
 interface StoryDataInterface {
   id: string;
