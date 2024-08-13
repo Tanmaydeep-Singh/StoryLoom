@@ -64,7 +64,7 @@ export default function Home() {
 
     <main className="">
       <Hero />
-      <div className="flex min-h-screen flex-col items-center justify-between md:pt-0 md:p-24  ">
+      <div className="flex min-h-screen flex-col items-center justify-between md:pt-0 md:p-24">
         {/* <Carousel /> */}
 
         {/* Card */}
