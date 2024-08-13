@@ -74,7 +74,7 @@ setStory(storyData.story)
           </h1>
           <div className="flex items-center space-x-4 justify-between">
             <div className="flex text-gray-300 space-x-2">
-              {(['en', 'es', 'de', '日本', 'fr', 'РУ'] as LanguageCode[]).map((language) => (
+              {(['en', 'es', 'de', 'fr', 'РУ'] as LanguageCode[]).map((language) => (
                 <button
                   key={language}
                   onClick={() => handleLanguageChange(language)}
