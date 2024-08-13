@@ -1,12 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+type LanguageCode = 'en' | 'es' | 'de'  | 'fr' | 'РУ';
+
 interface storyCards {
-    id: any,
-    image:string,
-    title:string,
-    story:string,
+  id: any;
+  title: string;
+  story: any;
+  image: string;
 }
+
 
 const StoryCards = ({ id, image, title, story }:storyCards) => {
     return (
@@ -28,7 +31,7 @@ const StoryCards = ({ id, image, title, story }:storyCards) => {
                     <div className="p-4">
                         <h3 className="text-lg font-semibold text-primary-100 mb-2">{title}</h3>
                         <p className="text-primary-200 text-sm sm:text-base">
-                            {story.slice(0, 45) + '...'}
+                            {story['en'].slice(0, 45) + '...'}
                         </p>
                         <span className="text-accent-200 hover:text-darkGreen mt-4 inline-block font-semibold">
                             Read More

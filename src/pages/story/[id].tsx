@@ -3,9 +3,9 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import data from '../data.json';
 import ShareIcon from '/public/Logos/share.svg';
-import ClapIcon from '/public/Logos/share.svg';
-import CommentIcon from '/public/Logos/share.svg';
-import SaveIcon from '/public/Logos/share.svg';
+import ClapIcon from '/public/Logos/clap.svg';
+import CommentIcon from '/public/Logos/comment.svg';
+import SaveIcon from '/public/Logos/save.svg';
 
 const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1426840963626-ffdf2d7ef80b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
@@ -23,24 +23,26 @@ export default function Story() {
   const [story, setStory] = useState('Story Loading...');
   const [storyImage, setStoryImage] = useState(DEFAULT_IMAGE);
   const [selectedLanguage, setSelectedLanguage] = useState<LanguageCode>('en');
+  const [availableLanguages, setAvailableLanguages] = useState<LanguageCode[]>([]);
   const router = useRouter();
 
   useEffect(() => {
     const { id } = router.query;
 
     if (id) {
-      const storyData = data.find((s) => s.id === id);
+      const storyData = (data as unknown as StoryDataInterface[]).find((s) => s.id === id);
 
       setTimeout(() => {
         if (storyData) {
           setStoryTitle(storyData.title);
-setStory(storyData.story)
-          // setStory(storyData.story[selectedLanguage] || storyData.story.en);
+          setStory(storyData.story[selectedLanguage] || storyData.story.en);
           setStoryImage(storyData.image || DEFAULT_IMAGE);
+          setAvailableLanguages(Object.keys(storyData.story) as LanguageCode[]);
         } else {
           setStoryTitle('Story not found');
           setStory('Sorry, the story you are looking for does not exist.');
           setStoryImage(DEFAULT_IMAGE);
+          setAvailableLanguages([]);
         }
       }, 1000);
     }
@@ -74,7 +76,7 @@ setStory(storyData.story)
           </h1>
           <div className="flex items-center space-x-4 justify-between">
             <div className="flex text-gray-300 space-x-2">
-              {(['en', 'es', 'de', 'fr', 'РУ'] as LanguageCode[]).map((language) => (
+              {availableLanguages.map((language) => (
                 <button
                   key={language}
                   onClick={() => handleLanguageChange(language)}
