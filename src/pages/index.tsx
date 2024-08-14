@@ -4,6 +4,7 @@ import FAQ from "@/components/FAQ";
 import FeaturedStorie from "@/components/FeaturedStories";
 import Hero from "@/components/Hero";
 import HighlightSection from "@/components/HighlightSection";
+import Map from "@/components/Map";
 import ParallaxAbout from "@/components/Parallex/About";
 import StoryCategorySection from "@/components/StorySection";
 import { useInView } from "framer-motion";
@@ -71,8 +72,13 @@ export default function Home() {
 
 
 
+        {/* <YTranslateCubic>
+          <Map/>
+        </YTranslateCubic> */}
+
         <YTranslateCubic>
-          <HighlightSection />
+
+        <HighlightSection/>
         </YTranslateCubic>
 
         <section className=" my-10 md:mt-20">
