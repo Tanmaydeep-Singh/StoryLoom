@@ -11,7 +11,7 @@ const countries = [
 
 const ExploreSection = () => {
     return (
-        <div className="relative w-full h-[80vh] top-12 md:top-0 flex flex-col items-center justify-center bg-cover bg-center mx-auto mb-8 p-4 lg:p-0">
+        <div className="relative w-full h-auto md:h-[80vh] top-12 md:top-0 flex flex-col items-center justify-center bg-cover bg-center mx-auto mb-8 p-4 lg:p-0">
             <div className="container mx-auto text-center mb-10 text-white">
                 <h2 className="text-2xl md:text-4xl font-bold text-white">Explore the World Around</h2>
                 <p className="mt-4 text-base md:text-lg text-gray-400">
@@ -19,7 +19,7 @@ const ExploreSection = () => {
                 </p>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full">
+            <div className="grid grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8 justify-items-center w-full">
                 {countries.map((country) => (
                     <CountryCard
                         key={country.name}
