@@ -61,7 +61,6 @@ export default function Story() {
         title: storyTitle,
         text: 'Check out this amazing story!',
         url: window.location.href,
-        files: [new File([storyImage], 'story-image.jpg', { type: 'image/jpeg' })]
       }).then(() => console.log('Successful share'))
         .catch((error) => console.log('Error sharing:', error));
     } else {
