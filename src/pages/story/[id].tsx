@@ -59,13 +59,16 @@ export default function Story() {
     if (navigator.share) {
       navigator.share({
         title: storyTitle,
+        text: 'Check out this amazing story!',
         url: window.location.href,
+        files: [new File([storyImage], 'story-image.jpg', { type: 'image/jpeg' })]
       }).then(() => console.log('Successful share'))
         .catch((error) => console.log('Error sharing:', error));
     } else {
       console.log('Web Share API is not supported in this browser.');
     }
   };
+  
 
   return (
     <div className="min-h-screen py-12 flex flex-col items-center text-white">
