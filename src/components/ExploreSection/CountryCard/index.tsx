@@ -3,17 +3,18 @@ import Link from "next/link";
 
 interface CountryCardProps {
   title: string;
+  genre:string;
   imageUrl: string;
 }
 
-const CountryCard = ({ title, imageUrl }: CountryCardProps) => {
+const CountryCard = ({ title, genre, imageUrl }: CountryCardProps) => {
   return (
     <motion.div
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
       className="relative w-[145px] h-[200px] sm:w-[150px] sm:h-[220px] md:w-[200px] md:h-[300px] lg:w-[250px] lg:h-[400px] bg-background-card rounded-xl overflow-hidden m-4 shadow-xl transform transition-transform duration-300"
     >
-      <Link href={`/${title}`} passHref>
+      <Link href={`/folktails/${genre}`} passHref>
         <div className="w-full h-full cursor-pointer">
           <img
             src={imageUrl}

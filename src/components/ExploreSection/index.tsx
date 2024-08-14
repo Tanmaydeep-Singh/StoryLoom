@@ -2,10 +2,10 @@ import React from 'react';
 import CountryCard from './CountryCard';
 
 const countries = [
-    { name: 'Russia', flagSrc: 'https://i.pinimg.com/236x/54/93/22/549322041d3eb23527fbf1d5e1d4bafa.jpg' },
-    { name: 'Germany', flagSrc: 'https://i.pinimg.com/564x/0e/c7/aa/0ec7aa1383c347acb0b1a91bf506f51b.jpg' },
-    { name: 'France', flagSrc: 'https://i.pinimg.com/564x/a7/87/8d/a7878d054c0c281018d5b08049d9f0d7.jpg' },
-    { name: 'Spain', flagSrc: 'https://i.pinimg.com/564x/fc/87/6a/fc876ac2ec535f0e964da8b04b914248.jpg' },
+    { name: 'Russia', genre:"Russian", flagSrc: 'https://i.pinimg.com/236x/54/93/22/549322041d3eb23527fbf1d5e1d4bafa.jpg' },
+    { name: 'Germany', genre:"German", flagSrc: 'https://i.pinimg.com/564x/0e/c7/aa/0ec7aa1383c347acb0b1a91bf506f51b.jpg' },
+    { name: 'France', genre:"French", flagSrc: 'https://i.pinimg.com/564x/a7/87/8d/a7878d054c0c281018d5b08049d9f0d7.jpg' },
+    { name: 'Spain', genre:"Spanish", flagSrc: 'https://i.pinimg.com/564x/fc/87/6a/fc876ac2ec535f0e964da8b04b914248.jpg' },
     // Add more countries as needed
 ];
 
@@ -24,6 +24,7 @@ const ExploreSection = () => {
                     <CountryCard
                         key={country.name}
                         title={country.name}
+                        genre={country.genre}
                         imageUrl={country.flagSrc}
                     />
                 ))}

@@ -14,6 +14,7 @@ type LanguageCode = 'en' | 'es' | 'de'  | 'fr' | 'РУ';
 interface StoryDataInterface {
   id: string;
   title: string;
+  genre:string;
   story: Record<LanguageCode, string>;
   image: string;
 }
@@ -21,6 +22,7 @@ interface StoryDataInterface {
 export default function Story() {
   const [storyTitle, setStoryTitle] = useState('Title Loading...');
   const [story, setStory] = useState('Story Loading...');
+  const [genre, setGenre] = useState(' Genre Loading...');
   const [storyImage, setStoryImage] = useState(DEFAULT_IMAGE);
   const [selectedLanguage, setSelectedLanguage] = useState<LanguageCode>('en');
   const [availableLanguages, setAvailableLanguages] = useState<LanguageCode[]>([]);
@@ -35,6 +37,7 @@ export default function Story() {
       setTimeout(() => {
         if (storyData) {
           setStoryTitle(storyData.title);
+          setGenre(storyData.genre);
           setStory(storyData.story[selectedLanguage] || storyData.story.en);
           setStoryImage(storyData.image || DEFAULT_IMAGE);
           setAvailableLanguages(Object.keys(storyData.story) as LanguageCode[]);
@@ -71,8 +74,11 @@ export default function Story() {
           <img src={storyImage} alt={storyTitle} className="object-cover w-full h-full opacity-80" />
         </div>
         <div className="pt-6 px-4 sm:px-6 md:px-8 lg:px-12">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
             {storyTitle}
+          </h1>
+          <h1 className="text-md sm:text-xl md:text-xl font-bold mb-4 text-gray-800">
+            {genre}
           </h1>
           <div className="flex items-center space-x-4 justify-between">
             <div className="flex text-gray-300 space-x-2">

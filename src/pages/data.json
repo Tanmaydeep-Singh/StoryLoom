@@ -233,7 +233,7 @@
             "fr": "Le célèbre voleur d'art Vincent Blackwood est connu pour ses cambriolages impeccables et son évasivité. Lorsqu'il est engagé pour voler un tableau inestimable dans un musée fortement gardé, il rassemble une équipe d'experts pour réussir le casse ultime. Cependant, les choses prennent une tournure inattendue lorsque Vincent découvre que le tableau est plus qu'il n'y paraît : il contient un secret qui pourrait faire tomber un puissant syndicat du crime. Alors que le casse se déroule, Vincent doit naviguer à travers des trahisons et des pièges mortels pour découvrir la vérité et protéger son équipe.",
             "de": "Der berühmte Kunstdieb Vincent Blackwood ist bekannt für seine makellosen Raubzüge und seine Unfassbarkeit. Als er angeheuert wird, um ein unbezahlbares Gemälde aus einem stark bewachten Museum zu stehlen, stellt er ein Team von Experten zusammen, um den ultimativen Raub durchzuführen. Doch die Dinge nehmen eine unerwartete Wendung, als Vincent entdeckt, dass das Gemälde mehr ist, als es scheint - es birgt ein Geheimnis, das ein mächtiges Verbrechersyndikat zerschlagen könnte. Während der Raubzug sich entfaltet, muss Vincent sich durch Doppelspiele und tödliche Fallen manövrieren, um die Wahrheit ans Licht zu bringen und sein Team zu schützen."
         }
-    },    
+    },
     {
         "id": 21,
         "title": "The Wishing Tree",
@@ -293,73 +293,72 @@
             "fr": "Dans la petite ville côtière de Seabrook, un auteur reclus nommé Nathaniel Grey est retrouvé mort chez lui. Le seul indice est une note énigmatique qui dit : 'L'écho silencieux détient la clé.' La détective Olivia Bennett est appelée à résoudre l'affaire, mais en fouillant dans le passé de Nathaniel, elle découvre un réseau de secrets et de mensonges. La ville est pleine de gens avec des mobiles, des rivaux jaloux aux parents éloignés. Olivia doit reconstituer le puzzle en utilisant les livres et écrits personnels de Nathaniel comme indices. En se rapprochant de la vérité, elle découvre une révélation choquante qui change tout ce qu'elle pensait savoir sur la ville et ses habitants.",
             "de": "In der kleinen Küstenstadt Seabrook wird der zurückgezogene Autor Nathaniel Grey tot in seinem Haus aufgefunden. Der einzige Hinweis ist eine kryptische Notiz, die lautet: 'Das stille Echo birgt den Schlüssel.' Detective Olivia Bennett wird gerufen, um den Fall zu lösen, aber als sie in Nathaniels Vergangenheit eintaucht, entdeckt sie ein Netz aus Geheimnissen und Lügen. Die Stadt ist voller Menschen mit Motiven, von eifersüchtigen Rivalen bis hin zu lange verlorenen Verwandten. Olivia muss das Puzzle zusammensetzen und dabei Nathaniels Bücher und persönliche Schriften als Hinweise nutzen. Als sie der Wahrheit näher kommt, enthüllt sie eine schockierende Entdeckung, die alles verändert, was sie über die Stadt und ihre Bewohner zu wissen glaubte."
         }
-    }
-,    {
-    "id": 26,
-    "title": "The Eternal Dance",
-    "genre": "Romance",
-    "image": "/dance.jpg",
-    "story": {
-        "en": "In the glamorous world of professional ballroom dancing, rising star Elena Morales has her sights set on winning the prestigious Grand Prix. When her partner is injured just weeks before the competition, Elena is paired with Alex, a talented but arrogant dancer with a reputation for being difficult. As they train together, their clashing personalities create tension, but they also discover a deep connection through their shared passion for dance. As they perfect their routine, Elena and Alex navigate the pressures of competition and the complexities of their growing feelings for each other. The story culminates in a breathtaking performance that leaves them questioning what truly matters—winning the competition or following their hearts.",
-        "es": "En el glamoroso mundo de la danza de salón profesional, la estrella en ascenso Elena Morales tiene la vista puesta en ganar el prestigioso Grand Prix. Cuando su pareja se lesiona pocas semanas antes de la competencia, Elena es emparejada con Alex, un bailarín talentoso pero arrogante con fama de ser difícil. A medida que entrenan juntos, sus personalidades en conflicto crean tensión, pero también descubren una profunda conexión a través de su pasión compartida por la danza. Mientras perfeccionan su rutina, Elena y Alex navegan las presiones de la competencia y las complejidades de sus crecientes sentimientos el uno por el otro. La historia culmina en una actuación impresionante que los deja cuestionando qué es lo que realmente importa: ganar la competencia o seguir sus corazones.",
-        "fr": "Dans le monde glamour de la danse de salon professionnelle, la star montante Elena Morales vise à remporter le prestigieux Grand Prix. Lorsque son partenaire est blessé quelques semaines avant la compétition, Elena est associée à Alex, un danseur talentueux mais arrogant, réputé pour être difficile. Alors qu'ils s'entraînent ensemble, leurs personnalités opposées créent des tensions, mais ils découvrent également une profonde connexion à travers leur passion commune pour la danse. Alors qu'ils perfectionnent leur routine, Elena et Alex doivent naviguer entre les pressions de la compétition et les complexités de leurs sentiments grandissants l'un pour l'autre. L'histoire culmine par une performance à couper le souffle qui les laisse se demander ce qui compte vraiment : gagner la compétition ou suivre leur cœur.",
-        "de": "In der glamourösen Welt des professionellen Gesellschaftstanzes hat die aufstrebende Tänzerin Elena Morales das Ziel, den prestigeträchtigen Grand Prix zu gewinnen. Als ihr Partner nur wenige Wochen vor dem Wettbewerb verletzt wird, wird Elena mit Alex, einem talentierten, aber arroganten Tänzer, gepaart, der als schwierig gilt. Während sie gemeinsam trainieren, führen ihre unterschiedlichen Persönlichkeiten zu Spannungen, doch sie entdecken auch eine tiefe Verbindung durch ihre gemeinsame Leidenschaft für den Tanz. Während sie ihre Routine perfektionieren, müssen Elena und Alex den Druck des Wettbewerbs und die Komplexität ihrer wachsenden Gefühle füreinander bewältigen. Die Geschichte gipfelt in einer atemberaubenden Aufführung, die sie fragen lässt, was wirklich wichtig ist – den Wettbewerb zu gewinnen oder ihren Herzen zu folgen.",
-        "ru": "В гламурном мире профессиональных бальных танцев восходящая звезда Елена Моралес стремится выиграть престижный Гран-при. Когда ее партнер получает травму за несколько недель до соревнования, Елена оказывается в паре с Алексом, талантливым, но высокомерным танцором с репутацией трудного человека. Во время совместных тренировок их противоположные личности создают напряжение, но они также обнаруживают глубокую связь через общую страсть к танцам. По мере того, как они совершенствуют свою программу, Елена и Алекс сталкиваются с давлением соревнований и сложностями своих растущих чувств друг к другу. История завершается захватывающим выступлением, которое заставляет их задуматься, что действительно важно — выиграть соревнование или следовать велениям своего сердца."
-    }
-},
-{
-    "id": 27,
-    "title": "The Shadow Thieves",
-    "genre": "Fantasy",
-    "image": "/shadow.jpg",
-    "story": {
-        "en": "In the bustling city of Alarion, shadows have a life of their own. The city is protected by an order of shadow mages who can manipulate shadows to protect the people. When a group of rogue shadow thieves begins stealing shadows for their own gain, chaos ensues. Young apprentice mage Kael is tasked with stopping the thieves and restoring order. With the help of his mentor and a group of unlikely allies, Kael embarks on a journey through the city's dark underbelly. Along the way, he uncovers a conspiracy that threatens the balance of magic in Alarion. Kael must confront his own fears and master his abilities to save the city from a looming darkness.",
-        "es": "En la bulliciosa ciudad de Alarion, las sombras tienen vida propia. La ciudad está protegida por una orden de magos de sombras que pueden manipular sombras para proteger a las personas. Cuando un grupo de ladrones de sombras renegados comienza a robar sombras para su propio beneficio, el caos se desata. El joven aprendiz de mago Kael tiene la tarea de detener a los ladrones y restaurar el orden. Con la ayuda de su mentor y un grupo de aliados inesperados, Kael se embarca en un viaje por el oscuro inframundo de la ciudad. A lo largo del camino, descubre una conspiración que amenaza el equilibrio de la magia en Alarion. Kael debe enfrentar sus propios miedos y dominar sus habilidades para salvar la ciudad de una oscuridad inminente.",
-        "fr": "Dans la ville animée d'Alarion, les ombres ont leur propre vie. La ville est protégée par un ordre de mages des ombres qui peuvent manipuler les ombres pour protéger les gens. Lorsqu'un groupe de voleurs d'ombres renégats commence à voler des ombres pour leur propre profit, le chaos s'ensuit. Le jeune apprenti mage Kael est chargé d'arrêter les voleurs et de rétablir l'ordre. Avec l'aide de son mentor et d'un groupe d'alliés improbables, Kael se lance dans un voyage à travers les bas-fonds sombres de la ville. En cours de route, il découvre un complot qui menace l'équilibre de la magie à Alarion. Kael doit affronter ses propres peurs et maîtriser ses capacités pour sauver la ville d'une obscurité imminente.",
-        "de": "In der geschäftigen Stadt Alarion haben Schatten ein Eigenleben. Die Stadt wird von einem Orden von Schattenmagiern geschützt, die Schatten manipulieren können, um die Menschen zu schützen. Als eine Gruppe von abtrünnigen Schattendieben beginnt, Schatten für ihren eigenen Vorteil zu stehlen, bricht Chaos aus. Der junge Zauberlehrling Kael wird beauftragt, die Diebe zu stoppen und die Ordnung wiederherzustellen. Mit der Hilfe seines Mentors und einer Gruppe unwahrscheinlicher Verbündeter begibt sich Kael auf eine Reise durch die dunkle Unterwelt der Stadt. Unterwegs entdeckt er eine Verschwörung, die das Gleichgewicht der Magie in Alarion bedroht. Kael muss sich seinen eigenen Ängsten stellen und seine Fähigkeiten meistern, um die Stadt vor einer drohenden Dunkelheit zu retten.",
-        "ru": "В шумном городе Аларион тени живут собственной жизнью. Город охраняется орденом магов теней, которые могут управлять тенями, чтобы защитить людей. Когда группа мятежных воров теней начинает красть тени для собственной выгоды, начинается хаос. Молодому ученику мага Каэлу поручено остановить воров и восстановить порядок. С помощью своего наставника и группы неожиданных союзников Каэл отправляется в путешествие по темным закоулкам города. По пути он раскрывает заговор, угрожающий магическому равновесию в Аларионе. Каэл должен преодолеть свои страхи и овладеть своими способностями, чтобы спасти город от надвигающейся тьмы."
-    }
-},
-{
-    "id": 28,
-    "title": "The Phantom's Serenade",
-    "genre": "Mystery",
-    "image": "/serenade.jpg",
-    "story": {
-        "en": "In the grand halls of the Royal Opera House, a series of mysterious accidents have been plaguing the performances. The superstitious performers believe it's the work of the Phantom, a ghostly figure said to haunt the opera house. Aspiring soprano Anna has just joined the company and quickly finds herself caught up in the intrigue. As she investigates the strange occurrences, she discovers a hidden world beneath the opera house, filled with secrets and hidden passages. With the help of the enigmatic stagehand, Erik, Anna uncovers a plot to sabotage the opera house. As she delves deeper, she must confront the Phantom and uncover the truth behind the legends.",
-        "es": "En los majestuosos pasillos de la Royal Opera House, una serie de misteriosos accidentes han estado plagando las actuaciones. Los supersticiosos intérpretes creen que es obra del Fantasma, una figura fantasmal que se dice que ronda la ópera. La aspirante a soprano Anna acaba de unirse a la compañía y rápidamente se ve atrapada en la intriga. A medida que investiga los extraños sucesos, descubre un mundo oculto bajo la ópera, lleno de secretos y pasajes escondidos. Con la ayuda del enigmático tramoyista Erik, Anna descubre un complot para sabotear la ópera. A medida que profundiza, debe enfrentarse al Fantasma y descubrir la verdad detrás de las leyendas.",
-        "fr": "Dans les grands halls de l'Opéra Royal, une série d'accidents mystérieux a perturbé les représentations. Les interprètes superstitieux croient que c'est l'œuvre du Fantôme, une figure fantomatique censée hanter l'opéra. La soprano en herbe Anna vient de rejoindre la compagnie et se retrouve rapidement mêlée à l'intrigue. Alors qu'elle enquête sur les étranges événements, elle découvre un monde caché sous l'opéra, rempli de secrets et de passages dissimulés. Avec l'aide du mystérieux machiniste Erik, Anna découvre un complot visant à saboter l'opéra. En s'enfonçant davantage, elle doit affronter le Fantôme et découvrir la vérité derrière les légendes.",
-        "de": "In den prunkvollen Hallen der Royal Opera House häufen sich eine Reihe mysteriöser Unfälle bei den Aufführungen. Die abergläubischen Darsteller glauben, es sei das Werk des Phantoms, einer geisterhaften Gestalt, die das Opernhaus heimsuchen soll. Die aufstrebende Sopranistin Anna hat sich gerade der Truppe angeschlossen und findet sich schnell inmitten der Intrigen wieder. Während sie die seltsamen Vorfälle untersucht, entdeckt sie eine verborgene Welt unter dem Opernhaus, gefüllt mit Geheimnissen und versteckten Gängen. Mit Hilfe des rätselhaften Bühnenarbeiters Erik deckt Anna ein Komplott auf, das darauf abzielt, das Opernhaus zu sabotieren. Während sie tiefer gräbt, muss sie sich dem Phantom stellen und die Wahrheit hinter den Legenden aufdecken.",
-        "ru": "В величественных залах Королевского оперного театра серию таинственных происшествий омрачает выступления. Суеверные исполнители верят, что это дело рук Призрака, призрачной фигуры, которая, как говорят, обитает в оперном театре. Стремящаяся стать сопрано Анна только что присоединилась к труппе и быстро оказывается втянутой в интригу. Расследуя странные происшествия, она обнаруживает скрытый мир под оперным театром, полный секретов и скрытых проходов. С помощью загадочного сценического рабочего Эрика Анна раскрывает заговор с целью саботажа оперного театра. Погружаясь глубже, она должна столкнуться с Призраком и раскрыть истину, стоящую за легендами."
-    }
-},
-{
-    "id": 29,
-    "title": "The Lunar Chronicles",
-    "genre": "Science Fiction",
-    "image": "/lunar.jpg",
-    "story": {
-        "en": "In the year 2275, humanity has established colonies on the moon. The Lunar Chronicles follows a group of astronauts and scientists who live and work in the lunar colony of New Hope. As they navigate the challenges of living on the moon, they uncover a mysterious signal coming from deep beneath the lunar surface. The signal leads them to an ancient alien artifact that holds the key to humanity's future. As they study the artifact, they must deal with political tensions, resource shortages, and personal conflicts. The story explores themes of exploration, survival, and the potential for first contact with extraterrestrial life.",
-        "es": "En el año 2275, la humanidad ha establecido colonias en la luna. The Lunar Chronicles sigue a un grupo de astronautas y científicos que viven y trabajan en la colonia lunar de New Hope. A medida que navegan por los desafíos de vivir en la luna, descubren una señal misteriosa que proviene de lo profundo de la superficie lunar. La señal los lleva a un antiguo artefacto alienígena que contiene la clave para el futuro de la humanidad. Mientras estudian el artefacto, deben lidiar con tensiones políticas, escasez de recursos y conflictos personales. La historia explora temas de exploración, supervivencia y el potencial para el primer contacto con vida extraterrestre.",
-        "fr": "En l'an 2275, l'humanité a établi des colonies sur la lune. The Lunar Chronicles suit un groupe d'astronautes et de scientifiques qui vivent et travaillent dans la colonie lunaire de New Hope. Alors qu'ils affrontent les défis de la vie sur la lune, ils découvrent un mystérieux signal provenant des profondeurs de la surface lunaire. Le signal les conduit à un ancien artefact extraterrestre qui détient la clé de l'avenir de l'humanité. En étudiant l'artefact, ils doivent faire face à des tensions politiques, des pénuries de ressources et des conflits personnels. L'histoire explore des thèmes tels que l'exploration, la survie et le potentiel d'un premier contact avec une vie extraterrestre.",
-        "de": "Im Jahr 2275 hat die Menschheit Kolonien auf dem Mond errichtet. The Lunar Chronicles folgt einer Gruppe von Astronauten und Wissenschaftlern, die in der Mondkolonie New Hope leben und arbeiten. Während sie sich den Herausforderungen des Lebens auf dem Mond stellen, entdecken sie ein mysteriöses Signal, das tief aus der Mondoberfläche kommt. Das Signal führt sie zu einem uralten außerirdischen Artefakt, das den Schlüssel zur Zukunft der Menschheit birgt. Während sie das Artefakt untersuchen, müssen sie mit politischen Spannungen, Ressourcenknappheit und persönlichen Konflikten umgehen. Die Geschichte erforscht Themen wie Entdeckung, Überleben und das Potenzial für einen Erstkontakt mit außerirdischem Leben.",
-        "ru": "В 2275 году человечество основало колонии на Луне. «Лунные хроники» рассказывают о группе астронавтов и ученых, которые живут и работают в лунной колонии Нью-Хоуп. Сталкиваясь с вызовами жизни на Луне, они обнаруживают таинственный сигнал, исходящий из глубин лунной поверхности. Сигнал приводит их к древнему инопланетному артефакту, который хранит ключ к будущему человечества. Изучая артефакт, они сталкиваются с политическими напряжениями, нехваткой ресурсов и личными конфликтами. История исследует темы исследования, выживания и потенциальной возможности первого контакта с внеземной жизнью."
-    }
-},
-{
-    "id": 30,
-    "title": "The Midnight Library",
-    "genre": "Fantasy",
-    "image": "/midnight_library.jpg",
-    "story": {
-        "en": "In a quaint, sleepy town, there's a library that only opens at midnight. The Midnight Library is said to contain books that tell the stories of people's lives, including those that could have been. When Nora, a woman at a crossroads in her life, stumbles upon the library, she is given a chance to explore the different paths her life could have taken. Guided by the enigmatic librarian, Mrs. Elm, Nora journeys through a series of alternate realities, experiencing different careers, relationships, and adventures. As she navigates these lives, Nora must decide which version of herself she truly wants to be and come to terms with the choices she has made.",
-        "es": "En un pintoresco y tranquilo pueblo, hay una biblioteca que solo abre a medianoche. Se dice que la Biblioteca de Medianoche contiene libros que cuentan las historias de las vidas de las personas, incluidas aquellas que podrían haber sido. Cuando Nora, una mujer en una encrucijada en su vida, tropieza con la biblioteca, se le da la oportunidad de explorar los diferentes caminos que su vida podría haber tomado. Guiada por la enigmática bibliotecaria, la Sra. Elm, Nora viaja a través de una serie de realidades alternas, experimentando diferentes carreras, relaciones y aventuras. Mientras navega por estas vidas, Nora debe decidir qué versión de sí misma realmente quiere ser y aceptar las decisiones que ha tomado.",
-        "fr": "Dans une ville pittoresque et paisible, il existe une bibliothèque qui n'ouvre qu'à minuit. On dit que la Bibliothèque de Minuit contient des livres qui racontent les histoires des vies des gens, y compris celles qui auraient pu être. Lorsque Nora, une femme à un carrefour de sa vie, tombe sur la bibliothèque, elle a l'opportunité d'explorer les différents chemins que sa vie aurait pu prendre. Guidée par la bibliothécaire énigmatique, Mme Elm, Nora voyage à travers une série de réalités alternatives, découvrant différentes carrières, relations et aventures. Alors qu'elle navigue à travers ces vies, Nora doit décider quelle version d'elle-même elle veut vraiment être et accepter les choix qu'elle a faits.",
-        "de": "In einer malerischen, verschlafenen Stadt gibt es eine Bibliothek, die nur um Mitternacht geöffnet ist. Es wird gesagt, dass die Mitternachtsbibliothek Bücher enthält, die die Geschichten der Lebenswege der Menschen erzählen, einschließlich derer, die hätten sein können. Als Nora, eine Frau an einem Wendepunkt in ihrem Leben, zufällig auf die Bibliothek stößt, bekommt sie die Gelegenheit, die verschiedenen Wege zu erkunden, die ihr Leben hätte nehmen können. Unter der Führung der rätselhaften Bibliothekarin Mrs. Elm reist Nora durch eine Reihe alternativer Realitäten und erlebt verschiedene Karrieren, Beziehungen und Abenteuer. Während sie diese Leben durchläuft, muss Nora entscheiden, welche Version von sich selbst sie wirklich sein möchte und sich mit den Entscheidungen auseinandersetzen, die sie getroffen hat.",
-        "ru": "В одном живописном и тихом городке есть библиотека, которая открывается только в полночь. Говорят, что Полуночная библиотека содержит книги, рассказывающие истории жизней людей, включая те, которые могли бы быть. Когда Нора, женщина на распутье в своей жизни, случайно находит библиотеку, ей предоставляется возможность исследовать различные пути, которые могла бы принять ее жизнь. Под руководством загадочной библиотекарши миссис Элм Нора отправляется в путешествие по ряду альтернативных реальностей, переживая различные карьеры, отношения и приключения. Путешествуя по этим мирам, Нора должна решить, какой версией себя она хочет быть на самом деле, и принять свои прошлые решения."
-    }
-}
-,
+    },
+    {
+        "id": 26,
+        "title": "The Eternal Dance",
+        "genre": "Romance",
+        "image": "/dance.jpg",
+        "story": {
+            "en": "In the glamorous world of professional ballroom dancing, rising star Elena Morales has her sights set on winning the prestigious Grand Prix. When her partner is injured just weeks before the competition, Elena is paired with Alex, a talented but arrogant dancer with a reputation for being difficult. As they train together, their clashing personalities create tension, but they also discover a deep connection through their shared passion for dance. As they perfect their routine, Elena and Alex navigate the pressures of competition and the complexities of their growing feelings for each other. The story culminates in a breathtaking performance that leaves them questioning what truly matters—winning the competition or following their hearts.",
+            "es": "En el glamoroso mundo de la danza de salón profesional, la estrella en ascenso Elena Morales tiene la vista puesta en ganar el prestigioso Grand Prix. Cuando su pareja se lesiona pocas semanas antes de la competencia, Elena es emparejada con Alex, un bailarín talentoso pero arrogante con fama de ser difícil. A medida que entrenan juntos, sus personalidades en conflicto crean tensión, pero también descubren una profunda conexión a través de su pasión compartida por la danza. Mientras perfeccionan su rutina, Elena y Alex navegan las presiones de la competencia y las complejidades de sus crecientes sentimientos el uno por el otro. La historia culmina en una actuación impresionante que los deja cuestionando qué es lo que realmente importa: ganar la competencia o seguir sus corazones.",
+            "fr": "Dans le monde glamour de la danse de salon professionnelle, la star montante Elena Morales vise à remporter le prestigieux Grand Prix. Lorsque son partenaire est blessé quelques semaines avant la compétition, Elena est associée à Alex, un danseur talentueux mais arrogant, réputé pour être difficile. Alors qu'ils s'entraînent ensemble, leurs personnalités opposées créent des tensions, mais ils découvrent également une profonde connexion à travers leur passion commune pour la danse. Alors qu'ils perfectionnent leur routine, Elena et Alex doivent naviguer entre les pressions de la compétition et les complexités de leurs sentiments grandissants l'un pour l'autre. L'histoire culmine par une performance à couper le souffle qui les laisse se demander ce qui compte vraiment : gagner la compétition ou suivre leur cœur.",
+            "de": "In der glamourösen Welt des professionellen Gesellschaftstanzes hat die aufstrebende Tänzerin Elena Morales das Ziel, den prestigeträchtigen Grand Prix zu gewinnen. Als ihr Partner nur wenige Wochen vor dem Wettbewerb verletzt wird, wird Elena mit Alex, einem talentierten, aber arroganten Tänzer, gepaart, der als schwierig gilt. Während sie gemeinsam trainieren, führen ihre unterschiedlichen Persönlichkeiten zu Spannungen, doch sie entdecken auch eine tiefe Verbindung durch ihre gemeinsame Leidenschaft für den Tanz. Während sie ihre Routine perfektionieren, müssen Elena und Alex den Druck des Wettbewerbs und die Komplexität ihrer wachsenden Gefühle füreinander bewältigen. Die Geschichte gipfelt in einer atemberaubenden Aufführung, die sie fragen lässt, was wirklich wichtig ist – den Wettbewerb zu gewinnen oder ihren Herzen zu folgen.",
+            "ru": "В гламурном мире профессиональных бальных танцев восходящая звезда Елена Моралес стремится выиграть престижный Гран-при. Когда ее партнер получает травму за несколько недель до соревнования, Елена оказывается в паре с Алексом, талантливым, но высокомерным танцором с репутацией трудного человека. Во время совместных тренировок их противоположные личности создают напряжение, но они также обнаруживают глубокую связь через общую страсть к танцам. По мере того, как они совершенствуют свою программу, Елена и Алекс сталкиваются с давлением соревнований и сложностями своих растущих чувств друг к другу. История завершается захватывающим выступлением, которое заставляет их задуматься, что действительно важно — выиграть соревнование или следовать велениям своего сердца."
+        }
+    },
+    {
+        "id": 27,
+        "title": "The Shadow Thieves",
+        "genre": "Fantasy",
+        "image": "/shadow.jpg",
+        "story": {
+            "en": "In the bustling city of Alarion, shadows have a life of their own. The city is protected by an order of shadow mages who can manipulate shadows to protect the people. When a group of rogue shadow thieves begins stealing shadows for their own gain, chaos ensues. Young apprentice mage Kael is tasked with stopping the thieves and restoring order. With the help of his mentor and a group of unlikely allies, Kael embarks on a journey through the city's dark underbelly. Along the way, he uncovers a conspiracy that threatens the balance of magic in Alarion. Kael must confront his own fears and master his abilities to save the city from a looming darkness.",
+            "es": "En la bulliciosa ciudad de Alarion, las sombras tienen vida propia. La ciudad está protegida por una orden de magos de sombras que pueden manipular sombras para proteger a las personas. Cuando un grupo de ladrones de sombras renegados comienza a robar sombras para su propio beneficio, el caos se desata. El joven aprendiz de mago Kael tiene la tarea de detener a los ladrones y restaurar el orden. Con la ayuda de su mentor y un grupo de aliados inesperados, Kael se embarca en un viaje por el oscuro inframundo de la ciudad. A lo largo del camino, descubre una conspiración que amenaza el equilibrio de la magia en Alarion. Kael debe enfrentar sus propios miedos y dominar sus habilidades para salvar la ciudad de una oscuridad inminente.",
+            "fr": "Dans la ville animée d'Alarion, les ombres ont leur propre vie. La ville est protégée par un ordre de mages des ombres qui peuvent manipuler les ombres pour protéger les gens. Lorsqu'un groupe de voleurs d'ombres renégats commence à voler des ombres pour leur propre profit, le chaos s'ensuit. Le jeune apprenti mage Kael est chargé d'arrêter les voleurs et de rétablir l'ordre. Avec l'aide de son mentor et d'un groupe d'alliés improbables, Kael se lance dans un voyage à travers les bas-fonds sombres de la ville. En cours de route, il découvre un complot qui menace l'équilibre de la magie à Alarion. Kael doit affronter ses propres peurs et maîtriser ses capacités pour sauver la ville d'une obscurité imminente.",
+            "de": "In der geschäftigen Stadt Alarion haben Schatten ein Eigenleben. Die Stadt wird von einem Orden von Schattenmagiern geschützt, die Schatten manipulieren können, um die Menschen zu schützen. Als eine Gruppe von abtrünnigen Schattendieben beginnt, Schatten für ihren eigenen Vorteil zu stehlen, bricht Chaos aus. Der junge Zauberlehrling Kael wird beauftragt, die Diebe zu stoppen und die Ordnung wiederherzustellen. Mit der Hilfe seines Mentors und einer Gruppe unwahrscheinlicher Verbündeter begibt sich Kael auf eine Reise durch die dunkle Unterwelt der Stadt. Unterwegs entdeckt er eine Verschwörung, die das Gleichgewicht der Magie in Alarion bedroht. Kael muss sich seinen eigenen Ängsten stellen und seine Fähigkeiten meistern, um die Stadt vor einer drohenden Dunkelheit zu retten.",
+            "ru": "В шумном городе Аларион тени живут собственной жизнью. Город охраняется орденом магов теней, которые могут управлять тенями, чтобы защитить людей. Когда группа мятежных воров теней начинает красть тени для собственной выгоды, начинается хаос. Молодому ученику мага Каэлу поручено остановить воров и восстановить порядок. С помощью своего наставника и группы неожиданных союзников Каэл отправляется в путешествие по темным закоулкам города. По пути он раскрывает заговор, угрожающий магическому равновесию в Аларионе. Каэл должен преодолеть свои страхи и овладеть своими способностями, чтобы спасти город от надвигающейся тьмы."
+        }
+    },
+    {
+        "id": 28,
+        "title": "The Phantom's Serenade",
+        "genre": "Mystery",
+        "image": "/serenade.jpg",
+        "story": {
+            "en": "In the grand halls of the Royal Opera House, a series of mysterious accidents have been plaguing the performances. The superstitious performers believe it's the work of the Phantom, a ghostly figure said to haunt the opera house. Aspiring soprano Anna has just joined the company and quickly finds herself caught up in the intrigue. As she investigates the strange occurrences, she discovers a hidden world beneath the opera house, filled with secrets and hidden passages. With the help of the enigmatic stagehand, Erik, Anna uncovers a plot to sabotage the opera house. As she delves deeper, she must confront the Phantom and uncover the truth behind the legends.",
+            "es": "En los majestuosos pasillos de la Royal Opera House, una serie de misteriosos accidentes han estado plagando las actuaciones. Los supersticiosos intérpretes creen que es obra del Fantasma, una figura fantasmal que se dice que ronda la ópera. La aspirante a soprano Anna acaba de unirse a la compañía y rápidamente se ve atrapada en la intriga. A medida que investiga los extraños sucesos, descubre un mundo oculto bajo la ópera, lleno de secretos y pasajes escondidos. Con la ayuda del enigmático tramoyista Erik, Anna descubre un complot para sabotear la ópera. A medida que profundiza, debe enfrentarse al Fantasma y descubrir la verdad detrás de las leyendas.",
+            "fr": "Dans les grands halls de l'Opéra Royal, une série d'accidents mystérieux a perturbé les représentations. Les interprètes superstitieux croient que c'est l'œuvre du Fantôme, une figure fantomatique censée hanter l'opéra. La soprano en herbe Anna vient de rejoindre la compagnie et se retrouve rapidement mêlée à l'intrigue. Alors qu'elle enquête sur les étranges événements, elle découvre un monde caché sous l'opéra, rempli de secrets et de passages dissimulés. Avec l'aide du mystérieux machiniste Erik, Anna découvre un complot visant à saboter l'opéra. En s'enfonçant davantage, elle doit affronter le Fantôme et découvrir la vérité derrière les légendes.",
+            "de": "In den prunkvollen Hallen der Royal Opera House häufen sich eine Reihe mysteriöser Unfälle bei den Aufführungen. Die abergläubischen Darsteller glauben, es sei das Werk des Phantoms, einer geisterhaften Gestalt, die das Opernhaus heimsuchen soll. Die aufstrebende Sopranistin Anna hat sich gerade der Truppe angeschlossen und findet sich schnell inmitten der Intrigen wieder. Während sie die seltsamen Vorfälle untersucht, entdeckt sie eine verborgene Welt unter dem Opernhaus, gefüllt mit Geheimnissen und versteckten Gängen. Mit Hilfe des rätselhaften Bühnenarbeiters Erik deckt Anna ein Komplott auf, das darauf abzielt, das Opernhaus zu sabotieren. Während sie tiefer gräbt, muss sie sich dem Phantom stellen und die Wahrheit hinter den Legenden aufdecken.",
+            "ru": "В величественных залах Королевского оперного театра серию таинственных происшествий омрачает выступления. Суеверные исполнители верят, что это дело рук Призрака, призрачной фигуры, которая, как говорят, обитает в оперном театре. Стремящаяся стать сопрано Анна только что присоединилась к труппе и быстро оказывается втянутой в интригу. Расследуя странные происшествия, она обнаруживает скрытый мир под оперным театром, полный секретов и скрытых проходов. С помощью загадочного сценического рабочего Эрика Анна раскрывает заговор с целью саботажа оперного театра. Погружаясь глубже, она должна столкнуться с Призраком и раскрыть истину, стоящую за легендами."
+        }
+    },
+    {
+        "id": 29,
+        "title": "The Lunar Chronicles",
+        "genre": "Science Fiction",
+        "image": "/lunar.jpg",
+        "story": {
+            "en": "In the year 2275, humanity has established colonies on the moon. The Lunar Chronicles follows a group of astronauts and scientists who live and work in the lunar colony of New Hope. As they navigate the challenges of living on the moon, they uncover a mysterious signal coming from deep beneath the lunar surface. The signal leads them to an ancient alien artifact that holds the key to humanity's future. As they study the artifact, they must deal with political tensions, resource shortages, and personal conflicts. The story explores themes of exploration, survival, and the potential for first contact with extraterrestrial life.",
+            "es": "En el año 2275, la humanidad ha establecido colonias en la luna. The Lunar Chronicles sigue a un grupo de astronautas y científicos que viven y trabajan en la colonia lunar de New Hope. A medida que navegan por los desafíos de vivir en la luna, descubren una señal misteriosa que proviene de lo profundo de la superficie lunar. La señal los lleva a un antiguo artefacto alienígena que contiene la clave para el futuro de la humanidad. Mientras estudian el artefacto, deben lidiar con tensiones políticas, escasez de recursos y conflictos personales. La historia explora temas de exploración, supervivencia y el potencial para el primer contacto con vida extraterrestre.",
+            "fr": "En l'an 2275, l'humanité a établi des colonies sur la lune. The Lunar Chronicles suit un groupe d'astronautes et de scientifiques qui vivent et travaillent dans la colonie lunaire de New Hope. Alors qu'ils affrontent les défis de la vie sur la lune, ils découvrent un mystérieux signal provenant des profondeurs de la surface lunaire. Le signal les conduit à un ancien artefact extraterrestre qui détient la clé de l'avenir de l'humanité. En étudiant l'artefact, ils doivent faire face à des tensions politiques, des pénuries de ressources et des conflits personnels. L'histoire explore des thèmes tels que l'exploration, la survie et le potentiel d'un premier contact avec une vie extraterrestre.",
+            "de": "Im Jahr 2275 hat die Menschheit Kolonien auf dem Mond errichtet. The Lunar Chronicles folgt einer Gruppe von Astronauten und Wissenschaftlern, die in der Mondkolonie New Hope leben und arbeiten. Während sie sich den Herausforderungen des Lebens auf dem Mond stellen, entdecken sie ein mysteriöses Signal, das tief aus der Mondoberfläche kommt. Das Signal führt sie zu einem uralten außerirdischen Artefakt, das den Schlüssel zur Zukunft der Menschheit birgt. Während sie das Artefakt untersuchen, müssen sie mit politischen Spannungen, Ressourcenknappheit und persönlichen Konflikten umgehen. Die Geschichte erforscht Themen wie Entdeckung, Überleben und das Potenzial für einen Erstkontakt mit außerirdischem Leben.",
+            "ru": "В 2275 году человечество основало колонии на Луне. «Лунные хроники» рассказывают о группе астронавтов и ученых, которые живут и работают в лунной колонии Нью-Хоуп. Сталкиваясь с вызовами жизни на Луне, они обнаруживают таинственный сигнал, исходящий из глубин лунной поверхности. Сигнал приводит их к древнему инопланетному артефакту, который хранит ключ к будущему человечества. Изучая артефакт, они сталкиваются с политическими напряжениями, нехваткой ресурсов и личными конфликтами. История исследует темы исследования, выживания и потенциальной возможности первого контакта с внеземной жизнью."
+        }
+    },
+    {
+        "id": 30,
+        "title": "The Midnight Library",
+        "genre": "Fantasy",
+        "image": "/midnight_library.jpg",
+        "story": {
+            "en": "In a quaint, sleepy town, there's a library that only opens at midnight. The Midnight Library is said to contain books that tell the stories of people's lives, including those that could have been. When Nora, a woman at a crossroads in her life, stumbles upon the library, she is given a chance to explore the different paths her life could have taken. Guided by the enigmatic librarian, Mrs. Elm, Nora journeys through a series of alternate realities, experiencing different careers, relationships, and adventures. As she navigates these lives, Nora must decide which version of herself she truly wants to be and come to terms with the choices she has made.",
+            "es": "En un pintoresco y tranquilo pueblo, hay una biblioteca que solo abre a medianoche. Se dice que la Biblioteca de Medianoche contiene libros que cuentan las historias de las vidas de las personas, incluidas aquellas que podrían haber sido. Cuando Nora, una mujer en una encrucijada en su vida, tropieza con la biblioteca, se le da la oportunidad de explorar los diferentes caminos que su vida podría haber tomado. Guiada por la enigmática bibliotecaria, la Sra. Elm, Nora viaja a través de una serie de realidades alternas, experimentando diferentes carreras, relaciones y aventuras. Mientras navega por estas vidas, Nora debe decidir qué versión de sí misma realmente quiere ser y aceptar las decisiones que ha tomado.",
+            "fr": "Dans une ville pittoresque et paisible, il existe une bibliothèque qui n'ouvre qu'à minuit. On dit que la Bibliothèque de Minuit contient des livres qui racontent les histoires des vies des gens, y compris celles qui auraient pu être. Lorsque Nora, une femme à un carrefour de sa vie, tombe sur la bibliothèque, elle a l'opportunité d'explorer les différents chemins que sa vie aurait pu prendre. Guidée par la bibliothécaire énigmatique, Mme Elm, Nora voyage à travers une série de réalités alternatives, découvrant différentes carrières, relations et aventures. Alors qu'elle navigue à travers ces vies, Nora doit décider quelle version d'elle-même elle veut vraiment être et accepter les choix qu'elle a faits.",
+            "de": "In einer malerischen, verschlafenen Stadt gibt es eine Bibliothek, die nur um Mitternacht geöffnet ist. Es wird gesagt, dass die Mitternachtsbibliothek Bücher enthält, die die Geschichten der Lebenswege der Menschen erzählen, einschließlich derer, die hätten sein können. Als Nora, eine Frau an einem Wendepunkt in ihrem Leben, zufällig auf die Bibliothek stößt, bekommt sie die Gelegenheit, die verschiedenen Wege zu erkunden, die ihr Leben hätte nehmen können. Unter der Führung der rätselhaften Bibliothekarin Mrs. Elm reist Nora durch eine Reihe alternativer Realitäten und erlebt verschiedene Karrieren, Beziehungen und Abenteuer. Während sie diese Leben durchläuft, muss Nora entscheiden, welche Version von sich selbst sie wirklich sein möchte und sich mit den Entscheidungen auseinandersetzen, die sie getroffen hat.",
+            "ru": "В одном живописном и тихом городке есть библиотека, которая открывается только в полночь. Говорят, что Полуночная библиотека содержит книги, рассказывающие истории жизней людей, включая те, которые могли бы быть. Когда Нора, женщина на распутье в своей жизни, случайно находит библиотеку, ей предоставляется возможность исследовать различные пути, которые могла бы принять ее жизнь. Под руководством загадочной библиотекарши миссис Элм Нора отправляется в путешествие по ряду альтернативных реальностей, переживая различные карьеры, отношения и приключения. Путешествуя по этим мирам, Нора должна решить, какой версией себя она хочет быть на самом деле, и принять свои прошлые решения."
+        }
+    },
     {
         "id": 31,
         "title": "The Enchanted Forest",
@@ -1007,5 +1006,365 @@
         "story": {
             "en": "In a distant future, a network of interstellar portals known as the Stellar Nexus allows for instant travel between galaxies. When a critical nexus hub is sabotaged, a team of elite agents must investigate the attack and prevent a galactic war. As they traverse the universe, they uncover a conspiracy involving a rogue faction that seeks to control the nexus for their own ends. The team must navigate complex political alliances and face deadly enemies to secure peace and restore the nexus."
         }
+    },
+    {
+        "id": "_1",
+        "title": "The Firebird",
+        "genre": "Russian Folktale",
+        "story": {
+            "en": "Once upon a time, in a faraway kingdom, there was a powerful tsar who had a magnificent garden filled with all sorts of beautiful flowers and rare trees. The pride of the garden was the Firebird, a magical creature with feathers that glowed like flames. Every night, the Firebird would come to the garden to feast on the golden apples, but no one could catch it. The tsar's youngest son, Prince Ivan, decided to embark on a quest to capture the Firebird. With the help of a wise wolf, Ivan faced many challenges, including battling a wicked sorcerer and rescuing a princess. In the end, Ivan captured the Firebird and brought it back to his father, earning his place as the rightful heir to the throne."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_2",
+        "title": "Vasilisa the Beautiful",
+        "genre": "Russian Folktale",
+        "story": {
+            "en": "Vasilisa, a kind and beautiful girl, lived with her wicked stepmother and stepsisters. Before her mother died, she gave Vasilisa a magical doll that would protect her from harm. The stepmother sent Vasilisa into the dark forest to fetch fire from Baba Yaga, the fearsome witch. With the help of her magical doll, Vasilisa completed the impossible tasks Baba Yaga set for her. Impressed but angry, Baba Yaga let Vasilisa go, and she returned home with a skull lantern that burned her stepfamily to ashes. Vasilisa later became a skilled weaver and eventually married the Tsar."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_3",
+        "title": "The Snow Maiden",
+        "genre": "Russian Folktale",
+        "story": {
+            "en": "An elderly couple, who had no children, built a snow girl in the midst of a harsh winter. Miraculously, the snow girl, Snegurochka, came to life and became their daughter. She was a beautiful and gentle child but longed to experience the warmth of summer. As spring arrived and the weather warmed, Snegurochka began to feel sad. One day, while playing with other children, she melted away in the heat of the sun, leaving her parents heartbroken but grateful for the brief joy she had brought to their lives."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_4",
+        "title": "Ivan and the Gray Wolf",
+        "genre": "Russian Folktale",
+        "story": {
+            "en": "Prince Ivan set out on a journey to capture the magical Firebird for his father, the Tsar. Along the way, he encountered a talking Gray Wolf, who offered to help him. The wolf carried Ivan on its back and guided him to the Firebird, the Horse with the Golden Mane, and the beautiful Princess Elena. With the wolf's help, Ivan successfully completed each task, but his jealous brothers killed him and took the treasures for themselves. The Gray Wolf revived Ivan with the Water of Life, and Ivan returned to expose his brothers' treachery, eventually marrying Elena and inheriting the throne."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_5",
+        "title": "The Frog Princess",
+        "genre": "Russian Folktale",
+        "story": {
+            "en": "The youngest son of a Tsar, Prince Ivan, was given an arrow and told to marry the girl who found it. His arrow was found by a frog, which he reluctantly married. However, the frog was actually a beautiful princess named Vasilisa, cursed by an evil sorcerer. Vasilisa's wisdom and magic helped Ivan overcome many challenges, and she eventually revealed her true form to him. Despite this, Ivan burned her frog skin, breaking the curse but causing Vasilisa to disappear. Ivan went on a long journey to find her, facing many dangers, and they were finally reunited, breaking the curse forever."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_6",
+        "title": "La Leyenda de la Llorona",
+        "genre": "Spanish Folktale",
+        "story": {
+            "en": "In a small village in Mexico, there was once a beautiful woman named Maria who was deeply in love with a nobleman. They had two children together, but the nobleman eventually left Maria for another woman. Devastated and consumed by jealousy, Maria took her children to the river and, in a moment of madness, drowned them. Realizing what she had done, she was overcome with grief and wandered the riverbanks, wailing for her lost children. From that day on, her spirit, known as La Llorona, haunted the area, crying and searching for her children. It is said that if you hear her wailing, you should be careful, as she might mistake you for one of her children and take you with her to the afterlife."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_7",
+        "title": "El Cid Campeador",
+        "genre": "Spanish Folktale",
+        "story": {
+            "en": "Rodrigo Díaz de Vivar, known as El Cid, was a noble warrior in medieval Spain. Banished by King Alfonso VI, El Cid led a group of loyal followers in battles against the Moors, becoming a legendary hero. His courage, honor, and skill in battle earned him the title 'El Cid Campeador,' meaning 'The Champion.' Despite his exile, El Cid continued to fight for his country, eventually capturing the city of Valencia. His legacy lived on as a symbol of Spanish chivalry, and his tale became one of the most celebrated in Spanish folklore."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_8",
+        "title": "The Legend of Don Quixote",
+        "genre": "Spanish Folktale",
+        "story": {
+            "en": "Don Quixote, an aging gentleman from La Mancha, became obsessed with tales of chivalry and knights. He decided to become a knight-errant himself, taking up the name Don Quixote de la Mancha. With his loyal squire, Sancho Panza, Don Quixote set out on a series of adventures, fighting windmills he believed to be giants and mistaking inns for castles. Though often misguided and delusional, Don Quixote's idealism and determination made him a beloved figure in Spanish folklore, representing the tension between reality and imagination."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_9",
+        "title": "The Legend of El Coco",
+        "genre": "Spanish Folktale",
+        "story": {
+            "en": "El Coco is a mythical creature from Spanish and Latin American folklore, used by parents to scare children into good behavior. It is said that El Coco, also known as 'The Bogeyman,' comes at night to take away children who misbehave or refuse to sleep. The creature is often described as a shapeless figure or a hairy monster that hides under beds or in closets, waiting to snatch naughty children. The legend of El Coco serves as a cautionary tale, teaching children the importance of obedience and discipline."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_10",
+        "title": "The Legend of La Giralda",
+        "genre": "Spanish Folktale",
+        "story": {
+            "en": "La Giralda is the famous bell tower of the Seville Cathedral in Spain, originally built as a minaret during the Almohad dynasty. According to legend, a great sorcerer named Ahmed built La Giralda to be so tall and magnificent that it could touch the sky. He used powerful magic to make the tower withstand any disaster. When the Christians reconquered Seville, they decided to preserve the tower, adding the belfry and Christian symbols. La Giralda became a symbol of the city and a testament to the blend of Christian and Muslim heritage in Spain."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_11",
+        "title": "Rumpelstiltskin",
+        "genre": "German Folktale",
+        "story": {
+            "en": "Once upon a time, there was a poor miller who had a beautiful daughter. In an attempt to impress the king, the miller lied and said that his daughter could spin straw into gold. The king, intrigued, summoned the daughter to his castle and locked her in a room filled with straw, demanding that she spin it into gold by morning. The girl was distraught, knowing she could not perform such a task, when suddenly, a strange little man appeared and offered to spin the straw into gold in exchange for something of value. The girl gave him her necklace, and the little man kept his promise. The next night, the king demanded more gold, and the little man returned, this time asking for the girl's ring. On the third night, the king demanded even more gold, and the little man asked for the girl's firstborn child in exchange. Desperate, the girl agreed. When she later became queen and had a child, the little man returned to claim his prize. However, he agreed to spare the child if the queen could guess his name. After many attempts, the queen finally discovered the little man's name—Rumpelstiltskin—and he disappeared in a fit of rage, never to be seen again."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_12",
+        "title": "Hansel and Gretel",
+        "genre": "German Folktale",
+        "story": {
+            "en": "Hansel and Gretel were the children of a poor woodcutter. When a great famine struck the land, their wicked stepmother convinced their father to abandon them in the forest. Hansel and Gretel left a trail of breadcrumbs to find their way back, but birds ate the crumbs, leaving them lost. They stumbled upon a house made of candy and gingerbread, owned by a wicked witch who lured them inside to eat them. However, the clever children outwitted the witch, pushing her into her own oven and escaping with her treasure. They returned home to their father, who had since regretted his actions, and they all lived happily ever after."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_13",
+        "title": "The Pied Piper of Hamelin",
+        "genre": "German Folktale",
+        "story": {
+            "en": "The town of Hamelin was overrun with rats, and the townspeople were desperate for a solution. A mysterious piper dressed in multicolored clothing appeared, offering to rid the town of its rats in exchange for a large sum of money. The townspeople agreed, and the piper played his magical flute, leading the rats into the Weser River, where they drowned. However, the townspeople refused to pay the piper. In revenge, the piper played his flute again, this time leading the town's children into a cave, where they disappeared forever. The legend serves as a warning about the consequences of breaking promises."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_14",
+        "title": "Snow White",
+        "genre": "German Folktale",
+        "story": {
+            "en": "Snow White was a beautiful princess whose stepmother, the Evil Queen, was jealous of her beauty. The Queen ordered a huntsman to take Snow White into the forest and kill her, but the huntsman couldn't bring himself to do it and let her go. Snow White found refuge in the home of seven dwarfs, who welcomed her. The Queen discovered that Snow White was still alive and attempted to kill her with a poisoned apple. Snow White fell into a deep sleep, but a prince who had fallen in love with her broke the curse with a kiss. Snow White awoke, and they lived happily ever after."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_15",
+        "title": "The Bremen Town Musicians",
+        "genre": "German Folktale",
+        "story": {
+            "en": "A donkey, a dog, a cat, and a rooster, all old and unwanted by their owners, decided to run away and become musicians in the town of Bremen. On their journey, they came across a band of robbers living in a house. The animals stood on each other's backs and made a terrible noise, scaring the robbers away. The animals moved into the house and lived together happily, never reaching Bremen but finding a new life free from their past hardships."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_16",
+        "title": "La Belle et la Bête",
+        "genre": "French Folktale",
+        "story": {
+            "en": "Once upon a time, a wealthy merchant had three daughters. The youngest, named Belle, was kind and beautiful. One day, the merchant lost all his wealth and was forced to live in the countryside with his daughters. During a trip to regain his fortune, the merchant became lost in a forest and stumbled upon a grand castle. Inside, he found food and shelter, but as he left, he picked a rose for Belle. This angered the castle's owner, a fearsome Beast, who demanded the merchant's life in exchange for the rose. To save her father, Belle offered to take his place. As she lived with the Beast, she discovered that he was not as terrifying as he seemed and grew fond of him. Eventually, Belle's love broke the spell that had turned the Beast into a monster, revealing him to be a handsome prince. They lived happily ever after, teaching that true beauty lies within."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_17",
+        "title": "Little Red Riding Hood",
+        "genre": "French Folktale",
+        "story": {
+            "en": "A little girl named Red Riding Hood was sent by her mother to visit her grandmother, bringing her a basket of food. On her way, she met a wolf who asked where she was going. Red Riding Hood innocently told him, and the wolf hurried to the grandmother's house, ate her, and disguised himself in her clothes. When Red Riding Hood arrived, she noticed that her 'grandmother' looked different. The wolf then tried to eat Red Riding Hood, but a passing hunter heard her cries and came to the rescue, killing the wolf and saving both Red Riding Hood and her grandmother."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_18",
+        "title": "Cinderella",
+        "genre": "French Folktale",
+        "story": {
+            "en": "Cinderella was a kind and beautiful girl who lived with her cruel stepmother and stepsisters. They forced her to do all the housework and treated her poorly. One day, the prince of the kingdom announced a grand ball, and Cinderella's stepsisters were invited, but she was not. However, Cinderella's Fairy Godmother appeared and magically transformed her rags into a beautiful gown, complete with glass slippers. She went to the ball and danced with the prince, but had to leave before midnight when the magic wore off. In her haste, she left behind one glass slipper. The prince searched the kingdom for the girl who fit the slipper, and when he found Cinderella, they were married and lived happily ever after."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_19",
+        "title": "Bluebeard",
+        "genre": "French Folktale",
+        "story": {
+            "en": "Bluebeard was a wealthy and powerful man known for his blue-colored beard. He married many women, but they all mysteriously disappeared. When he married his latest wife, he gave her the keys to all his rooms but forbade her from entering one in particular. Curiosity got the better of her, and she opened the forbidden door, discovering the bodies of Bluebeard's previous wives. Terrified, she managed to delay Bluebeard's wrath until her brothers arrived and killed him, saving her from his murderous intentions."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_20",
+        "title": "Sleeping Beauty",
+        "genre": "French Folktale",
+        "story": {
+            "en": "A king and queen, after many years of longing, had a beautiful daughter. To celebrate, they held a grand feast and invited fairies to bless the child. However, one fairy, who was not invited, cursed the princess, predicting that she would prick her finger on a spindle and die. Another fairy altered the curse so that the princess would only fall into a deep sleep for 100 years. The curse came true, but after 100 years, a prince discovered the sleeping princess and kissed her, breaking the spell. They married and lived happily ever after."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_21",
+        "title": "The Tale of Tsar Saltan",
+        "genre": "Russian Folktale",
+        "story": {
+            "en": "Tsar Saltan married a beautiful woman, and they soon had a son named Gvidon. However, the Tsar's wicked sisters-in-law were jealous and conspired to have the Tsarina and her son cast into the sea. The mother and child survived and washed ashore on a magical island. Gvidon grew up strong and brave, eventually saving a swan that transformed into a beautiful princess. With the help of the magical creatures on the island, Gvidon returned to his father's kingdom and revealed the truth. The wicked sisters were punished, and Gvidon and his mother were reunited with Tsar Saltan, living happily ever after."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_22",
+        "title": "The Feather of Finist the Falcon",
+        "genre": "Russian Folktale",
+        "story": {
+            "en": "A poor merchant had three daughters, and the youngest, Maria, was the most beautiful and kind. One day, Maria asked her father to bring her the feather of Finist the Falcon, a magical bird. The father found the feather, and when Maria held it, Finist the Falcon appeared, transforming into a handsome man at night. They fell in love, but her jealous sisters ruined their happiness by driving Finist away. Maria embarked on a perilous journey to find him, facing many challenges. In the end, she found Finist, and her love broke the spell that bound him. They married and lived in happiness."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_23",
+        "title": "The Wise Little Girl",
+        "genre": "Russian Folktale",
+        "story": {
+            "en": "A poor peasant had a clever daughter who could solve any problem. One day, the Tsar set a challenge: to come to his palace neither on foot nor on horseback, neither dressed nor undressed, and neither bringing a gift nor empty-handed. The clever girl arrived riding a goat, wrapped in a fishing net, and carrying a bird in one hand. The Tsar was so impressed by her wisdom that he made her his advisor. The girl used her wit to outsmart the Tsar's greedy ministers, proving that intelligence and cleverness could triumph over wealth and power."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_24",
+        "title": "The Stone Flower",
+        "genre": "Russian Folktale",
+        "story": {
+            "en": "Danila, a talented stone carver, became obsessed with creating the perfect piece of art. He heard of a mythical Stone Flower that could teach him the secrets of his craft. Danila journeyed to the realm of the Mistress of the Copper Mountain, who guarded the Stone Flower. She allowed him to see the flower, but in exchange, he had to stay with her forever. However, Danila's love for his fiancée, Katya, was stronger, and with her love and courage, he managed to return home. The Mistress granted him mastery over stone but allowed him to leave her domain, reuniting him with Katya."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_25",
+        "title": "The Tale of the Golden Cockerel",
+        "genre": "Russian Folktale",
+        "story": {
+            "en": "Tsar Dodon ruled his kingdom with fear but was always worried about enemies. An astrologer gave him a golden cockerel that would crow to warn of danger. In return, the astrologer asked for any favor he desired. The cockerel served the Tsar well until one day it crowed, signaling danger from the east. Tsar Dodon led his army but found nothing. On his return, the astrologer asked for the Tsar's bride as his reward. Angry, Tsar Dodon struck the astrologer, but the golden cockerel pecked the Tsar to death, fulfilling the astrologer's prophecy that greed and broken promises lead to downfall."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_26",
+        "title": "El Pozo Amargo (The Bitter Well)",
+        "genre": "Spanish Folktale",
+        "story": {
+            "en": "In Toledo, Spain, there was a well known as El Pozo Amargo, or The Bitter Well. The legend tells of a young Christian girl and a Jewish boy who fell deeply in love. Their love was forbidden by their families, and one night, the girl was found dead at the bottom of the well, having thrown herself in out of despair. Her lover was so heartbroken that he poisoned the well, cursing it so that all who drank from it would taste the bitterness of their forbidden love. The well became a symbol of tragic love and loss, and the story was passed down through generations."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_27",
+        "title": "The Legend of Sant Jordi",
+        "genre": "Spanish Folktale",
+        "story": {
+            "en": "Sant Jordi, or Saint George, is the patron saint of Catalonia. According to legend, a dragon terrorized the town of Montblanc, demanding human sacrifices. When the king's daughter was chosen as the next victim, Sant Jordi appeared on a white horse, fought the dragon, and killed it with his lance. From the dragon's blood, a rose bush grew, and Sant Jordi gave the princess a single red rose. To this day, Sant Jordi's Day is celebrated in Catalonia with the exchange of roses and books, symbolizing love and culture."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_28",
+        "title": "The Legend of La Encantada",
+        "genre": "Spanish Folktale",
+        "story": {
+            "en": "In the region of Murcia, Spain, there is a legend of La Encantada, a beautiful Moorish princess who was cursed to remain hidden in a cave, guarding her father's treasures. The curse could only be broken by a man who was pure of heart and could resist her beauty. Many men tried to rescue her, but they all succumbed to her charms and were turned to stone. It is said that La Encantada still waits in her cave, and on the night of San Juan, she appears to lure new victims, hoping one day to find her true savior."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_29",
+        "title": "The Legend of the Lovers of Teruel",
+        "genre": "Spanish Folktale",
+        "story": {
+            "en": "In the city of Teruel, there lived two lovers, Diego and Isabel, who were deeply in love but of different social standings. Diego went to seek his fortune, promising to return in five years to marry Isabel. When he returned, he found Isabel married to another man, believing Diego had died. Diego begged Isabel for a kiss, but she refused out of loyalty to her husband. Heartbroken, Diego died at her feet. At his funeral, Isabel kissed him and collapsed dead beside him. The lovers were buried together, and their story became a symbol of eternal love and tragedy."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_30",
+        "title": "La Fuente de los 25 Caños",
+        "genre": "Spanish Folktale",
+        "story": {
+            "en": "In the town of Navarrés, there is a fountain known as La Fuente de los 25 Caños (The Fountain of the 25 Spouts). According to legend, the fountain was created by a young woman who prayed for a miracle to bring water to her drought-stricken village. An angel appeared and granted her wish, but warned her that the fountain's water would only flow as long as the villagers remained pure and kind-hearted. For generations, the fountain brought life to the village, but when the people became greedy and selfish, the water stopped flowing, serving as a reminder of the importance of virtue and community."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_31",
+        "title": "The Fisherman and His Wife",
+        "genre": "German Folktale",
+        "story": {
+            "en": "A poor fisherman caught a magical fish that could grant wishes. Out of kindness, he released the fish. His wife, greedy and unsatisfied with their life, urged him to wish for a better home. The fish granted the wish, but as the wife demanded more—wealth, power, and finally to be ruler of the universe—the fish became annoyed and eventually reversed all the wishes, leaving the couple back in their humble hut. The tale is a moral lesson about the dangers of greed and the importance of contentment."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_32",
+        "title": "The Seven Ravens",
+        "genre": "German Folktale",
+        "story": {
+            "en": "A poor peasant had seven sons and desperately wished for a daughter. When a daughter was finally born, the seven sons were sent to fetch water for her baptism but accidentally lost the jug. Their father, in anger, cursed them, and they were transformed into ravens. The daughter grew up and, upon learning of her brothers' fate, set out on a journey to rescue them. After facing many trials, she reached the glass mountain where her brothers were trapped, and through her courage and sacrifice, she broke the curse, turning the ravens back into her brothers."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_33",
+        "title": "The Golden Goose",
+        "genre": "German Folktale",
+        "story": {
+            "en": "A simpleton named Hans, who was always kind and generous, found a golden goose in the forest. Anyone who tried to touch the goose became stuck to it. As Hans walked through the town with the goose, a comical chain of people stuck to each other formed behind him. When Hans arrived at the palace, the king promised his daughter's hand in marriage to anyone who could make her laugh. The sight of the stuck-together people made the princess laugh, and Hans was rewarded with her hand in marriage and lived happily ever after."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_34",
+        "title": "The Wolf and the Seven Young Goats",
+        "genre": "German Folktale",
+        "story": {
+            "en": "A mother goat left her seven kids alone at home, warning them not to open the door to anyone. The big bad wolf tricked the kids into opening the door by disguising his voice. He devoured six of the kids, but the youngest hid and escaped. When the mother returned, the youngest kid told her everything, and together, they found the wolf sleeping. They cut open the wolf's belly, freed the six kids, and filled the wolf's stomach with stones. When the wolf woke up, he tried to flee but collapsed and died from the weight."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_35",
+        "title": "The Frog King",
+        "genre": "German Folktale",
+        "story": {
+            "en": "A young princess lost her golden ball in a well, and a frog offered to retrieve it in exchange for her companionship. The princess agreed, but once the ball was returned, she ran away, leaving the frog behind. The frog followed her to the palace, and the king insisted that she keep her promise. The princess reluctantly allowed the frog to eat from her plate and sleep on her pillow. The next morning, the frog transformed into a handsome prince, who had been cursed by an evil witch. The princess and the prince fell in love and were married."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_36",
+        "title": "The Little Red Hen",
+        "genre": "French Folktale",
+        "story": {
+            "en": "The Little Red Hen found some grains of wheat and asked her farm friends to help her plant them, but they all refused. She planted, harvested, and baked the wheat into bread all by herself. When the bread was ready, she asked who would help her eat it, and now everyone was eager to join. But the Little Red Hen refused to share, teaching them a lesson about the value of hard work and the consequences of laziness."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_37",
+        "title": "Riquet with the Tuft",
+        "genre": "French Folktale",
+        "story": {
+            "en": "Riquet was a prince born with great intelligence but a strange tuft of hair. An enchantress gave him the power to grant intelligence to the person he loved. At the same time, a princess was born with beauty but little wit. Riquet fell in love with her and gave her his intelligence in exchange for her promise to marry him. Over time, she grew to love Riquet for his kindness and wit, and when they married, he became handsome in her eyes, showing that true beauty comes from love and understanding."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_38",
+        "title": "Puss in Boots",
+        "genre": "French Folktale",
+        "story": {
+            "en": "A poor miller left his youngest son nothing but a cat. However, this was no ordinary cat. Puss in Boots was clever and resourceful, and he promised to make his master rich. The cat caught rabbits and presented them to the king as gifts from the 'Marquis of Carabas,' a title he invented for his master. Through clever tricks and deceptions, Puss in Boots managed to secure wealth, a castle, and even the hand of a princess for his master, proving that intelligence and cunning can overcome any obstacle."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_39",
+        "title": "Beauty and the Beast",
+        "genre": "French Folktale",
+        "story": {
+            "en": "Beauty, a kind and selfless girl, volunteered to live with a fearsome Beast in exchange for her father's freedom. Despite the Beast's frightening appearance, Beauty treated him with kindness and grew to love him. One day, Beauty returned home to visit her family, but when she saw in a dream that the Beast was dying of a broken heart, she rushed back to his side. Her love broke the spell that had turned the prince into a Beast, and they lived happily ever after, teaching the lesson that true beauty lies within."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
+    },
+    {
+        "id": "_40",
+        "title": "Little Thumb",
+        "genre": "French Folktale",
+        "story": {
+            "en": "Little Thumb was the youngest of seven brothers, small but very clever. When their parents, too poor to feed them, abandoned them in the forest, Little Thumb left a trail of breadcrumbs to find their way back. However, birds ate the crumbs, and they became lost. They stumbled upon a giant's house, and Little Thumb, using his wits, managed to save his brothers from being eaten by the giant. He stole the giant's magical boots and treasure, and they returned home, rich and safe, showing that intelligence and bravery are more valuable than size or strength."
+        },
+        "image": "https://i.pinimg.com/564x/d1/64/fc/d164fcdf87e24167f351402bb498e2a5.jpg"
     }
 ]
