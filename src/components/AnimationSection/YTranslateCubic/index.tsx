@@ -6,8 +6,7 @@ const YTranslateCubic = ({ children }: any) => {
     const isInView = useInView(ref, { once: true });
 
     return (
-        <section ref={ref} className="bg-gradient-to-b from-[#010509]  via-transparent to-transparent  "
-        >
+        <section ref={ref} >
             {children}
 
         </section>

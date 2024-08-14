@@ -20,8 +20,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <main className='bg-gradient-to-r from-black via-gray-900 to-black shadow-md backdrop-blur-md bg-opacity-30'>
       {pathname !== '/' && <Navbar />}
+      <div className=' bg-gradient-to-b from-black to-transparent '>
+     
       {children}
+      </div>
       <Footer />
+
     </main>
   );
 };
