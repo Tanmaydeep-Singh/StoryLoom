@@ -22,7 +22,7 @@ const { pathname } = useRouter();
   
       <div className="flex items-center">
         <Link href="/" className="text-white font-serif text-3xl font-bold mr-10">
-          stori<span className="text-gray-400">averse</span>
+        story<span className="text-gray-400">loom</span>
         </Link>
       </div>
       <Link href="/contact" className="bg-gradient-to-r from-blue-400 to-blue-500 text-white px-4 py-2 rounded-full shadow hover:shadow-lg transition duration-300">

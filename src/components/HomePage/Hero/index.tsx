@@ -1,6 +1,6 @@
 // components/Hero.tsx
 import { motion } from "framer-motion";
-import Navbar from "../Navbar";
+import Navbar from "../../Navbar";
 
 const Hero = () => {
   return (

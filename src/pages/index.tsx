@@ -1,13 +1,13 @@
 import { useAnimation, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
-import Hero from "@/components/Hero";
-import HighlightSection from "@/components/HighlightSection";
-import StoryCategorySection from "@/components/StorySection";
-import ParallaxAbout from "@/components/Parallex/About";
-import FeaturedStorie from "@/components/FeaturedStories";
-import FAQ from "@/components/FAQ";
+import Hero from "@/components/HomePage/Hero";
+import HighlightSection from "@/components/HomePage/HighlightSection";
+import StoryCategorySection from "@/components/HomePage/StorySection";
+import ParallaxAbout from "@/components/HomePage/Parallex/About";
+import FeaturedStorie from "@/components/HomePage/FeaturedStories";
+import FAQ from "@/components/HomePage/FAQ";
 import YTranslateCubic from "@/components/AnimationSection/YTranslateCubic";
-import ExploreSection from "@/components/ExploreSection";
+import ExploreSection from "@/components/HomePage/ExploreSection";
 
 export default function Home() {
   const controls = useAnimation();
