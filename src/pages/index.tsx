@@ -8,6 +8,7 @@ import FeaturedStorie from "@/components/HomePage/FeaturedStories";
 import FAQ from "@/components/HomePage/FAQ";
 import YTranslateCubic from "@/components/AnimationSection/YTranslateCubic";
 import ExploreSection from "@/components/HomePage/ExploreSection";
+import ContributeAsWriter from "@/components/HomePage/Contribute/Writer";
 
 export default function Home() {
   const controls = useAnimation();
@@ -59,6 +60,9 @@ export default function Home() {
 
         <section>
           <FeaturedStorie />
+        </section>
+        <section>
+          <ContributeAsWriter/>
         </section>
 
         <section className="my-10 md:mt-20">
