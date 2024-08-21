@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
 
         {/* Content */}
-        <div className="absolute z-10 flex flex-col items-center justify-center w-full h-full px-4 text-center text-white">
+        <div className="absolute z-10 flex flex-col items-center justify-center w-full h-[80%] px-4 text-center text-white">
           <h1 className="text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight tracking-wide">
             Discover, Read, and Learn Across Cultures.
           </h1>
