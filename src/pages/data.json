@@ -190,7 +190,7 @@
         "id": 17,
         "title": "The Timekeeper's Dilemma",
         "genre": "Science Fiction",
-        "image": "/timekeeper.jpg",
+        "image": "https://i.pinimg.com/564x/a7/35/30/a73530d2dc916a3abd98db6540f9f16b.jpg",
         "story": {
             "en": "In a world where time travel is a closely guarded secret, a young scientist named Elara invents a device that can manipulate time. However, her invention accidentally creates a temporal rift, causing multiple timelines to intersect. Elara must team up with versions of herself from different realities to fix the damage and prevent a catastrophic time collapse. As they navigate through past, present, and future, they face moral dilemmas and the consequences of altering events.",
             "es": "En un mundo donde los viajes en el tiempo son un secreto muy bien guardado, una joven científica llamada Elara inventa un dispositivo que puede manipular el tiempo. Sin embargo, su invención accidentalmente crea una grieta temporal, causando que múltiples líneas temporales se crucen. Elara debe unirse a versiones de sí misma de diferentes realidades para reparar el daño y evitar un colapso temporal catastrófico. A medida que navegan por el pasado, el presente y el futuro, se enfrentan a dilemas morales y las consecuencias de alterar los eventos.",
@@ -202,7 +202,7 @@
         "id": 18,
         "title": "The Serpent's Shadow",
         "genre": "Fantasy",
-        "image": "/serpent.jpg",
+        "image": "https://i.pinimg.com/564x/f6/aa/ba/f6aabae16ce7961243e8cedabe94fbe2.jpg",
         "story": {
             "en": "In a land where magic is forbidden, a young mage named Aria discovers an ancient prophecy about a great serpent that will bring destruction. To stop the serpent, Aria embarks on a quest to find the legendary Sword of Light, which is said to be the only weapon capable of defeating the creature. Along the way, she encounters mystical creatures, gains unexpected allies, and learns to harness her own powers. The journey tests her courage and conviction, ultimately leading to a final battle that will determine the fate of her world.",
             "es": "En una tierra donde la magia está prohibida, una joven maga llamada Aria descubre una antigua profecía sobre una gran serpiente que traerá destrucción. Para detener a la serpiente, Aria se embarca en una búsqueda para encontrar la legendaria Espada de Luz, que se dice que es la única arma capaz de derrotar a la criatura. En el camino, se encuentra con criaturas místicas, gana aliados inesperados y aprende a aprovechar sus propios poderes. El viaje pone a prueba su valor y convicción, llevándola finalmente a una batalla que determinará el destino de su mundo.",
@@ -214,7 +214,7 @@
         "id": 19,
         "title": "The Ghosts of Willow Creek",
         "genre": "Mystery",
-        "image": "/ghosts.jpg",
+        "image": "https://i.pinimg.com/564x/61/93/7d/61937da529d0fe46efc9f7da7026241f.jpg",
         "story": {
             "en": "In the quiet town of Willow Creek, strange occurrences have been happening at the old abandoned hotel. The townspeople believe the hotel is haunted by the ghosts of a family who disappeared mysteriously fifty years ago. Detective Jane Holloway is called in to investigate the case. As she digs deeper into the town's history, she uncovers hidden secrets and long-buried grudges. With the help of a local historian, Jane uncovers the truth about the family's fate and brings closure to the restless spirits.",
             "es": "En el tranquilo pueblo de Willow Creek, han estado ocurriendo cosas extrañas en el antiguo hotel abandonado. Los habitantes del pueblo creen que el hotel está embrujado por los fantasmas de una familia que desapareció misteriosamente hace cincuenta años. La detective Jane Holloway es llamada para investigar el caso. A medida que profundiza en la historia del pueblo, descubre secretos ocultos y rencores enterrados desde hace mucho tiempo. Con la ayuda de un historiador local, Jane descubre la verdad sobre el destino de la familia y trae paz a los espíritus inquietos.",
@@ -226,7 +226,7 @@
         "id": 20,
         "title": "The Art of Deception",
         "genre": "Thriller",
-        "image": "/art.jpg",
+        "image": "https://i.pinimg.com/564x/23/b6/a6/23b6a68a59b9a87eb259e0584ea3ff04.jpg",
         "story": {
             "en": "Renowned art thief Vincent Blackwood is known for his flawless heists and elusiveness. When he's hired to steal a priceless painting from a heavily guarded museum, he assembles a team of experts to pull off the ultimate heist. However, things take an unexpected turn when Vincent discovers that the painting is more than it seems—it holds a secret that could unravel a powerful crime syndicate. As the heist unfolds, Vincent must navigate double-crosses and deadly traps to uncover the truth and protect his team.",
             "es": "El renombrado ladrón de arte Vincent Blackwood es conocido por sus robos impecables y su elusividad. Cuando es contratado para robar una pintura inestimable de un museo fuertemente custodiado, reúne a un equipo de expertos para llevar a cabo el robo definitivo. Sin embargo, las cosas toman un giro inesperado cuando Vincent descubre que la pintura es más de lo que parece: contiene un secreto que podría desentrañar un poderoso sindicato del crimen. A medida que se desarrolla el robo, Vincent debe navegar por traiciones y trampas mortales para descubrir la verdad y proteger a su equipo.",
@@ -238,7 +238,7 @@
         "id": 21,
         "title": "The Wishing Tree",
         "genre": "Fantasy",
-        "image": "/wishing_tree.jpg",
+        "image": "https://i.pinimg.com/564x/28/ac/40/28ac404829bc0a9f61b9a61c7488d3b7.jpg",
         "story": {
             "en": "In the enchanted village of Eldoria, a magical tree known as the Wishing Tree grants one wish to anyone who ties a ribbon to its branches. Young Clara, an orphan with a kind heart, wishes for a family. Her wish sets off a chain of events that brings together people from all walks of life, each with their own desires and dreams. As the villagers' wishes intertwine, Clara discovers that the true magic lies in the connections they form and the love they share. The Wishing Tree becomes a symbol of hope and unity, changing the village forever.",
             "es": "En el encantado pueblo de Eldoria, un árbol mágico conocido como el Árbol de los Deseos concede un deseo a cualquiera que ate una cinta a sus ramas. La joven Clara, una huérfana con un corazón bondadoso, desea tener una familia. Su deseo desencadena una serie de eventos que unen a personas de todos los ámbitos de la vida, cada una con sus propios deseos y sueños. A medida que los deseos de los aldeanos se entrelazan, Clara descubre que la verdadera magia reside en las conexiones que forman y el amor que comparten. El Árbol de los Deseos se convierte en un símbolo de esperanza y unidad, cambiando el pueblo para siempre.",
@@ -250,7 +250,7 @@
         "id": 22,
         "title": "The Pirate's Code",
         "genre": "Adventure",
-        "image": "/thriller.jpg",
+        "image": "https://i.pinimg.com/564x/66/8c/49/668c491c80106f84c9eeab6bece31641.jpg",
         "story": {
             "en": "Captain Isabella Drake, the feared pirate queen of the Seven Seas, has always lived by her own rules. But when she discovers a map to the legendary treasure of Blackbeard, she knows she must find it before her rivals do. As she sets sail on her ship, The Stormbreaker, Isabella and her crew face treacherous waters, dangerous foes, and their own pasts. Along the way, Isabella must confront her own code of honor and decide what kind of pirate she truly wants to be. The journey leads to a fateful showdown on a mysterious island where the treasure lies hidden.",
             "es": "La capitana Isabella Drake, la temida reina pirata de los Siete Mares, siempre ha vivido según sus propias reglas. Pero cuando descubre un mapa del legendario tesoro de Barbanegra, sabe que debe encontrarlo antes que sus rivales. Mientras navega en su barco, The Stormbreaker, Isabella y su tripulación se enfrentan a aguas traicioneras, enemigos peligrosos y sus propios pasados. En el camino, Isabella debe confrontar su propio código de honor y decidir qué tipo de pirata realmente quiere ser. El viaje la lleva a un enfrentamiento decisivo en una isla misteriosa donde se esconde el tesoro.",
@@ -262,7 +262,7 @@
         "id": 23,
         "title": "The Alchemist's Apprentice",
         "genre": "Fantasy",
-        "image": "/alchemist.jpg",
+        "image": "https://i.pinimg.com/564x/1d/76/07/1d7607b55172865438cd1bd4532e0a6d.jpg",
         "story": {
             "en": "In a kingdom where alchemy is a revered science, a young apprentice named Marcus dreams of becoming a master alchemist. When his mentor is accused of a crime he didn't commit, Marcus sets out to clear his name. Along the way, he discovers a conspiracy that threatens the entire kingdom. Using his knowledge of alchemy, Marcus creates potions and artifacts to aid him in his quest. With the help of a rogue thief and a mysterious sorceress, he uncovers a plot that could change the course of history. The adventure tests Marcus's skills and courage, leading to a climactic battle that will determine the fate of the kingdom.",
             "es": "En un reino donde la alquimia es una ciencia venerada, un joven aprendiz llamado Marcus sueña con convertirse en un maestro alquimista. Cuando su mentor es acusado de un crimen que no cometió, Marcus se propone limpiar su nombre. En el camino, descubre una conspiración que amenaza a todo el reino. Utilizando su conocimiento de la alquimia, Marcus crea pociones y artefactos para ayudarlo en su búsqueda. Con la ayuda de un ladrón renegado y una misteriosa hechicera, descubre un complot que podría cambiar el curso de la historia. La aventura pone a prueba las habilidades y el valor de Marcus, llevando a una batalla climática que determinará el destino del reino.",
@@ -274,7 +274,7 @@
         "id": 24,
         "title": "The Stardust Chronicles",
         "genre": "Science Fiction",
-        "image": "/stardust.jpg",
+        "image": "https://i.pinimg.com/564x/d1/99/30/d19930f641af3a7c43faa110bd6b04d8.jpg",
         "story": {
             "en": "In a distant galaxy, the crew of the spaceship Stardust is on a mission to explore uncharted worlds. Captain Aria Vega leads a diverse team of explorers, scientists, and engineers as they encounter strange phenomena and alien civilizations. When they discover a planet with a powerful energy source, they must navigate political intrigue and moral dilemmas. The crew faces internal conflicts as they debate whether to harness the energy for their own benefit or protect the planet's inhabitants. As they uncover the truth about the energy's origin, they must make a decision that will shape the future of their galaxy.",
             "es": "En una galaxia distante, la tripulación de la nave espacial Stardust está en una misión para explorar mundos inexplorados. La capitana Aria Vega lidera un equipo diverso de exploradores, científicos e ingenieros mientras encuentran fenómenos extraños y civilizaciones alienígenas. Cuando descubren un planeta con una poderosa fuente de energía, deben navegar por intrigas políticas y dilemas morales. La tripulación enfrenta conflictos internos mientras debaten si deben aprovechar la energía para su propio beneficio o proteger a los habitantes del planeta. A medida que descubren la verdad sobre el origen de la energía, deben tomar una decisión que moldeará el futuro de su galaxia.",
@@ -286,7 +286,7 @@
         "id": 25,
         "title": "The Silent Echo",
         "genre": "Mystery",
-        "image": "/echo.jpg",
+        "image": "https://i.pinimg.com/564x/26/e6/0f/26e60f9e85a342a323545c0bea5c1294.jpg",
         "story": {
             "en": "In the small coastal town of Seabrook, a reclusive author named Nathaniel Grey is found dead in his home. The only clue is a cryptic note that reads, 'The silent echo holds the key.' Detective Olivia Bennett is called to solve the case, but as she delves into Nathaniel's past, she discovers a web of secrets and lies. The town is full of people with motives, from jealous rivals to long-lost relatives. Olivia must piece together the puzzle, using Nathaniel's books and personal writings as clues. As she gets closer to the truth, she uncovers a shocking revelation that changes everything she thought she knew about the town and its residents.",
             "es": "En el pequeño pueblo costero de Seabrook, un autor solitario llamado Nathaniel Grey es encontrado muerto en su casa. La única pista es una nota críptica que dice: 'El eco silencioso tiene la clave.' La detective Olivia Bennett es llamada para resolver el caso, pero a medida que profundiza en el pasado de Nathaniel, descubre una red de secretos y mentiras. El pueblo está lleno de personas con motivos, desde rivales celosos hasta familiares perdidos. Olivia debe armar el rompecabezas, utilizando los libros y escritos personales de Nathaniel como pistas. A medida que se acerca a la verdad, descubre una revelación impactante que cambia todo lo que creía saber sobre el pueblo y sus habitantes.",
@@ -298,7 +298,7 @@
         "id": 26,
         "title": "The Eternal Dance",
         "genre": "Romance",
-        "image": "/dance.jpg",
+        "image": "https://i.pinimg.com/564x/de/72/6c/de726c8a6953a485cf905a93870f9c2a.jpg",
         "story": {
             "en": "In the glamorous world of professional ballroom dancing, rising star Elena Morales has her sights set on winning the prestigious Grand Prix. When her partner is injured just weeks before the competition, Elena is paired with Alex, a talented but arrogant dancer with a reputation for being difficult. As they train together, their clashing personalities create tension, but they also discover a deep connection through their shared passion for dance. As they perfect their routine, Elena and Alex navigate the pressures of competition and the complexities of their growing feelings for each other. The story culminates in a breathtaking performance that leaves them questioning what truly matters—winning the competition or following their hearts.",
             "es": "En el glamoroso mundo de la danza de salón profesional, la estrella en ascenso Elena Morales tiene la vista puesta en ganar el prestigioso Grand Prix. Cuando su pareja se lesiona pocas semanas antes de la competencia, Elena es emparejada con Alex, un bailarín talentoso pero arrogante con fama de ser difícil. A medida que entrenan juntos, sus personalidades en conflicto crean tensión, pero también descubren una profunda conexión a través de su pasión compartida por la danza. Mientras perfeccionan su rutina, Elena y Alex navegan las presiones de la competencia y las complejidades de sus crecientes sentimientos el uno por el otro. La historia culmina en una actuación impresionante que los deja cuestionando qué es lo que realmente importa: ganar la competencia o seguir sus corazones.",
@@ -311,7 +311,7 @@
         "id": 27,
         "title": "The Shadow Thieves",
         "genre": "Fantasy",
-        "image": "/shadow.jpg",
+        "image": "https://i.pinimg.com/564x/6d/11/6f/6d116f5ff92ff67dad141f18f8e0016b.jpg",
         "story": {
             "en": "In the bustling city of Alarion, shadows have a life of their own. The city is protected by an order of shadow mages who can manipulate shadows to protect the people. When a group of rogue shadow thieves begins stealing shadows for their own gain, chaos ensues. Young apprentice mage Kael is tasked with stopping the thieves and restoring order. With the help of his mentor and a group of unlikely allies, Kael embarks on a journey through the city's dark underbelly. Along the way, he uncovers a conspiracy that threatens the balance of magic in Alarion. Kael must confront his own fears and master his abilities to save the city from a looming darkness.",
             "es": "En la bulliciosa ciudad de Alarion, las sombras tienen vida propia. La ciudad está protegida por una orden de magos de sombras que pueden manipular sombras para proteger a las personas. Cuando un grupo de ladrones de sombras renegados comienza a robar sombras para su propio beneficio, el caos se desata. El joven aprendiz de mago Kael tiene la tarea de detener a los ladrones y restaurar el orden. Con la ayuda de su mentor y un grupo de aliados inesperados, Kael se embarca en un viaje por el oscuro inframundo de la ciudad. A lo largo del camino, descubre una conspiración que amenaza el equilibrio de la magia en Alarion. Kael debe enfrentar sus propios miedos y dominar sus habilidades para salvar la ciudad de una oscuridad inminente.",
@@ -324,7 +324,7 @@
         "id": 28,
         "title": "The Phantom's Serenade",
         "genre": "Mystery",
-        "image": "/serenade.jpg",
+        "image": "https://i.pinimg.com/564x/dc/47/03/dc4703306af7867b20da6ea5b058461a.jpg",
         "story": {
             "en": "In the grand halls of the Royal Opera House, a series of mysterious accidents have been plaguing the performances. The superstitious performers believe it's the work of the Phantom, a ghostly figure said to haunt the opera house. Aspiring soprano Anna has just joined the company and quickly finds herself caught up in the intrigue. As she investigates the strange occurrences, she discovers a hidden world beneath the opera house, filled with secrets and hidden passages. With the help of the enigmatic stagehand, Erik, Anna uncovers a plot to sabotage the opera house. As she delves deeper, she must confront the Phantom and uncover the truth behind the legends.",
             "es": "En los majestuosos pasillos de la Royal Opera House, una serie de misteriosos accidentes han estado plagando las actuaciones. Los supersticiosos intérpretes creen que es obra del Fantasma, una figura fantasmal que se dice que ronda la ópera. La aspirante a soprano Anna acaba de unirse a la compañía y rápidamente se ve atrapada en la intriga. A medida que investiga los extraños sucesos, descubre un mundo oculto bajo la ópera, lleno de secretos y pasajes escondidos. Con la ayuda del enigmático tramoyista Erik, Anna descubre un complot para sabotear la ópera. A medida que profundiza, debe enfrentarse al Fantasma y descubrir la verdad detrás de las leyendas.",
@@ -337,7 +337,7 @@
         "id": 29,
         "title": "The Lunar Chronicles",
         "genre": "Science Fiction",
-        "image": "/lunar.jpg",
+        "image": "https://i.pinimg.com/736x/67/75/2d/67752d61dbd71790a8ae204a97080fb8.jpg",
         "story": {
             "en": "In the year 2275, humanity has established colonies on the moon. The Lunar Chronicles follows a group of astronauts and scientists who live and work in the lunar colony of New Hope. As they navigate the challenges of living on the moon, they uncover a mysterious signal coming from deep beneath the lunar surface. The signal leads them to an ancient alien artifact that holds the key to humanity's future. As they study the artifact, they must deal with political tensions, resource shortages, and personal conflicts. The story explores themes of exploration, survival, and the potential for first contact with extraterrestrial life.",
             "es": "En el año 2275, la humanidad ha establecido colonias en la luna. The Lunar Chronicles sigue a un grupo de astronautas y científicos que viven y trabajan en la colonia lunar de New Hope. A medida que navegan por los desafíos de vivir en la luna, descubren una señal misteriosa que proviene de lo profundo de la superficie lunar. La señal los lleva a un antiguo artefacto alienígena que contiene la clave para el futuro de la humanidad. Mientras estudian el artefacto, deben lidiar con tensiones políticas, escasez de recursos y conflictos personales. La historia explora temas de exploración, supervivencia y el potencial para el primer contacto con vida extraterrestre.",
@@ -350,7 +350,7 @@
         "id": 30,
         "title": "The Midnight Library",
         "genre": "Fantasy",
-        "image": "/midnight_library.jpg",
+        "image": "https://i.pinimg.com/564x/27/79/c1/2779c183651a4d596b49273719f46b66.jpg",
         "story": {
             "en": "In a quaint, sleepy town, there's a library that only opens at midnight. The Midnight Library is said to contain books that tell the stories of people's lives, including those that could have been. When Nora, a woman at a crossroads in her life, stumbles upon the library, she is given a chance to explore the different paths her life could have taken. Guided by the enigmatic librarian, Mrs. Elm, Nora journeys through a series of alternate realities, experiencing different careers, relationships, and adventures. As she navigates these lives, Nora must decide which version of herself she truly wants to be and come to terms with the choices she has made.",
             "es": "En un pintoresco y tranquilo pueblo, hay una biblioteca que solo abre a medianoche. Se dice que la Biblioteca de Medianoche contiene libros que cuentan las historias de las vidas de las personas, incluidas aquellas que podrían haber sido. Cuando Nora, una mujer en una encrucijada en su vida, tropieza con la biblioteca, se le da la oportunidad de explorar los diferentes caminos que su vida podría haber tomado. Guiada por la enigmática bibliotecaria, la Sra. Elm, Nora viaja a través de una serie de realidades alternas, experimentando diferentes carreras, relaciones y aventuras. Mientras navega por estas vidas, Nora debe decidir qué versión de sí misma realmente quiere ser y aceptar las decisiones que ha tomado.",
@@ -363,7 +363,7 @@
         "id": 31,
         "title": "The Enchanted Forest",
         "genre": "Fantasy",
-        "image": "/forest.jpg",
+        "image": "https://i.pinimg.com/564x/e4/53/58/e45358cf1f02584aa520361209f920ca.jpg",
         "story": {
             "en": "The Enchanted Forest is a place of wonder and magic, home to mystical creatures and ancient spirits. When a young girl named Lily stumbles into the forest, she discovers that it is in danger. The magical barriers protecting the forest are weakening, and a dark force threatens to consume it. With the help of a talking fox, a wise old tree, and a mischievous fairy, Lily embarks on a quest to restore the forest's magic. Along the way, she learns about the forest's history and the balance of nature. The journey tests Lily's courage and determination as she faces challenges and uncovers her own hidden potential."
         }
@@ -372,7 +372,7 @@
         "id": 32,
         "title": "The Celestial Journey",
         "genre": "Science Fiction",
-        "image": "/celestial.jpg",
+        "image": "https://i.pinimg.com/564x/93/cb/90/93cb90c258cdf5f281f3c99b6fabcfe1.jpg",
         "story": {
             "en": "In a future where space travel is commonplace, a young explorer named Leo joins the crew of the starship Voyager on a mission to chart a newly discovered star system. The crew includes scientists, engineers, and adventurers, all eager to make new discoveries. As they journey through the stars, they encounter strange phenomena, alien species, and uncharted planets. The crew must work together to overcome the challenges of deep space, including hostile environments and mysterious anomalies. The story explores themes of exploration, teamwork, and the quest for knowledge, culminating in a breathtaking discovery that changes humanity's understanding of the universe."
         }
@@ -381,7 +381,7 @@
         "id": 33,
         "title": "The Dragon's Pact",
         "genre": "Fantasy",
-        "image": "/dragon.jpg",
+        "image": "https://i.pinimg.com/564x/08/f4/2e/08f42ee2b854ba7c7dae533adf990f4a.jpg",
         "story": {
             "en": "In a land where dragons and humans once lived in harmony, a centuries-old pact keeps the peace. However, the fragile alliance is threatened when a rogue dragon begins attacking villages. The kingdom's rulers suspect that the dragon attacks are a prelude to war. A young knight named Eira, who has always admired dragons, is tasked with finding the rogue dragon and uncovering the truth. With the help of a wise old dragon named Seraphis, Eira embarks on a journey to prevent conflict and restore the balance between humans and dragons. The quest challenges her beliefs and forces her to confront her own biases, ultimately leading to a revelation about the true nature of the dragon attacks."
         }
@@ -390,7 +390,7 @@
         "id": 34,
         "title": "The Labyrinth of Echoes",
         "genre": "Mystery",
-        "image": "/labyrinth.jpg",
+        "image": "https://i.pinimg.com/564x/a8/92/26/a8922607b9dd34fc66a3f2800b70a12e.jpg",
         "story": {
             "en": "Deep beneath the bustling city of Arkanis lies a hidden labyrinth of ancient tunnels and chambers. When a series of bizarre occurrences start affecting the city's residents, archaeologist Dr. Amelia Thornton is called to investigate. She discovers that the labyrinth is more than just a historical relic; it's a living entity that responds to sound. As Amelia and her team explore the labyrinth, they uncover echoes of the past—ghostly apparitions and voices trapped in time. The deeper they go, the more they realize that the labyrinth holds a powerful secret connected to the city's dark history. Amelia must solve the mystery before the labyrinth consumes them all."
         }
@@ -399,7 +399,7 @@
         "id": 35,
         "title": "The Forgotten Kingdom",
         "genre": "Fantasy",
-        "image": "/forgotten_kingdom.jpg",
+        "image": "https://i.pinimg.com/736x/d1/99/30/d19930f641af3a7c43faa110bd6b04d8.jpg",
         "story": {
             "en": "Long ago, the kingdom of Eldoria was erased from history by a powerful curse. Now, only a few remember its existence, and the kingdom lies hidden behind a magical barrier. Young historian Elinor, who has always been fascinated by the legend of Eldoria, stumbles upon an ancient map that reveals the way to the forgotten kingdom. Determined to uncover the truth, she sets out on a perilous journey. Along the way, Elinor encounters mythical creatures, ancient guardians, and other adventurers seeking the kingdom's treasures. As she ventures deeper, she discovers that the kingdom's fate is tied to her own past. Elinor must break the curse and restore Eldoria to its former glory."
         }
@@ -408,7 +408,7 @@
         "id": 36,
         "title": "The Quantum Paradox",
         "genre": "Science Fiction",
-        "image": "/quantum_paradox.jpg",
+        "image": "https://i.pinimg.com/564x/af/f3/49/aff34995ae2b5d7664ae525cbbe322a8.jpg",
         "story": {
             "en": "In the not-so-distant future, humanity has unlocked the secrets of quantum computing, enabling incredible technological advancements. Dr. Alex Morgan, a brilliant physicist, leads a team working on a revolutionary quantum AI. However, during an experiment, they accidentally create a paradox that threatens the fabric of reality. As alternate timelines and parallel universes begin to converge, Alex must navigate a complex web of possibilities to find a solution. With the help of a quantum engineer and a rogue time traveler, Alex uncovers a conspiracy that reaches far beyond their own timeline. The race is on to fix the paradox before reality itself unravels."
         }
@@ -417,7 +417,7 @@
         "id": 37,
         "title": "The Cursed Amulet",
         "genre": "Fantasy",
-        "image": "/cursed_amulet.jpg",
+        "image": "https://i.pinimg.com/564x/d6/b5/0a/d6b50ad4a33d3678a64c0260bf27c369.jpg",
         "story": {
             "en": "In the ancient city of Veridia, a powerful sorcerer named Malik wields a cursed amulet that grants him immense power but at a great cost. When the amulet falls into the hands of a young street thief named Zara, she finds herself imbued with the sorcerer's powers. However, the curse also begins to take a toll on her. Desperate to break the curse and free herself from its grip, Zara seeks the help of a mysterious sage. As she delves into the dark history of the amulet, she uncovers a prophecy that foretells the rise of a new ruler. Zara must choose between using the amulet's power for her own gain or sacrificing it to save the city from a dark fate."
         }
@@ -426,7 +426,7 @@
         "id": 38,
         "title": "The Last Guardian",
         "genre": "Adventure",
-        "image": "/last_guardian.jpg",
+        "image": "https://i.pinimg.com/564x/2c/4f/e2/2c4fe2f454eeb99d4844ccbbf16435c8.jpg",
         "story": {
             "en": "In a post-apocalyptic world, remnants of an ancient civilization lie buried beneath the sands. A young scavenger named Kai stumbles upon an ancient relic known as the Guardian Stone, which is said to possess the power to protect or destroy. As rumors of the stone spread, Kai becomes the target of ruthless factions seeking to harness its power. With the help of an enigmatic traveler and a skilled mechanic, Kai embarks on a journey to find the legendary Last Guardian, the only one who can unlock the stone's true potential. Along the way, they face dangerous creatures, treacherous landscapes, and moral dilemmas. The journey tests their resolve and leads to a final confrontation that will determine the fate of their world."
         }
@@ -435,7 +435,7 @@
         "id": 39,
         "title": "The Invisible City",
         "genre": "Mystery",
-        "image": "/invisible_city.jpg",
+        "image": "https://i.pinimg.com/736x/16/c8/ad/16c8ade8b7aceef39886b3e3d9d3b7df.jpg",
         "story": {
             "en": "In the heart of a bustling metropolis, rumors persist of an invisible city that only appears to those who seek it. Journalist Ethan Ross, intrigued by the legend, sets out to find the elusive city. As he follows a series of cryptic clues, Ethan encounters a secret society dedicated to protecting the city's existence. The society's members, known as the Watchers, possess the ability to become invisible at will. Ethan's investigation leads him into a world of espionage and hidden agendas. As he uncovers the city's secrets, he realizes that the city's invisibility is not just a physical phenomenon but a metaphor for the hidden truths and corruption in society. Ethan must decide whether to expose the city's existence or protect its secrets."
         }
@@ -444,7 +444,7 @@
         "id": 40,
         "title": "The Starbound Odyssey",
         "genre": "Science Fiction",
-        "image": "/starbound.jpg",
+        "image": "https://i.pinimg.com/564x/0d/90/35/0d9035b661356c8a2b1685ebd88e349e.jpg",
         "story": {
             "en": "In a galaxy where space travel is the norm, a group of explorers sets out on the starship Odyssey to chart a course to the distant star system known as the Seven Suns. Captain Lyra Orion leads a diverse crew of scientists, engineers, and adventurers on a mission to explore uncharted planets and discover new life forms. Along the way, they encounter strange cosmic phenomena, ancient alien artifacts, and other spacefaring civilizations. The journey is filled with wonder and danger, testing the crew's resolve and unity. As they approach their destination, they uncover a hidden threat that could destabilize the entire galaxy. The crew must work together to avert a catastrophe and ensure the continued exploration of the stars."
         }

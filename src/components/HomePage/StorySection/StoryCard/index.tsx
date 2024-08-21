@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -9,8 +10,7 @@ interface StoryCardProps {
 export default function StoryCard({ title, imageUrl }: StoryCardProps) {
   return (
     <motion.div
-      whileHover={{ scale: 1.1 }} // Slightly larger scale for hover effect
-      whileTap={{ scale: 0.95 }}  // Slightly smaller scale for tap effect
+      whileHover={{ scale: 1.1 }} 
       className="relative w-[160px] h-[160px] md:w-[225px] md:h-[350px] bg-background-card rounded-lg overflow-hidden m-2 shadow-lg transform transition-transform duration-300"
     >
       <Link href={`/${title}`} passHref>
@@ -28,3 +28,4 @@ export default function StoryCard({ title, imageUrl }: StoryCardProps) {
     </motion.div>
   );
 }
+
