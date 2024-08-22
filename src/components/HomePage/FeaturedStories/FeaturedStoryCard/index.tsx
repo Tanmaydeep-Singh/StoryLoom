@@ -23,6 +23,7 @@ const FeaturedStoryCard = ({ id, image, title, story }: StoryCard) => {
                             layout="fill"
                             objectFit="cover"
                             className="rounded-t-xl"
+                            priority={true}
                         />
                     </div>
                     <div className="p-5 bg-background-card">

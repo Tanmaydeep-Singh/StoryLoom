@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import Image from "next/image";
 
 interface StoryCardProps {
   title: string;
@@ -13,10 +13,13 @@ export default function StoryCard({ title, imageUrl }: StoryCardProps) {
     >
       <Link href={`/${title}`} passHref>
         <div className="w-full h-full cursor-pointer">
-          <img
+          <Image
             src={imageUrl}
             alt={title}
-            className="w-full h-full object-cover"
+            layout="fill"
+            objectFit="cover"
+            className="w-full h-full"
+            priority={true}  // This ensures lazy loading is enabled.
           />
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-2 backdrop-blur-md">
             <h1 className="text-white text-center text-sm md:text-base font-semibold">{title}</h1>
@@ -26,4 +29,3 @@ export default function StoryCard({ title, imageUrl }: StoryCardProps) {
     </div>
   );
 }
-
