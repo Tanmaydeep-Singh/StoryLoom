@@ -38,7 +38,7 @@ export default function Home() {
         <meta name="description" content="Discover stories and improve your language skills with StoryLoom." />
         <meta property="og:title" content="StoryLoom" />
         <meta property="og:description" content="Discover stories and improve your language skills with StoryLoom." />
-        <meta property="og:image" content="/images/storyloom-thumbnail.jpg" />
+        <meta property="og:image" content="/Logos/logo.png" />
         <link rel="canonical" href="https://www.storyloom.com/your-page" />
       </Head>    <main className="relative">
         <div ref={heroRef} className="relative">
