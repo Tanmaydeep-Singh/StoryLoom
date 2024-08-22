@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <h2 className="text-xl font-semibold mb-4 text-primary-100">About Us</h2>
             <p className="text-primary-200">
-              StoryVerse is your go-to platform for discovering and sharing captivating stories. Explore a world of fiction and non-fiction, translated into multiple languages, and immerse yourself in the magic of storytelling.
+              StoryLoom is your go-to platform for discovering and sharing captivating stories. Explore a world of fiction and non-fiction, translated into multiple languages, and immerse yourself in the magic of storytelling.
             </p>
           </div>
 
@@ -23,13 +23,13 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/stories" className="hover:text-accent-300 transition-colors duration-300">Stories
+                <Link href="/explore" className="hover:text-accent-300 transition-colors duration-300">Stories
                 </Link>
               </li>
-              <li>
-                <Link href="/about" className="hover:text-accent-300 transition-colors duration-300">About
+              {/* <li>
+                <Link href="/about" className="hover:text-accent-300 transition-colors duration-300">Folktails
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/contact" className="hover:text-accent-300 transition-colors duration-300">Contact
                 </Link>

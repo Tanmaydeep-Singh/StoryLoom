@@ -43,31 +43,35 @@ export default function Home() {
 
       <div className="flex min-h-screen flex-col items-center justify-between md:pt-0 md:p-24">
         <YTranslateCubic>
-          <ExploreSection/>
+          <ExploreSection />
         </YTranslateCubic>
 
         <YTranslateCubic>
           <HighlightSection />
         </YTranslateCubic>
 
-        <section className="my-10 md:mt-20">
+        <YTranslateCubic>
           <StoryCategorySection />
-        </section>
+        </YTranslateCubic>
 
-        <section className="my-10 md:mt-20">
+
+        <YTranslateCubic>
           <ParallaxAbout />
-        </section>
+        </YTranslateCubic>
 
-        <section>
+        <YTranslateCubic>
+
           <FeaturedStorie />
-        </section>
-        <section>
-          <ContributeAsWriter/>
-        </section>
+        </YTranslateCubic>
 
-        <section className="my-10 md:mt-20">
+        <YTranslateCubic>
+
+          <ContributeAsWriter />
+        </YTranslateCubic>
+
+        <YTranslateCubic>
           <FAQ />
-        </section>
+        </YTranslateCubic>
       </div>
     </main>
   );
