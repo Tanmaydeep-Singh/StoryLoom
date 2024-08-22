@@ -9,6 +9,7 @@ import FAQ from "@/components/HomePage/FAQ";
 import YTranslateCubic from "@/components/AnimationSection/YTranslateCubic";
 import ExploreSection from "@/components/HomePage/ExploreSection";
 import ContributeAsWriter from "@/components/HomePage/Contribute/Writer";
+import Head from "next/head";
 
 export default function Home() {
   const controls = useAnimation();
@@ -31,44 +32,54 @@ export default function Home() {
   }, [controls]);
 
   return (
-    <main className="relative">
-      <div ref={heroRef} className="relative">
-        <Hero />
-        <motion.div
-          className="absolute inset-0 bg-black"
-          initial={{ opacity: 0 }}
-          animate={controls}
-        />
-      </div>
+    <>
+      <Head>
+        <title>StoryLoom - Read & Learn Languages</title>
+        <meta name="description" content="Discover stories and improve your language skills with StoryLoom." />
+        <meta property="og:title" content="StoryLoom" />
+        <meta property="og:description" content="Discover stories and improve your language skills with StoryLoom." />
+        <meta property="og:image" content="/images/storyloom-thumbnail.jpg" />
+        <link rel="canonical" href="https://www.storyloom.com/your-page" />
+      </Head>    <main className="relative">
+        <div ref={heroRef} className="relative">
+          <Hero />
+          <motion.div
+            className="absolute inset-0 bg-black"
+            initial={{ opacity: 0 }}
+            animate={controls}
+          />
+        </div>
 
-      <div className="flex min-h-screen flex-col items-center justify-between md:pt-0 md:p-24">
-        <YTranslateCubic>
-          <ExploreSection/>
-        </YTranslateCubic>
+        <div className="flex min-h-screen flex-col items-center justify-between md:pt-0 md:p-24">
+          <YTranslateCubic>
+            <ExploreSection />
+          </YTranslateCubic>
 
-        <YTranslateCubic>
-          <HighlightSection />
-        </YTranslateCubic>
+          <YTranslateCubic>
+            <HighlightSection />
+          </YTranslateCubic>
 
-        <section className="my-10 md:mt-20">
-          <StoryCategorySection />
-        </section>
+          <section className="my-10 md:mt-20">
+            <StoryCategorySection />
+          </section>
 
-        <section className="my-10 md:mt-20">
-          <ParallaxAbout />
-        </section>
+          <section className="my-10 md:mt-20">
+            <ParallaxAbout />
+          </section>
 
-        <section>
-          <FeaturedStorie />
-        </section>
-        <section>
-          <ContributeAsWriter/>
-        </section>
+          <section>
+            <FeaturedStorie />
+          </section>
+          <section>
+            <ContributeAsWriter />
+          </section>
 
-        <section className="my-10 md:mt-20">
-          <FAQ />
-        </section>
-      </div>
-    </main>
+          <section className="my-10 md:mt-20">
+            <FAQ />
+          </section>
+        </div>
+      </main>
+    </>
+
   );
 }
