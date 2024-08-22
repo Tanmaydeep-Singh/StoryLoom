@@ -12,7 +12,7 @@ export default function Document() {
         <meta property="og:title" content="Storyloom - Explore and Contribute to Global Folktales" />
         <meta property="og:description" content="Discover and share folktales from various cultures with Storyloom. Join a community of readers and writers to explore the world through stories." />
         <meta property="og:image" content="/Logos/logo.png" />
-        <meta property="og:url" content="https://storyloom.com" />
+        <meta property="og:url" content="https://storyloom.in/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@storyloom" />

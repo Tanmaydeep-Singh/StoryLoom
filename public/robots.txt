@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://storyloom.in
+
+# Sitemaps
+Sitemap: https://storyloom.in/sitemap.xml
