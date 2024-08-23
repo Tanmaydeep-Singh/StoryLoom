@@ -1,38 +1,40 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [statusMessage, setStatusMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e:any) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = async (e:any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     setIsSubmitting(true);
-    console.log("message", formData.message)
 
-    // try {
-    //   const response = await fetch('/api/contact', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify(formData),
-    //   });
+    try {
+      const result = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        formData,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
+      );
 
-    //   if (response.ok) {
-    //     setStatusMessage('Your message has been sent successfully.');
-    //     setFormData({ name: '', email: '', message: '' });
-    //   } else {
-    //     setStatusMessage('Something went wrong. Please try again later.');
-    //   }
-    // } catch (error) {
-    //   setStatusMessage('An error occurred. Please try again later.');
-    // } finally {
-    //   setIsSubmitting(false);
-    // }
+      if (result.text === 'OK') {
+        setStatusMessage('Your message has been sent successfully.');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatusMessage('Something went wrong. Please try again later.');
+      }
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setStatusMessage('An error occurred. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
