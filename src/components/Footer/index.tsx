@@ -46,7 +46,7 @@ const Footer = () => {
               <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-75">
               <Image src="/Logos/x.svg" alt="Twitter" width={30} height={30} />
               </Link>
-              <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-75">
+              <Link href="https://www.instagram.com/_storyloom_/" target="_blank" rel="noopener noreferrer" className="hover:opacity-75">
               
                 <Image src="/Logos/instagram.svg" alt="Instagram" width={30} height={30}  className=' text-white'/>
               </Link>
