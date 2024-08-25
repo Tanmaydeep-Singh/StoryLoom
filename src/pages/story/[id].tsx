@@ -14,7 +14,7 @@ type LanguageCode = 'en' | 'es' | 'de'  | 'fr' | 'РУ';
 interface StoryDataInterface {
   id: string;
   title: string;
-  genre:string;
+  genre: string;
   story: Record<LanguageCode, string>;
   image: string;
 }
@@ -67,7 +67,10 @@ export default function Story() {
       console.log('Web Share API is not supported in this browser.');
     }
   };
-  
+
+  const handleBack = () => {
+    router.back();
+  };
 
   return (
     <div className="min-h-screen py-12 flex flex-col items-center text-white">
@@ -107,6 +110,12 @@ export default function Story() {
           <div className="text-base sm:text-lg md:text-xl leading-relaxed">
             <p>{story}</p>
           </div>
+          <button
+            onClick={handleBack}
+            className="mt-6 px-4 py-2 bg-gradient-to-r from-blue-400 to-blue-500 text-white rounded-lg transition-all duration-300"
+          >
+            Back
+          </button>
         </div>
       </div>
     </div>
