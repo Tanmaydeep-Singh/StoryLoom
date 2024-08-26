@@ -34,9 +34,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>StoryLoom - Read & Learn Languages</title>
+        <title>StoryLoom - Discover the World Around</title>
+
         <meta name="description" content="Discover stories and improve your language skills with StoryLoom." />
-        <meta property="og:title" content="StoryLoom" />
+        <meta property="og:title" content="StoryLoom - Discover the World Around" />
         <meta property="og:description" content="Discover stories and improve your language skills with StoryLoom." />
         <meta property="og:image" content="/Logos/logo.png" />
         <link rel="canonical" href="https://storyloom.in/" />
