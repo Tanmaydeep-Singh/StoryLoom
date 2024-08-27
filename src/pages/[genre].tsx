@@ -12,9 +12,15 @@ const GenrePage = () => {
 
   const [selectedGenre, setSelectedGenre] = useState(genre || 'explore');
 
+  const genres = [
+    "All", "Adventure", "Romance", "Mystery", 
+    "Fantasy", "Science Fiction", "Thriller", 
+    "Horror", "Comedy"
+  ];
+
   let stories = storiesData;
 
-  if (selectedGenre !== 'explore') {
+  if (selectedGenre !== 'All') {
     stories = storiesData.filter((story) => story.genre == selectedGenre);
   }
 
@@ -37,16 +43,9 @@ const GenrePage = () => {
           onChange={handleGenreChange}
           className="p-2 rounded bg-gray-800 text-white"
         >
-          <option value="explore">All</option>
-          <option value="Adventure">Adventure</option>
-          <option value="Romance">Romance</option>
-          <option value="Mystery">Mystery</option>       
-          <option value="Fantasy">Fantasy</option>
-          <option value="Science Fiction">Sci-Fi</option>
-          <option value="Thriller">Thriller</option>
-          <option value="Horror">Horror</option>
-          <option value="Comedy">Comedy</option>
-          {/* Add more options as needed */}
+          {genres.map((genre) => (
+            <option key={genre} value={genre}>{genre}</option>
+          ))}
         </select>
       </div>
 

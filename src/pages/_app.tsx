@@ -13,6 +13,7 @@ const poppins = Poppins({
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <Layout>
+      
       <Component {...pageProps} />
     </Layout>
   );
