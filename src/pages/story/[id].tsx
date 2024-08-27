@@ -32,7 +32,7 @@ export default function Story() {
     const { id } = router.query;
 
     if (id) {
-      const storyData = (data as unknown as StoryDataInterface[]).find((s) => s.id === id);
+      const storyData = (data as unknown as StoryDataInterface[]).find((s) => s.id == id);
 
       setTimeout(() => {
         if (storyData) {
