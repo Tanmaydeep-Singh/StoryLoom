@@ -31,7 +31,7 @@ const FolktailsPage = () => {
   };
 
   return (
-    <div className="w-[80vw] mx-auto mt-8">
+    <div className="w-[80vw] mx-auto my-8 ">
       <h1 className="text-3xl lg:text-4xl font-bold text-white mb-2 capitalize"> Folktales</h1>
       <p className="text-xl text-gray-600 mb-6">{tagline}</p>
 
