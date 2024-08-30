@@ -31,7 +31,7 @@ const FolktailsPage: React.FC = () => {
   const tagline = "Dive into the timeless tales and magical legends from around the world.";
 
   const handleCountryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    router.push(`/folktails/${e.target.value}`);
+    router.push(`/folktales/${e.target.value}`);
   };
 
   return (
