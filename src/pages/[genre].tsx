@@ -1,16 +1,16 @@
-// pages/[genre].tsx
 import { useRouter } from 'next/router';
-import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import storiesData from './data.json';
+import { useState, useEffect } from 'react';
 import StoryCards from '@/components/StoryCards';
+import storiesData from './data.json';
+import SkeletonCard from '@/components/HomePage/SkeletonCard';
 
 const GenrePage = () => {
   const router = useRouter();
   const { genre } = router.query;
 
   const [selectedGenre, setSelectedGenre] = useState(genre || 'explore');
+  const [stories, setStories] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const genres = [
     "All", "Adventure", "Romance", "Mystery", 
@@ -18,25 +18,37 @@ const GenrePage = () => {
     "Horror", "Comedy"
   ];
 
-  let stories = storiesData;
+  let filteredStories = storiesData;
 
-  if (selectedGenre !== 'All') {
-    stories = storiesData.filter((story) => story.genre == selectedGenre);
-  }
+
+  useEffect(() => {
+    setLoading(true); 
+    setTimeout(() => {
+      let filteredStories = storiesData;
+
+      if (selectedGenre !== 'All') {
+        filteredStories = storiesData.filter(
+          (story) => story.genre == selectedGenre
+        );
+      }
+
+      
+      setLoading(false); 
+    }, );
+  }, [selectedGenre]);
 
   const handleGenreChange = (e: any) => {
     const newGenre = e.target.value;
     setSelectedGenre(newGenre);
-    router.push(`/${newGenre}`); // Navigate to the new genre page
+    router.push(`/${newGenre}`);
   };
 
   return (
-    <div className="w-[80vw] mx-auto my-8 ">
+    <div className="w-[80vw] mx-auto my-8">
       <h1 className="text-3xl lg:text-4xl font-bold text-white mb-2 capitalize">
         {selectedGenre} Stories
       </h1>
 
-      {/* Genre Dropdown */}
       <div className="mb-6">
         <select
           value={selectedGenre}
@@ -50,15 +62,19 @@ const GenrePage = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {stories.map((story) => (
-          <StoryCards
-            key={story.id}
-            image={story.image}
-            title={story.title}
-            story={story.story}
-            id={story.id}
-          />
-        ))}
+        {loading ? (
+          Array(6).fill(null).map((_, index) => <SkeletonCard key={index} />)
+        ) : (
+          filteredStories.map((story) => (
+            <StoryCards
+              key={story.id}
+              image={story.image}
+              title={story.title}
+              story={story.story}
+              id={story.id}
+            />
+          ))
+        )}
       </div>
     </div>
   );
