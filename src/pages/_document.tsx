@@ -8,7 +8,7 @@ export default function Document() {
         {/* SEO Meta Tags */}
         <title>StoryLoom - Discover the World Around</title>
         <meta name="description" content="Explore a world of stories with Storyloom. Read and contribute to folktales from around the globe and enhance your language skills." />
-        <meta name="keywords" content="stories, folktales, language learning, Storyloom, literature, multilingual stories, cultural tales, global literature, language practice, storytelling, traditional stories, language immersion, reading for language learners, cultural heritage, narrative, folklore" />
+        <meta name="keywords" content="stories, folktales, language learning, Storyloom, literature, multilingual stories, cultural tales, global literature, language practice, storytelling, traditional stories, language immersion, reading for language learners, cultural heritage, narrative, folklore, cultural preservation, global cultures, cultural understanding, Japan, cultural diversity, traditional culture, world heritage, international stories, Adventure, Romance, Mystery, Fantasy, Science Fiction, Thriller, Horror, Comedy, Russian, German, French, Spanish, Japanese, Indian" />
         <meta name="author" content="Storyloom Team" />
         <meta property="og:title" content="Storyloom - Explore and Contribute to Global Folktales" />
         <meta property="og:description" content="Discover and share folktales from various cultures with Storyloom. Join a community of readers and writers to explore the world through stories." />
