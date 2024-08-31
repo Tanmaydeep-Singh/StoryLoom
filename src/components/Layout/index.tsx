@@ -5,6 +5,7 @@ import Footer from '../Footer';
 import Navbar from '../Navbar';
 import { useRouter } from 'next/router';
 import { Analytics } from "@vercel/analytics/react"
+import GoogleAnalytics from '../GoogleAnalytics';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,6 +25,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
       {pathname !== '/' && <Navbar />}
       
+      <GoogleAnalytics />
 
      
       {children}
