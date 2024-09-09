@@ -8,7 +8,7 @@ const FolktailsPage: React.FC = () => {
   const router = useRouter();
   const { country } = router.query;
 
-  const countries: string[] = ['All', 'Russian', 'German', 'French', 'Spanish', 'Japanese', 'Indian'];
+  const countries: string[] = ['All', 'Russian', 'German', 'French', 'Spanish', 'Japanese', 'Italian'];
   
   const [stories, setStories] = useState(folkTails);
   const [loading, setLoading] = useState(true);
