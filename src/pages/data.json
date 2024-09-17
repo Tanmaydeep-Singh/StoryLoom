@@ -1008,6 +1008,28 @@
     }
   },
   {
+    "id": "103",
+    "title": "A Love Beyond Time",
+    "genre": "Romance",
+    "image": "https://i.pinimg.com/564x/26/98/82/269882a706d56da7150646f78ead4895.jpg",
+    "story": {
+      "en": "Amelia, a historian, stumbles upon an ancient locket that holds a mysterious power to connect her with a man from the past. Despite the centuries that separate them, their love grows as they exchange letters through time. But as Amelia uncovers a dark secret about his tragic fate, she must find a way to rewrite history or risk losing him forever.",
+      "de": "Amelia, eine Historikerin, stolpert über ein altes Medaillon, das die mysteriöse Fähigkeit besitzt, sie mit einem Mann aus der Vergangenheit zu verbinden. Trotz der Jahrhunderte, die sie trennen, wächst ihre Liebe, während sie Briefe durch die Zeit austauschen. Doch als Amelia ein dunkles Geheimnis über sein tragisches Schicksal aufdeckt, muss sie einen Weg finden, die Geschichte umzuschreiben, oder sie riskiert, ihn für immer zu verlieren.",
+      "es": "Amelia, una historiadora, tropieza con un antiguo relicario que tiene el misterioso poder de conectarla con un hombre del pasado. A pesar de los siglos que los separan, su amor crece a medida que intercambian cartas a través del tiempo. Pero cuando Amelia descubre un oscuro secreto sobre su trágico destino, debe encontrar una manera de reescribir la historia o arriesgarse a perderlo para siempre.",
+      "ja": "歴史家のアメリアは、過去の男と繋がる不思議な力を持つ古いロケットを発見する。何世紀にもわたる隔たりにもかかわらず、二人の愛は時間を超えて手紙を交わすことで育まれる。しかし、アメリアが彼の悲劇的な運命にまつわる暗い秘密を明らかにすると、彼を永遠に失う危険を冒さないために、歴史を書き換える方法を見つけなければならない。"
+    }
+  },
+  {
+    "id": "104",
+    "title": "The Midnight Waltz",
+    "genre": "Romance",
+    "image": "https://i.pinimg.com/564x/ab/03/a1/ab03a1d81054d98d5aab67aa9471006d.jpg",
+    "story": {
+      "en": "At a grand masquerade ball, two strangers are drawn together by an irresistible connection. As they share a dance under the starlit sky, they realize they are bound by more than just the magic of the evening. But when the clock strikes midnight, they are separated by fate. Now, they must race against time to find each other before their fleeting love slips away forever.",
+      "de": "Auf einem großen Maskenball werden zwei Fremde durch eine unwiderstehliche Verbindung zueinander hingezogen. Während sie einen Tanz unter dem sternenklaren Himmel teilen, erkennen sie, dass sie durch mehr als nur den Zauber des Abends verbunden sind. Doch als die Uhr Mitternacht schlägt, werden sie durch das Schicksal getrennt. Nun müssen sie gegen die Zeit ankämpfen, um einander zu finden, bevor ihre flüchtige Liebe für immer verschwindet."
+    }
+  },
+  {
     "id": "_1",
     "title": "The Firebird",
     "genre": "Russian Folktale",
