@@ -8,8 +8,8 @@ const GenrePage = () => {
   const router = useRouter();
   const { genre } = router.query;
 
-  const [selectedGenre, setSelectedGenre] = useState(genre || 'explore');
-  const [stories, setStories] = useState([]);
+  const [selectedGenre, setSelectedGenre] = useState(genre || 'All');
+  const [stories, setStories] = useState(storiesData);
   const [loading, setLoading] = useState(true);
 
   const genres = [
@@ -24,15 +24,18 @@ const GenrePage = () => {
   useEffect(() => {
     setLoading(true); 
     setTimeout(() => {
+      
       let filteredStories = storiesData;
 
-      if (selectedGenre !== 'All') {
+      if (selectedGenre != 'All') {
+        console.log(selectedGenre)
         filteredStories = storiesData.filter(
           (story) => story.genre == selectedGenre
         );
-      }
+        setStories(filteredStories);
+        }
 
-      
+  
       setLoading(false); 
     }, );
   }, [selectedGenre]);
@@ -65,7 +68,7 @@ const GenrePage = () => {
         {loading ? (
           Array(6).fill(null).map((_, index) => <SkeletonCard key={index} />)
         ) : (
-          filteredStories.map((story) => (
+          stories.map((story) => (
             <StoryCards
               key={story.id}
               image={story.image}
