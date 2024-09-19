@@ -54,7 +54,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {genres.map((genre, index) => (
                 <li key={index}>
-                  <Link href={`/genres/${genre}`} className="text-sm hover:text-accent-300 transition-colors duration-300">{genre}</Link>
+                  <Link href={`/${genre}`} className="text-sm hover:text-accent-300 transition-colors duration-300">{genre}</Link>
                 </li>
               ))}
             </ul>
