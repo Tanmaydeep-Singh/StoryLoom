@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image'; // Import only if you use it in your code
 import { useState, useEffect } from 'react';
 
-export default function Story() {
+export default function Country() {
     const router = useRouter();
     const { country } = router.query;
 
