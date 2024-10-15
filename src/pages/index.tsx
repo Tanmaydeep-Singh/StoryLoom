@@ -76,9 +76,9 @@ export default function Home() {
             <ContributeAsWriter />
           </section>
 
-          <section>
+          {/* <section>
             <CheckPlans/>
-          </section>
+          </section> */}
 
           <section className="my-10 md:mt-20">
             <FAQ />

@@ -98,7 +98,6 @@ const Plans = () => {
         </motion.div>
       </section>
     <Table/>
-      {/* Call-to-Action Section */}
       <section className="text-center py-12  text-white">
         <h4 className="text-2xl lg:text-3xl font-bold">
           Ready to dive deeper into cultural stories?
