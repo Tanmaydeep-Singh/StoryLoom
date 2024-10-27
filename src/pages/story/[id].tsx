@@ -1,15 +1,12 @@
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'; 
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import data from '../data.json';
 import ShareIcon from '/public/Logos/share.svg';
-import ClapIcon from '/public/Logos/clap.svg';
-import CommentIcon from '/public/Logos/comment.svg';
-import SaveIcon from '/public/Logos/save.svg';
 
 const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1426840963626-ffdf2d7ef80b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
-type LanguageCode = 'en' | 'es' | 'de'  | 'fr' | 'РУ';
+type LanguageCode = 'en' | 'de' | 'fr' | 'ru' | 'ja';
 
 interface StoryDataInterface {
   id: string;
@@ -32,7 +29,7 @@ export default function Story() {
     const { id } = router.query;
 
     if (id) {
-      const storyData = (data as unknown as StoryDataInterface[]).find((s) => s.id == id);
+      const storyData = (data as unknown as StoryDataInterface[]).find((s) => s.id === id);
 
       setTimeout(() => {
         if (storyData) {
@@ -72,6 +69,9 @@ export default function Story() {
     router.back();
   };
 
+  // Split the story into paragraphs
+  const storyParagraphs = story.split('\n').filter((paragraph) => paragraph.trim() !== '');
+
   return (
     <div className="min-h-screen py-12 flex flex-col items-center text-white">
       <div className="max-w-3xl w-full sm:w-[95vw] md:w-[90vw] lg:w-[80vw] rounded-lg shadow-2xl overflow-hidden transform transition-transform duration-500">
@@ -108,7 +108,9 @@ export default function Story() {
         </div>
         <div className="p-4 sm:p-6 md:p-8 lg:p-12 bg-opacity-80">
           <div className="text-base sm:text-lg md:text-xl leading-relaxed">
-            <p>{story}</p>
+            {storyParagraphs.map((paragraph, index) => (
+              <p key={index} className="mb-4">{paragraph}</p>
+            ))}
           </div>
           <button
             onClick={handleBack}
