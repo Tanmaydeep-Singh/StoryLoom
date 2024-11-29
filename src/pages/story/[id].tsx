@@ -6,6 +6,7 @@ import ShareIcon from '/public/Logos/share.svg';
 import ClapIcon from '/public/Logos/clap.svg';
 import CommentIcon from '/public/Logos/comment.svg';
 import SaveIcon from '/public/Logos/save.svg';
+import MusicIcon from '/public/Logos/audio.svg';
 
 const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1426840963626-ffdf2d7ef80b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
@@ -85,6 +86,7 @@ export default function Story() {
           <h1 className="text-md sm:text-xl md:text-xl font-bold mb-4 text-gray-800">
             {genre}
           </h1>
+         
           <div className="flex items-center space-x-4 justify-between">
             <div className="flex text-gray-300 space-x-2">
               {availableLanguages.map((language) => (
@@ -98,8 +100,15 @@ export default function Story() {
                   {language}
                 </button>
               ))}
+         
             </div>
+         
+         
             <div className="flex items-center space-x-2">
+            <button onClick={handleShare}>
+                <Image src={MusicIcon} alt="Audio" width={18} height={18} />
+              </button>
+
               <button onClick={handleShare}>
                 <Image src={ShareIcon} alt="Share" width={18} height={18} />
               </button>
