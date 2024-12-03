@@ -15,7 +15,7 @@ const GenrePage = () => {
   const genres = [
     "All", "Adventure", "Romance", "Mystery", 
     "Fantasy", "Science Fiction", "Thriller", 
-    "Horror", "Comedy"
+    "Horror", "Comedy","Reflective"
   ];
 
   let filteredStories = storiesData;

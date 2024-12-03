@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'; 
 import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
 import data from '../data.json';
@@ -10,7 +10,7 @@ import MusicIcon from '/public/Logos/audio.svg';
 
 const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1426840963626-ffdf2d7ef80b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
-type LanguageCode = 'en' | 'es' | 'de' | 'fr' | 'РУ';
+type LanguageCode = 'en' | 'de' | 'fr' | 'ru' | 'ja';
 
 interface StoryDataInterface {
   id: string;
@@ -36,7 +36,7 @@ export default function Story() {
     const { id } = router.query;
 
     if (id) {
-      const storyData = (data as unknown as StoryDataInterface[]).find((s) => s.id == id);
+      const storyData = (data as unknown as StoryDataInterface[]).find((s) => s.id === id);
 
       setTimeout(() => {
         if (storyData) {
@@ -78,6 +78,7 @@ export default function Story() {
 
   const handleAudioToggle = () => {
     if (audioRef.current) {
+      console.log(isPlaying);
       if (isPlaying) {
         audioRef.current.pause(); 
       } else {
@@ -86,6 +87,7 @@ export default function Story() {
       setIsPlaying(!isPlaying); 
     }
   };
+  const storyParagraphs = story.split('\n').filter((paragraph) => paragraph.trim() !== '');
 
   return (
     <div className="min-h-screen py-12 flex flex-col items-center text-white">
@@ -129,7 +131,9 @@ export default function Story() {
         </div>
         <div className="p-4 sm:p-6 md:p-8 lg:p-12 bg-opacity-80">
           <div className="text-base sm:text-lg md:text-xl leading-relaxed">
-            <p>{story}</p>
+            {storyParagraphs.map((paragraph, index) => (
+              <p key={index} className="mb-4">{paragraph}</p>
+            ))}
           </div>
           <button
             onClick={handleBack}
@@ -140,7 +144,7 @@ export default function Story() {
         </div>
       </div>
 
-      <audio ref={audioRef} src='../../../public/Audio/117.mp3' preload="auto" />
-    </div>
+      <audio ref={audioRef} src="/Audio/117.mp3" preload="auto" />
+      </div>
   );
 }
