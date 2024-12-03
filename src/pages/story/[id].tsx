@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import data from '../data.json';
 import ShareIcon from '/public/Logos/share.svg';
 import ClapIcon from '/public/Logos/clap.svg';
@@ -10,7 +10,7 @@ import MusicIcon from '/public/Logos/audio.svg';
 
 const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1426840963626-ffdf2d7ef80b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
-type LanguageCode = 'en' | 'es' | 'de'  | 'fr' | 'РУ';
+type LanguageCode = 'en' | 'es' | 'de' | 'fr' | 'РУ';
 
 interface StoryDataInterface {
   id: string;
@@ -18,6 +18,7 @@ interface StoryDataInterface {
   genre: string;
   story: Record<LanguageCode, string>;
   image: string;
+  audio?: string;
 }
 
 export default function Story() {
@@ -27,6 +28,8 @@ export default function Story() {
   const [storyImage, setStoryImage] = useState(DEFAULT_IMAGE);
   const [selectedLanguage, setSelectedLanguage] = useState<LanguageCode>('en');
   const [availableLanguages, setAvailableLanguages] = useState<LanguageCode[]>([]);
+  const [isPlaying, setIsPlaying] = useState(false); 
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -73,6 +76,17 @@ export default function Story() {
     router.back();
   };
 
+  const handleAudioToggle = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause(); 
+      } else {
+        audioRef.current.play(); 
+      }
+      setIsPlaying(!isPlaying); 
+    }
+  };
+
   return (
     <div className="min-h-screen py-12 flex flex-col items-center text-white">
       <div className="max-w-3xl w-full sm:w-[95vw] md:w-[90vw] lg:w-[80vw] rounded-lg shadow-2xl overflow-hidden transform transition-transform duration-500">
@@ -100,12 +114,10 @@ export default function Story() {
                   {language}
                 </button>
               ))}
-         
             </div>
          
-         
             <div className="flex items-center space-x-2">
-            <button onClick={handleShare}>
+              <button onClick={handleAudioToggle}>
                 <Image src={MusicIcon} alt="Audio" width={18} height={18} />
               </button>
 
@@ -127,6 +139,8 @@ export default function Story() {
           </button>
         </div>
       </div>
+
+      <audio ref={audioRef} src='../../../public/Audio/117.mp3' preload="auto" />
     </div>
   );
 }
