@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router'; 
+import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
 import data from '../data.json';
@@ -6,7 +6,9 @@ import ShareIcon from '/public/Logos/share.svg';
 import ClapIcon from '/public/Logos/clap.svg';
 import CommentIcon from '/public/Logos/comment.svg';
 import SaveIcon from '/public/Logos/save.svg';
-import MusicIcon from '/public/Logos/audio.svg';
+import AudioIcon from '/public/Logos/audio.svg';
+import AudioWaveIcon from '/public/Logos/audio-wave.svg';
+
 
 const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1426840963626-ffdf2d7ef80b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
@@ -18,7 +20,7 @@ interface StoryDataInterface {
   genre: string;
   story: Record<LanguageCode, string>;
   image: string;
-  audio?: string;
+  audio?: boolean;
 }
 
 export default function Story() {
@@ -28,16 +30,19 @@ export default function Story() {
   const [storyImage, setStoryImage] = useState(DEFAULT_IMAGE);
   const [selectedLanguage, setSelectedLanguage] = useState<LanguageCode>('en');
   const [availableLanguages, setAvailableLanguages] = useState<LanguageCode[]>([]);
-  const [isPlaying, setIsPlaying] = useState(false); 
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [audio, setAudio] = useState(false);
+
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const router = useRouter();
+
+  const { id } = router.query;
 
   useEffect(() => {
     const { id } = router.query;
 
     if (id) {
       const storyData = (data as unknown as StoryDataInterface[]).find((s) => s.id === id);
-
       setTimeout(() => {
         if (storyData) {
           setStoryTitle(storyData.title);
@@ -45,6 +50,7 @@ export default function Story() {
           setStory(storyData.story[selectedLanguage] || storyData.story.en);
           setStoryImage(storyData.image || DEFAULT_IMAGE);
           setAvailableLanguages(Object.keys(storyData.story) as LanguageCode[]);
+          setAudio(storyData?.audio || false);
         } else {
           setStoryTitle('Story not found');
           setStory('Sorry, the story you are looking for does not exist.');
@@ -80,11 +86,11 @@ export default function Story() {
     if (audioRef.current) {
       console.log(isPlaying);
       if (isPlaying) {
-        audioRef.current.pause(); 
+        audioRef.current.pause();
       } else {
-        audioRef.current.play(); 
+        audioRef.current.play();
       }
-      setIsPlaying(!isPlaying); 
+      setIsPlaying(!isPlaying);
     }
   };
   const storyParagraphs = story.split('\n').filter((paragraph) => paragraph.trim() !== '');
@@ -102,29 +108,42 @@ export default function Story() {
           <h1 className="text-md sm:text-xl md:text-xl font-bold mb-4 text-gray-800">
             {genre}
           </h1>
-         
+
           <div className="flex items-center space-x-4 justify-between">
             <div className="flex text-gray-300 space-x-2">
               {availableLanguages.map((language) => (
                 <button
                   key={language}
                   onClick={() => handleLanguageChange(language)}
-                  className={`p-2 text-xs sm:text-sm md:text-base rounded-lg transition-all duration-300 ${
-                    selectedLanguage === language ? 'bg-gray-700 text-white' : 'hover:bg-gray-700 hover:text-white'
-                  }`}
+                  className={`p-2 text-xs sm:text-sm md:text-base rounded-lg transition-all duration-300 ${selectedLanguage === language ? 'bg-gray-700 text-white' : 'hover:bg-gray-700 hover:text-white'
+                    }`}
                 >
                   {language}
                 </button>
               ))}
             </div>
-         
+
             <div className="flex items-center space-x-2">
-              <button onClick={handleAudioToggle}>
-                <Image src={MusicIcon} alt="Audio" width={18} height={18} />
-              </button>
+
+            
+              {
+                audio ?
+                isPlaying   ? 
+                  <button onClick={handleAudioToggle} className='bg-white rounded-full w-9 h-9 flex justify-center items-center'>
+                    <Image src={AudioWaveIcon} alt="Audio" width={26} height={26} />
+                  </button>
+                  :
+                  <button onClick={handleAudioToggle}>
+                  <Image src={AudioIcon} alt="Audio" width={24} height={24} />
+                </button>
+            : <></>
+              }
+
+
+
 
               <button onClick={handleShare}>
-                <Image src={ShareIcon} alt="Share" width={18} height={18} />
+                <Image src={ShareIcon} alt="Share" width={24} height={24} />
               </button>
             </div>
           </div>
@@ -144,7 +163,7 @@ export default function Story() {
         </div>
       </div>
 
-      <audio ref={audioRef} src="/Audio/117.mp3" preload="auto" />
-      </div>
+       { audio ?       <audio ref={audioRef} src={`/Audio/${id}.mp3`} preload="auto" /> : <></>}     
+    </div>
   );
 }
