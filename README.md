@@ -91,10 +91,6 @@ Open [http://localhost:3000](http://localhost:3000) to view the app in your brow
 - **Mobile App**: Develop a mobile version of the app for iOS and Android.
 - **Additional Language Support**: Expand the number of languages available for translation and reading.
 
-## Contributing
-
-We welcome contributions from the community! Please read our [Contributing Guidelines](CONTRIBUTING.md) for more information.
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
