@@ -1,30 +1,40 @@
+"use client";
+
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 interface CountryCardProps {
   title: string;
-  genre:string;
+  genre: string;
   imageUrl: string;
 }
 
 const CountryCard = ({ title, genre, imageUrl }: CountryCardProps) => {
   return (
     <motion.div
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-      className="relative w-[145px] h-[200px] sm:w-[150px] sm:h-[220px] md:w-[200px] md:h-[300px] lg:w-[250px] lg:h-[400px] bg-background-card rounded-xl overflow-hidden m-4 shadow-xl transform transition-transform duration-300"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.97 }}
+      className="relative w-48 sm:w-52 h-72 rounded-3xl overflow-hidden transition-transform border border-white/10  shadow-[0_8px_30px_rgb(0,0,0,0.2)]"
     >
       <Link href={`/folktales/${genre}`} passHref>
-        <div className="w-full h-full cursor-pointer">
-          <img
+        <div className="cursor-pointer w-full h-full relative group">
+          {/* Background image */}
+          <Image
             src={imageUrl}
             alt={title}
-            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+            fill
+            className="object-cover w-full h-full transition-transform duration-500 "
+            priority
           />
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 backdrop-blur-lg">
-            <h1 className="text-white text-center text-sm sm:text-base md:text-lg font-semibold">
-              {title}
-            </h1>
+
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10" />
+
+          {/* Text content */}
+          <div className="absolute bottom-4 left-4 z-20">
+            <h3 className="text-white text-lg font-semibold">{title}</h3>
+            <p className="text-white/70 text-sm">{genre} Folktales</p>
           </div>
         </div>
       </Link>

@@ -1,36 +1,36 @@
-import React from 'react';
-import CountryCard from './CountryCard';
+"use client";
 
-const countries = [
-    { name: 'Russia', genre:"Russian", flagSrc: 'https://i.pinimg.com/236x/54/93/22/549322041d3eb23527fbf1d5e1d4bafa.jpg' },
-    { name: 'Germany', genre:"German", flagSrc: 'https://i.pinimg.com/564x/0e/c7/aa/0ec7aa1383c347acb0b1a91bf506f51b.jpg' },
-    { name: 'France', genre:"French", flagSrc: 'https://i.pinimg.com/564x/a7/87/8d/a7878d054c0c281018d5b08049d9f0d7.jpg' },
-    { name: 'Spain', genre:"Spanish", flagSrc: 'https://i.pinimg.com/564x/fc/87/6a/fc876ac2ec535f0e964da8b04b914248.jpg' },
-    // Add more countries as needed
-];
+import Link from "next/link";
+import { FolktailsMarquess } from "./Folktale Marquee";
 
-const ExploreSection = () => {
+const ExploreCultures = () => {
     return (
-        <div className="relative w-full h-auto top-16 lg:top-0 md:h-[100vh] flex flex-col items-center justify-center bg-cover bg-center mx-auto mb-8 p-4 lg:p-0">
-            <div className="container mx-auto text-center mb-10 text-white">
-                <h2 className="text-2xl md:text-4xl font-bold text-white">Explore the World Around</h2>
-                <p className="mt-4 text-base md:text-lg text-gray-400">
-                    Discover folktales from different cultures and immerse yourself in their magic.
-                </p>
-            </div>
+        <section className="w-full h-[80vh] py-16 px-6 md:px-12 bg-gradient-to-br from-[#050505] to-[#0a0a0a] flex items-center justify-center relative overflow-hidden">
+            <div className="max-w-7xl w-full flex flex-col md:flex-row items-center  z-10">
 
-            <div className="grid grid-cols-2 xl:grid-cols-4 6gap-4 md:gap-8 justify-items-center w-full">
-                {countries.map((country) => (
-                    <CountryCard
-                        key={country.name}
-                        title={country.name}
-                        genre={country.genre}
-                        imageUrl={country.flagSrc}
-                    />
-                ))}
+                {/* Left: Text */}
+                <div className="space-y-6 md:w-2/5 pb-20">
+                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#e8d5b7]">
+                        Explore Cultures
+                    </h2>
+                    <p className="text-[#b8a58c] text-base md:text-lg max-w-md leading-relaxed">
+                        Learn about diverse cultural traditions and heritage through storytelling.
+                    </p>
+                    <Link href="/folktales/All">
+                        <button className="mt-4 px-6 py-2 bg-[#3c6255] text-white rounded-full text-sm font-medium hover:bg-[#2f4e43] transition duration-200">
+                            Discover
+                        </button>
+                    </Link>
+                </div>
+
+                {/* Right: Folktails Marquee */}
+                <div className="w-[80vw]  md:w-3/5">
+                    <FolktailsMarquess />
+                </div>
+
             </div>
-        </div>
+        </section>
     );
 };
 
-export default ExploreSection;
+export default ExploreCultures;
