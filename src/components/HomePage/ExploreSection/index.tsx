@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FolktailsMarquess } from "./Folktale Marquee";
+import { FolktailsMarquess } from "./FolktaleMarquee";
 
 const ExploreCultures = () => {
     return (
