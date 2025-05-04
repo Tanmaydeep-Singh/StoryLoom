@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+'use client'
 import { Marquee } from "@/components/magicui/marquee";
 import CountryCard from "../CountryCard";
 
@@ -17,7 +18,7 @@ const firstRow = countries.slice(0, countries.length / 2);
 export function FolktailsMarquess() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-      <Marquee pauseOnHover className="[--duration:15s]">
+      <Marquee pauseOnHover className="[--duration:10s]">
         {firstRow.map((card, _i) => (
           <CountryCard
             key={_i}
