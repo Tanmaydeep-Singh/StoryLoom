@@ -11,7 +11,7 @@ const config: Config = {
 	theme: {
 		extend: {
 			animation: {
-				marquee: "marquee 40s linear infinite",
+				marquee: "marquee 25s linear infinite",
 				'loop-scroll': 'loop-scroll 40s linear infinite'
 			},
 			keyframes: {
