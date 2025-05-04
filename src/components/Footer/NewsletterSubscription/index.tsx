@@ -19,7 +19,7 @@ const StoryloomSubscription = () => {
     setError(null);
 
     const formData = {
-      name: 'Storyloom Submission', 
+      name: 'Storyloom Submission',
       email,
       message: 'Subscribed to Storyloom',
     };
@@ -48,27 +48,24 @@ const StoryloomSubscription = () => {
   };
 
   return (
-    <section className="h-[60vh] flex items-center text-white py-16 px-6 md:px-12 lg:px-24">
+    <section className="flex items-center text-white">
       <div className="max-w-4xl mx-auto text-center">
         {!isSubscribed ? (
-          <div>
-            <h2 className="text-4xl font-bold mb-6">Get Story Updates</h2>
-            <p className="text-lg mb-8">
-              Stay updated with the latest stories! Subscribe now to receive the latest content directly to your inbox.
-            </p>
-            <form onSubmit={handleSubmit} className="flex flex-col items-center">
+          <div >
+            <form onSubmit={handleSubmit} className="flex flex-row items-center justify-center">
               <input
                 type="email"
                 placeholder="Enter your email"
                 value={email}
                 onChange={handleEmailChange}
                 required
-                className="p-3 mb-4 w-80 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="p-3 rounded-l-xl  border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-56 h-10"
               />
               <button
                 type="submit"
                 disabled={loading}
-                className={`w-80 p-3 text-white rounded-md ${loading ? 'bg-gray-400' : 'bg-gradient-to-r from-blue-400 to-blue-500 hover:shadow-lg'}`}
+                className={`w-24 h-10 p-4 text-white rounded-r-xl flex items-center justify-center text-center ${loading ? 'bg-gray-400' : 'bg-blue-400 hover:shadow-lg'
+                  }`}
               >
                 {loading ? 'Subscribing...' : 'Subscribe'}
               </button>
