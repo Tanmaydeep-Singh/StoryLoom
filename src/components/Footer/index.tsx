@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import StoryloomSubscription from "./NewsletterSubscription";
+import StoryloomSubscription from "../HomePage/NewsletterSubscription";
 
 const Footer = () => {
   return (

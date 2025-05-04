@@ -11,7 +11,7 @@ import ExploreSection from "@/components/HomePage/ExploreSection";
 import ContributeAsWriter from "@/components/HomePage/Contribute/Writer";
 import Head from "next/head";
 import CheckPlans from "@/components/HomePage/CheckPlans";
-import NewsletterSubscription from "@/components/Footer/NewsletterSubscription";
+import NewsletterSubscription from "@/components/HomePage/NewsletterSubscription";
 
 export default function Home() {
   const controls = useAnimation();

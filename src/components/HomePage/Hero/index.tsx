@@ -25,10 +25,11 @@ const Hero = () => {
 
         {/* Content */}
         <div className="absolute z-10 flex flex-col items-center justify-center w-full h-[80%] px-4 text-center text-white">
-          <h1 className="text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight tracking-wide">
+          <h1 className="text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight tracking-wide font-serif ">
             Discover, Read, and Learn Across Cultures.
+
           </h1>
-          <p className="text-lg md:text-2xl lg:text-3xl mt-4 max-w-3xl">
+          <p className="text-lg md:text-2xl lg:text-3xl mt-4 max-w-3xl font-serif font-bold ">
             Explore captivating stories and dive into magical worlds.
           </p>
         </div>

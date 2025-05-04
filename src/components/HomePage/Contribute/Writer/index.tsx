@@ -5,7 +5,7 @@ const ContributeAsWriter = () => {
   return (
     <section className="h-[60vh] flex items-center text-white py-16 px-6 md:px-12 lg:px-24  ">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-6">Contribute as a Writer</h2>
+        <h2 className="text-4xl font-bold mb-6 font-serif  text-[#e8d5b7]">Contribute as a Writer</h2>
         <p className="text-lg mb-8">
           Join our community of storytellers! Share your stories, folktales, and creative narratives with the world. Your voice can inspire, educate, and entertain readers across the globe.
         </p>
