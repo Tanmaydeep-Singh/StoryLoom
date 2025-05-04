@@ -8,53 +8,48 @@ const GenrePage = () => {
   const router = useRouter();
   const { genre } = router.query;
 
-  const [selectedGenre, setSelectedGenre] = useState(genre || 'All');
+  const genres = [
+    "All", "Adventure", "Romance", "Mystery",
+    "Fantasy", "Science Fiction", "Thriller",
+    "Horror", "Comedy", "Reflective"
+  ];
+
+
   const [stories, setStories] = useState(storiesData);
   const [loading, setLoading] = useState(true);
 
-  const genres = [
-    "All", "Adventure", "Romance", "Mystery", 
-    "Fantasy", "Science Fiction", "Thriller", 
-    "Horror", "Comedy","Reflective"
-  ];
-
-  let filteredStories = storiesData;
-
 
   useEffect(() => {
-    setLoading(true); 
-    setTimeout(() => {
-      
-      let filteredStories = storiesData;
-
-      if (selectedGenre != 'All') {
-        console.log(selectedGenre)
-        filteredStories = storiesData.filter(
-          (story) => story.genre == selectedGenre
+    setLoading(true);
+    const timeoutId = setTimeout(() => {
+      if (genre && genre != 'All') {
+        const filteredStories = storiesData.filter(
+          (story) => story.genre == genre
         );
         setStories(filteredStories);
-        }
+      } else {
+        setStories(storiesData);
+      }
+      setLoading(false);
+    },);
 
-  
-      setLoading(false); 
-    }, );
-  }, [selectedGenre]);
+    return () => clearTimeout(timeoutId);
+  }, [genre]);
 
   const handleGenreChange = (e: any) => {
     const newGenre = e.target.value;
-    setSelectedGenre(newGenre);
     router.push(`/${newGenre}`);
   };
 
   return (
     <div className="w-[80vw] mx-auto my-8">
       <h1 className="text-3xl lg:text-4xl font-bold text-white mb-2 capitalize">
-        {selectedGenre} Stories
+        {genre} Stories
       </h1>
 
       <div className="mb-6">
         <select
-          value={selectedGenre}
+          value={genre}
           onChange={handleGenreChange}
           className="p-2 rounded bg-gray-800 text-white"
         >
