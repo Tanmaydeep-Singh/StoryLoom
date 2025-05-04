@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://storyloom.in</loc><lastmod>2025-05-04T08:52:55.241Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://storyloom.in/V2/home</loc><lastmod>2025-05-04T08:52:55.241Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://storyloom.in/contact</loc><lastmod>2025-05-04T08:52:55.241Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://storyloom.in/contribute</loc><lastmod>2025-05-04T08:52:55.241Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://storyloom.in/login</loc><lastmod>2025-05-04T08:52:55.241Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://storyloom.in/plans</loc><lastmod>2025-05-04T08:52:55.241Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://storyloom.in/signup</loc><lastmod>2025-05-04T08:52:55.241Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://storyloom.in</loc><lastmod>2025-05-04T11:51:00.153Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://storyloom.in/V2/home</loc><lastmod>2025-05-04T11:51:00.153Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://storyloom.in/contact</loc><lastmod>2025-05-04T11:51:00.153Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://storyloom.in/contribute</loc><lastmod>2025-05-04T11:51:00.153Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://storyloom.in/login</loc><lastmod>2025-05-04T11:51:00.153Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://storyloom.in/plans</loc><lastmod>2025-05-04T11:51:00.153Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://storyloom.in/signup</loc><lastmod>2025-05-04T11:51:00.153Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
