@@ -1,84 +1,76 @@
-import Link from 'next/link';
-import Image from 'next/image';
+"use client";
+
+import Link from "next/link";
 
 const Footer = () => {
-  const folktales = ['Russian', 'German', 'French', 'Spanish', 'Japanese', 'Indian'];
-  const genres = [
-    "Adventure", "Romance", "Mystery", "Fantasy",
-    "Science Fiction", "Thriller", "Horror", "Comedy"
-  ];
-
   return (
-    <footer className="bg-background-card text-primary-100 py-8">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
-          {/* About Section */}
-          <div>
-            <h2 className="text-xl font-semibold mb-4 text-primary-100">About Us</h2>
-            <p className="text-primary-200">
-              StoryLoom is your go-to platform for discovering and sharing captivating stories. Explore a world of fiction and non-fiction, translated into multiple languages, and immerse yourself in the magic of storytelling.
+    <footer className="bg-background-card text-white px-8 py-20 sm:py-28 relative">
+      <div className="max-w-7xl mx-auto relative">
+        {/* Top Grid Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          {/* Left Section */}
+          <div className="space-y-6">
+            <p className="text-xs text-blue-400 font-medium tracking-widest uppercase">
+              + Contact Us
             </p>
+            <h2 className="text-3xl md:text-4xl font-medium leading-snug">
+              Interested in exploring the world,
+              <br />
+              <span className="text-gray-400">
+                trying out the platform or simply learning more?
+              </span>
+            </h2>
+            <div className="pt-4 text-sm">
+              <p className="text-gray-400">Contact Tanmay at:</p>
+              <a
+                href="mailto:work@storyloom.in"
+                className="text-white underline underline-offset-4 hover:text-blue-400"
+              >
+                work@storyloom.in
+              </a>
+            </div>
           </div>
 
-          {/* Quick Links Section */}
-          <div>
-            <h2 className="text-xl font-semibold mb-4 text-primary-100">Quick Links</h2>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="text-sm hover:text-accent-300 transition-colors duration-300">Home</Link>
-              </li>
-              <li>
-                <Link href="/explore" className="text-sm hover:text-accent-300 transition-colors duration-300">Stories</Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-sm hover:text-accent-300 transition-colors duration-300">Contact</Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Folktales Section */}
-          <div>
-            <h2 className="text-xl font-semibold mb-4 text-primary-100">Folktales</h2>
-            <ul className="space-y-2">
-              {folktales.map((folktale, index) => (
-                <li key={index}>
-                  <Link href={`/folktales/${folktale}`} className="text-sm hover:text-accent-300 transition-colors duration-300">{folktale}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Genres Section */}
-          <div>
-            <h2 className="text-xl font-semibold mb-4 text-primary-100">Genres</h2>
-            <ul className="space-y-2">
-              {genres.map((genre, index) => (
-                <li key={index}>
-                  <Link href={`/${genre}`} className="text-sm hover:text-accent-300 transition-colors duration-300">{genre}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Social Media Section */}
-          <div>
-            <h2 className="text-xl font-semibold mb-4 text-primary-100">Follow Us</h2>
-            <div className="flex space-x-4">
-              <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-75">
-                <Image src="/Logos/x.svg" alt="Twitter" width={30} height={30} />
+          {/* Right Navigation Links */}
+          <div className="flex md:justify-end items-start">
+            <div className="space-y-4 text-right">
+              <Link href="/contribute" className="block hover:text-blue-400 transition">
+                Contribute
               </Link>
-              <Link href="https://www.instagram.com/_storyloom_/" target="_blank" rel="noopener noreferrer" className="hover:opacity-75">
-                <Image src="/Logos/instagram.svg" alt="Instagram" width={30} height={30} className='text-white'/>
+              <Link href="/folktales/All" className="block hover:text-blue-400 transition">
+                Folktales
+              </Link>
+              <Link href="/all" className="block hover:text-blue-400 transition">
+                Genre
+              </Link>
+              <Link href="/plans" className="block hover:text-blue-400 transition">
+                Plans
               </Link>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-primary-200 pt-4 text-center">
-          <p className="text-primary-200 text-sm">
-            &copy; {new Date().getFullYear()} StoryLoom. All rights reserved.
-          </p>
+        {/* Footer Bottom Branding */}
+        <div className="mt-24 flex flex-col sm:flex-row justify-between items-center border-t border-white/10 pt-12">
+          {/* Logo + Brand Name */}
+          <div className="flex items-center space-x-4">
+            {/* Replace with your own logo */}
+            <div className="bg-white rounded-md w-12 h-12" />
+            <h1 className="text-4xl font-extrabold tracking-tight">storyloom</h1>
+          </div>
+
+          {/* Social Links */}
+          <div className="mt-6 sm:mt-0 flex space-x-6 text-sm text-gray-400">
+            <Link href="https://linkedin.com/company/storyloom" className="hover:text-white">LinkedIn</Link>
+            <Link href="https://facebook.com/storyloom" className="hover:text-white">Facebook</Link>
+            <Link href="https://twitter.com/storyloom" className="hover:text-white">Twitter</Link>
+          </div>
         </div>
+
+        {/* Copyright */}
+        <p className="text-xs text-gray-600 text-center mt-10">
+          © 2024 Storyloom. All rights reserved.
+        </p>
       </div>
     </footer>
   );

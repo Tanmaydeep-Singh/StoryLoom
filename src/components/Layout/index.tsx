@@ -1,11 +1,11 @@
 // components/Layout.tsx
 import React, { ReactNode } from 'react';
 import { Metadata } from 'next';
-import Footer from '../Footer';
 import Navbar from '../Navbar';
 import { useRouter } from 'next/router';
 import { Analytics } from "@vercel/analytics/react"
 import GoogleAnalytics from '../GoogleAnalytics';
+import Footer from '../Footer';
 
 export const metadata: Metadata = {
   title: "Create Next App",
