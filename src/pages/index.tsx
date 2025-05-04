@@ -76,9 +76,9 @@ export default function Home() {
           </section>
 
 
-          <section className="my-10 md:mt-20">
+          {/* <section className="my-10 md:mt-20">
             <ParallaxAbout />
-          </section>
+          </section> */}
 
 
           <section>
