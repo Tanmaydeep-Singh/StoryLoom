@@ -5,7 +5,7 @@ import { FolktailsMarquess } from "./FolktaleMarquee";
 
 const ExploreCultures = () => {
   return (
-    <section className="w-full py-12 px-4 sm:px-6 xl:px-12 bg-gradient-to-br from-[#050505] to-[#0a0a0a] flex items-center justify-center relative overflow-hidden">
+    <section className="w-full h-[80vh] py-16 px-4 sm:px-6 md:px-12 bg-gradient-to-br from-[#050505] to-[#0a0a0a] flex items-center justify-center relative overflow-hidden">
       <div className="max-w-7xl w-full flex flex-col xl:flex-row items-center gap-12 z-10">
 
         {/* Left: Text */}

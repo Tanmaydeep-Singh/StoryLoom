@@ -17,7 +17,7 @@ const firstRow = countries.slice(0, countries.length);
 export function FolktailsMarquess() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-      <Marquee>
+      <Marquee className="animate-marquee">
         {firstRow.map((card, _i) => (
           <CountryCard
             key={_i}
