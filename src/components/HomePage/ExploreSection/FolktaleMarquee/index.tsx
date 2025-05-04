@@ -13,10 +13,15 @@ const countries = [
 
 export function FolktailsMarquess() {
   return (
-    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+    <div className="relative w-full overflow-hidden">
+      {/* Gradient Overlays */}
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-[20%] bg-gradient-to-r from-black to-transparent z-10" />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-[20%] bg-gradient-to-l from-black to-transparent z-10" />
+
+      {/* Marquee Container */}
       <div className="flex gap-6 py-4 w-max animate-marquee hover:[animation-play-state:paused]">
-        {[...Array(4)].map((_, index) => (
-          <div key={index} className="flex gap-6">
+        {[...Array(3)].map((_, setIndex) => (
+          <div key={setIndex} className="flex gap-6">
             {countries.map((card) => (
               <CountryCard
                 key={card.name}
@@ -24,16 +29,11 @@ export function FolktailsMarquess() {
                 genre={card.genre}
                 imageUrl={card.flagSrc}
               />
+
             ))}
           </div>
         ))}
       </div>
-
-      {/* Left Fade */}
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-1/6 bg-gradient-to-r from-black dark:from-black to-transparent z-10" />
-
-      {/* Right Fade */}
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-1/6 bg-gradient-to-l from-black dark:from-black to-transparent z-10" />
     </div>
   );
 }
