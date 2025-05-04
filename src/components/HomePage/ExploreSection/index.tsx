@@ -11,7 +11,7 @@ const ExploreCultures = () => {
                 {/* Left: Text */}
                 <div className="space-y-6 md:w-2/5 pb-20">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#e8d5b7]">
-                        Explore Cultures
+                        Explore Cultures.
                     </h2>
                     <p className="text-[#b8a58c] text-base md:text-lg max-w-md leading-relaxed">
                         Learn about diverse cultural traditions and heritage through storytelling.

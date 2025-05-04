@@ -9,7 +9,7 @@ const countries = [
   { name: 'France', genre: 'French', flagSrc: 'https://i.pinimg.com/564x/a7/87/8d/a7878d054c0c281018d5b08049d9f0d7.jpg' },
   { name: 'Spain', genre: 'Spanish', flagSrc: 'https://i.pinimg.com/564x/fc/87/6a/fc876ac2ec535f0e964da8b04b914248.jpg' },
   { name: 'Italian', genre: 'Italian', flagSrc: 'https://i.pinimg.com/736x/b0/89/95/b089951b2b827070692989b3345ca3aa.jpg' },
-  { name: 'Japanese', genre: 'Japanese', flagSrc: 'https://i.pinimg.com/564x/f9/e2/54/f9e254112c69629fab7bb6acc9ac5a17.jpg' },
+  { name: 'Japanese', genre: 'Japanese', flagSrc: 'https://i.pinimg.com/564x/f9/e2/54/f9e254112c69629fab7bb6acc9ac5a17.jpg' }
 ];
 
 const firstRow = countries.slice(0, countries.length);
