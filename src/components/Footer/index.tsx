@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import StoryloomSubscription from "../HomePage/NewsletterSubscription";
+import storyloomLogoDark from "../../../public/favicon/storyloomLogoDark.png";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -61,9 +63,17 @@ const Footer = () => {
           {/* Footer Bottom Branding */}
           <div className="mt-16 sm:mt-24 flex flex-col sm:flex-row justify-between items-center border-t border-white/10 pt-10 sm:pt-12 space-y-6 sm:space-y-0">
             {/* Logo + Brand Name */}
-            <div className="flex items-center space-x-4">
-              <div className="bg-white rounded-md w-10 h-10 sm:w-12 sm:h-12" />
-              <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">storyloom</h1>
+            <div className="flex items-center space-x-4 ">
+              <Image
+                src={storyloomLogoDark}
+                alt="Storyloom logo"
+                width={128}
+                height={128}
+                className="rounded-md  w-6 h-6"
+              />
+              <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+                storyloom
+              </h1>
             </div>
 
             {/* Social Links */}
