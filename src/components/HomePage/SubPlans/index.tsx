@@ -2,11 +2,10 @@ import React from 'react';
 import PricingDetails from './PricingDetails';
 
 const SubPlans = () => {
-
   return (
-    <section className="w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-12">
+    <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16">
       {/* Header */}
-      <div className="text-center mb-10">
+      <div className="text-center mb-12">
         <h2 className="text-3xl sm:text-4xl xl:text-5xl font-serif font-bold text-[#e8d5b7] mb-4">
           Discover the Perfect Plan for You
         </h2>
@@ -15,10 +14,7 @@ const SubPlans = () => {
         </p>
       </div>
 
-      {/* Pricing Plans */}
-      <div className="w-full">
-        <PricingDetails />
-      </div>
+      <PricingDetails />
     </section>
   );
 };
