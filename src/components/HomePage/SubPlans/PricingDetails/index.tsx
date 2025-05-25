@@ -65,7 +65,7 @@ const PricingDetails= () => {
   }, []);
 
   return (
-    <div className="px-4 sm:px-6 lg:px-8 py-6">
+    <div className="px-4 sm:px-6 lg:px-8 py-6 font-serif">
       {/* Billing toggle */}
       <div className="flex justify-center max-w-[16rem] mx-auto mb-6 sm:mb-12">
         <div className="relative flex w-full p-1 rounded-full border border-white/30 bg-white/10 text-white">
