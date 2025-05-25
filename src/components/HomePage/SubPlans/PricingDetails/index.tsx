@@ -1,5 +1,4 @@
 import React, { useState, useCallback } from 'react';
-import PricingPlanList from './PricingPlanList';
 import PricingCard from './PricingCard';
 
 interface Plan {
@@ -14,7 +13,7 @@ interface Plan {
 const pricingData: Plan[] = [
   {
     name: 'Basic Plan',
-    price: '₹0',
+    price: '0',
     details: 'base',
     description: 'For casual readers',
     features: [
@@ -26,7 +25,7 @@ const pricingData: Plan[] = [
   },
   {
     name: 'Plus Plan',
-    price: '₹99',
+    price: '10',
     details: 'plus',
     discount: '15%',
     description: 'Enhanced features',
@@ -41,7 +40,7 @@ const pricingData: Plan[] = [
   },
   {
     name: 'Pro Plan',
-    price: '₹199',
+    price: '25',
     details: 'pro',
     discount: '20%',
     description: 'Power users & enthusiasts',
@@ -56,7 +55,7 @@ const pricingData: Plan[] = [
   },
 ];
 
-const PricingDetails: React.FC = () => {
+const PricingDetails= () => {
   const [selectedPlan, setSelectedPlan] = useState<Plan>(pricingData[0]);
   const [isAnnual, setIsAnnual] = useState(true);
 
@@ -66,45 +65,35 @@ const PricingDetails: React.FC = () => {
   }, []);
 
   return (
-    <div className="px-4 sm:px-6 lg:px-8">
+    <div className="px-4 sm:px-6 lg:px-8 py-6">
       {/* Billing toggle */}
-      <div className="flex justify-center max-w-[14rem] mx-auto mb-6 sm:mb-12">
+      <div className="flex justify-center max-w-[16rem] mx-auto mb-6 sm:mb-12">
         <div className="relative flex w-full p-1 rounded-full border border-white/30 bg-white/10 text-white">
-          <span
-            className="absolute inset-0 m-1 pointer-events-none"
-            aria-hidden="true"
-          >
+          <span className="absolute inset-0 m-1 pointer-events-none" aria-hidden="true">
             <span
-              className={`absolute inset-0 w-1/2 bg-indigo-500 rounded-full shadow-sm shadow-indigo-950/10 transform transition-transform duration-150 ease-in-out ${
-                isAnnual ? 'translate-x-0' : 'translate-x-full'
-              }`}
+              className={`absolute inset-0 w-1/2 bg-indigo-500 rounded-full shadow-sm shadow-indigo-950/10 transform transition-transform duration-150 ease-in-out ${isAnnual ? 'translate-x-0' : 'translate-x-full'
+                }`}
             />
           </span>
 
           <button
             type="button"
-            className={`relative flex-1 text-sm font-medium h-8 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-300 transition-colors duration-150 ease-in-out ${
-              isAnnual ? 'text-white' : 'text-slate-400'
-            }`}
+            className={`relative flex-1 text-sm font-medium h-8 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-300 transition-colors duration-150 ease-in-out ${isAnnual ? 'text-white' : 'text-slate-400'
+              }`}
             onClick={() => setIsAnnual(true)}
             aria-pressed={isAnnual}
             aria-label="Select yearly billing"
           >
             Yearly{' '}
-            <span
-              className={`ml-1 ${
-                isAnnual ? 'text-indigo-200' : 'text-slate-400'
-              }`}
-            >
+            <span className={`ml-1 ${isAnnual ? 'text-indigo-200' : 'text-slate-400'}`}>
               -20%
             </span>
           </button>
 
           <button
             type="button"
-            className={`relative flex-1 text-sm font-medium h-8 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-300 transition-colors duration-150 ease-in-out ${
-              !isAnnual ? 'text-white' : 'text-slate-400'
-            }`}
+            className={`relative flex-1 text-sm font-medium h-8 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-300 transition-colors duration-150 ease-in-out ${!isAnnual ? 'text-white' : 'text-slate-400'
+              }`}
             onClick={() => setIsAnnual(false)}
             aria-pressed={!isAnnual}
             aria-label="Select monthly billing"
@@ -114,33 +103,15 @@ const PricingDetails: React.FC = () => {
         </div>
       </div>
 
-      {/* Pricing plans and details */}
-      <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-3 space-y-8 sm:space-y-0 lg:gap-12">
-        {/* Plan list */}
-        <div className="flex flex-col gap-5 col-span-2">
-          {pricingData.map((plan) => (
-            <button
-              key={plan.name}
-              className="w-full text-left focus:outline-none rounded-lg transition-transform duration-200 hover:scale-[1.02]"
-              onClick={() => handleSelect(plan.name)}
-              aria-pressed={selectedPlan.name === plan.name}
-              aria-label={`Select ${plan.name}`}
-            >
-              <PricingPlanList
-                name={plan.name}
-                price={plan.price}
-                discount={plan.discount}
-                selected={selectedPlan.name === plan.name}
-                isAnnual={isAnnual}
-              />
-            </button>
-          ))}
-        </div>
-
-        {/* Selected plan card */}
-        <div className="lg:sticky top-6">
-          <PricingCard selectedPlan={selectedPlan} isAnnual={isAnnual} />
-        </div>
+      {/* Responsive Plan Grid */}
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {pricingData.map((plan) => (
+          <PricingCard
+            selectedPlan={plan}
+            isAnnual={isAnnual}
+            key={plan.name}
+          />
+        ))}
       </div>
     </div>
   );
