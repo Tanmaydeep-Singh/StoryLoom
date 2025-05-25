@@ -10,8 +10,8 @@ import YTranslateCubic from "@/components/AnimationSection/YTranslateCubic";
 import ExploreSection from "@/components/HomePage/ExploreSection";
 import ContributeAsWriter from "@/components/HomePage/Contribute/Writer";
 import Head from "next/head";
-import CheckPlans from "@/components/HomePage/CheckPlans";
 import NewsletterSubscription from "@/components/HomePage/NewsletterSubscription";
+import SubPlans from "@/components/HomePage/SubPlans";
 
 export default function Home() {
   const controls = useAnimation();
@@ -66,7 +66,11 @@ export default function Home() {
             <StoryCategorySection />
           </section>
 
-  
+          <section className="my-10 md:mt-20">
+            <SubPlans />
+          </section>
+
+
           <section className="my-10 md:mt-20">
             <FeaturedStorie />
           </section>
