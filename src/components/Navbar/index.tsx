@@ -1,7 +1,4 @@
-// components/Navbar.tsx
-import { useState } from 'react';
 import Link from 'next/link';
-import LanguageSelection from './LanguageSelection';
 import { useRouter } from 'next/router';
 
 const Navbar = () => {
@@ -9,20 +6,51 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`relative top-4 flex items-center justify-between mx-auto p-4 pb-6 w-11/12 max-w-4xl lg:w-3/5 z-50  ${pathname !== '/'
-          ? 'rounded-full shadow-2xl backdrop-blur-md bg-gradient-to-r from-[rgba(0,0,0,0.8)] via-gray-900 to-[rgba(0,0,0,0.8)]  bg-opacity-30 '
-          : ''
-        }`}
+      className={`fixed top-4 left-1/2 transform -translate-x-1/2 w-[95%] max-w-6xl flex items-center justify-between px-6 py-3 bg-white bg-opacity-10 backdrop-blur-md rounded-[var(--radius,_1.5rem)] shadow-md transition-all duration-300 z-50 ${
+        pathname !== '/' ? 'bg-opacity-30 shadow-lg' : 'bg-opacity-10'
+      }`}
     >
-      <div className="flex items-center">
-        <Link href="/" className="text-white font-serif text-3xl font-bold mr-10">
-          story<span className="text-gray-400">loom</span>
-        </Link>
-      </div>
-      <div className="flex space-x-6">
+      {/* Logo */}
+      <Link href="/" className="flex items-center space-x-1">
+        <span className="text-2xl font-serif font-bold text-white tracking-tight leading-tight">
+          story
+        </span>
+        <span className="text-2xl font-serif font-bold text-gray-300 tracking-tight leading-tight">
+          loom
+        </span>
+      </Link>
 
-        <Link href="/contact" className="bg-gradient-to-r from-blue-400 to-blue-500 text-white px-4 py-2 rounded-full shadow hover:shadow-lg transition duration-300">
-          Contact
+      {/* Navigation Links */}
+      <div className="hidden md:flex space-x-8">
+        {[
+          ['Explore', '/explore'],
+          ['Pricing', '/pricing'],
+          ['About', '/about'],
+          ['Contact', '/contact']
+        ].map(([label, href]) => (
+          <Link
+            key={href}
+            href={href}
+            className="text-white text-base font-semibold hover:text-blue-400 transition-colors duration-200"
+          >
+            {label}
+          </Link>
+        ))}
+      </div>
+
+      {/* Right Controls */}
+      <div className="flex items-center space-x-5">
+        <Link
+          href="/login"
+          className="text-white text-base font-medium hover:text-blue-400 transition-colors duration-200"
+        >
+          Login
+        </Link>
+        <Link
+          href="/signup"
+          className="px-4 py-1.5 bg-transparent border border-blue-400 text-blue-400 rounded-full text-sm font-semibold hover:bg-blue-400 hover:text-white transition duration-300 shadow-sm"
+        >
+          Sign Up
         </Link>
       </div>
     </nav>
@@ -30,4 +58,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
