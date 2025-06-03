@@ -19,6 +19,20 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const { pathname } = useRouter();
 
+  
+  const noLayoutPaths = ['/session/signup', '/session/login'];
+
+  if (noLayoutPaths.includes(pathname)) {
+    return (
+      <>
+        <GoogleAnalytics />
+        {children}
+        <Analytics />
+      </>
+    );
+  }
+
+
   return (
     <main className='bg-gradient-to-r from-black via-gray-900 to-black shadow-md backdrop-blur-md bg-opacity-30 '>
             <div className={` ${ pathname  == '/' ?  'bg-gradient-to-b from-black to-transparent' : 'bg-gradient-to-b from-[rgba(0,0,0,0.2)] to-transparent'} `}>
