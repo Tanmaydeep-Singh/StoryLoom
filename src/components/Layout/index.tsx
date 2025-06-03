@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import { Analytics } from "@vercel/analytics/react"
 import GoogleAnalytics from '../GoogleAnalytics';
 import Footer from '../Footer';
+import Sidebar from '../UserProfile/Sidebar';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,10 +20,11 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const { pathname } = useRouter();
 
-  
-  const noLayoutPaths = ['/session/signup', '/session/login'];
 
-  if (noLayoutPaths.includes(pathname)) {
+  // No Layout
+  const noLayoutPaths = ['/session'];
+
+  if (noLayoutPaths.some((path) => pathname.startsWith(path))) {
     return (
       <>
         <GoogleAnalytics />
@@ -32,18 +34,34 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     );
   }
 
+  // Profile Layout
+  const isProfileRoute = pathname.startsWith("/profile");
+  if (isProfileRoute) {
+    return (
+      <>
+        <GoogleAnalytics />
+        <main className="flex flex-1 p-4">
+          <Sidebar />
+          {children}
+        </main>
+        <Analytics />
+      </>
+    );
+  }
+
+
 
   return (
     <main className='bg-gradient-to-r from-black via-gray-900 to-black shadow-md backdrop-blur-md bg-opacity-30 '>
-            <div className={` ${ pathname  == '/' ?  'bg-gradient-to-b from-black to-transparent' : 'bg-gradient-to-b from-[rgba(0,0,0,0.2)] to-transparent'} `}>
+      <div className={` ${pathname == '/' ? 'bg-gradient-to-b from-black to-transparent' : 'bg-gradient-to-b from-[rgba(0,0,0,0.2)] to-transparent'} `}>
 
-      {pathname !== '/' && <Navbar />}
-      
-      <GoogleAnalytics />
+        {pathname !== '/' && <Navbar />}
 
-     
-      {children}
-      <Analytics />
+        <GoogleAnalytics />
+
+
+        {children}
+        <Analytics />
 
       </div>
       <Footer />

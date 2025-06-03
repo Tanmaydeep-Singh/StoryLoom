@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import StoryCards from '@/components/StoryCards';
-import storiesData from './data.json';
+import storiesData from '../data.json';
 import SkeletonCard from '@/components/HomePage/SkeletonCard';
 
 const GenrePage = () => {
