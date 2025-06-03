@@ -1,15 +1,17 @@
+'use client';
+
 import { useAnimation, motion } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
+import Head from "next/head";
+
 import Hero from "@/components/HomePage/Hero";
 import HighlightSection from "@/components/HomePage/HighlightSection";
 import StoryCategorySection from "@/components/HomePage/StorySection";
-import ParallaxAbout from "@/components/HomePage/Parallex/About";
 import FeaturedStorie from "@/components/HomePage/FeaturedStories";
 import FAQ from "@/components/HomePage/FAQ";
 import YTranslateCubic from "@/components/AnimationSection/YTranslateCubic";
 import ExploreSection from "@/components/HomePage/ExploreSection";
 import ContributeAsWriter from "@/components/HomePage/Contribute/Writer";
-import Head from "next/head";
 import NewsletterSubscription from "@/components/HomePage/NewsletterSubscription";
 import SubPlans from "@/components/HomePage/SubPlans";
 
@@ -17,43 +19,54 @@ export default function Home() {
   const controls = useAnimation();
   const heroRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (heroRef.current) {
-        const heroHeight = heroRef.current.clientHeight;
-        const scrollY = window.scrollY;
-        const opacity = Math.min(scrollY / heroHeight, 1);
-        controls.start({ opacity });
-      }
-    };
+  const handleScroll = useCallback(() => {
+    if (heroRef.current) {
+      const heroHeight = heroRef.current.clientHeight;
+      const scrollY = window.scrollY;
+      const opacity = Math.min(scrollY / heroHeight, 1);
 
-    window.addEventListener("scroll", handleScroll);
+      // Use rAF for performance
+      requestAnimationFrame(() => {
+        controls.start({ opacity });
+      });
+    }
+  }, [controls]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [controls]);
+  }, [handleScroll]);
 
   return (
     <>
       <Head>
         <title>StoryLoom - Discover the World Around</title>
-
-        <meta name="description" content="Discover stories and improve your language skills with StoryLoom." />
+        <meta
+          name="description"
+          content="Discover stories and improve your language skills with StoryLoom."
+        />
         <meta property="og:title" content="StoryLoom - Discover the World Around" />
-        <meta property="og:description" content="Discover stories and improve your language skills with StoryLoom." />
+        <meta
+          property="og:description"
+          content="Discover stories and improve your language skills with StoryLoom."
+        />
         <meta property="og:image" content="/Logos/logo.png" />
         <link rel="canonical" href="https://storyloom.in/" />
-      </Head>    <main className="relative">
+      </Head>
+
+      <main className="relative">
         <div ref={heroRef} className="relative">
           <Hero />
           <motion.div
-            className="absolute inset-0 bg-black"
+            className="absolute inset-0 bg-black pointer-events-none"
             initial={{ opacity: 0 }}
             animate={controls}
           />
         </div>
 
-        <div className="flex min-h-screen flex-col items-center justify-between md:pt-0 md:p-24">
+        <div className="flex flex-col items-center justify-between md:p-24">
           <YTranslateCubic>
             <ExploreSection />
           </YTranslateCubic>
@@ -70,33 +83,24 @@ export default function Home() {
             <SubPlans />
           </section>
 
-
           <section className="my-10 md:mt-20">
             <FeaturedStorie />
           </section>
 
-
-          {/* <section className="my-10 md:mt-20">
-            <ParallaxAbout />
-          </section> */}
-
-
-          <section>
+          <section className="my-10 md:mt-20">
             <ContributeAsWriter />
           </section>
-
-
-
-          {/* <section>
-            <CheckPlans/>
-          </section> */}
 
           <section className="my-10 md:mt-20">
             <FAQ />
           </section>
+
+          {/* Optional future section */}
+          {/* <section className="my-10 md:mt-20">
+            <NewsletterSubscription />
+          </section> */}
         </div>
       </main>
     </>
-
   );
 }

@@ -9,10 +9,10 @@ const HighlightSection = () => {
       {/* Centered text */}
       <div className="relative z-10 flex items-center justify-center h-full px-4 sm:px-8">
         <div className="text-center text-white">
-          <h2 className="text-2xl sm:text-3xl xl:text-4xl font-serif font-bold  pb-10">
-            Intriguing Plots and Characters
-          </h2>
-        </div>
+         <h2 className="text-3xl sm:text-4xl xl:text-5xl font-serif font-bold pb-10">
+          Intriguing Plots and Characters
+        </h2>
+       </div>
       </div>
     </div>
   );
