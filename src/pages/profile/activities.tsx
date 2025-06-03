@@ -1,9 +1,10 @@
 import React from 'react'
 
-function activities() {
-  return (
-    <div>activities</div>
-  )
+const activities = () => {
+    return (
+    <div className=" flex flex-col md:flex-row bg-white px-2 py-4">
+            activities</div>
+    )
 }
 
 export default activities

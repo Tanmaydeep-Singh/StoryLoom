@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react"
 import GoogleAnalytics from '../GoogleAnalytics';
 import Footer from '../Footer';
 import Sidebar from '../UserProfile/Sidebar';
+import UserNav from '../UserProfile/UserNav';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -33,22 +34,26 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </>
     );
   }
-
   // Profile Layout
   const isProfileRoute = pathname.startsWith("/profile");
+
   if (isProfileRoute) {
+    const pageTitle = pathname?.split("/")[2] || "Dashboard";
+
     return (
       <>
         <GoogleAnalytics />
-        <main className="flex flex-1 p-4">
+        <main className="flex">
           <Sidebar />
-          {children}
+          <div className="flex-1 ">
+            <UserNav pageTitle={pageTitle} />
+            <div className=' overflow-y-auto'>{children}</div>
+          </div>
         </main>
         <Analytics />
       </>
     );
   }
-
 
 
   return (

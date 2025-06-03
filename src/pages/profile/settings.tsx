@@ -1,10 +1,10 @@
 import React from 'react'
 
-const subscriptions = () => {
+const setting = () => {
     return (
     <div className=" flex flex-col md:flex-row bg-white px-2 py-4">
-            subscriptions</div>
+            setting</div>
     )
 }
 
-export default subscriptions
+export default setting
