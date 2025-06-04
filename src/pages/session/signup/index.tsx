@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { useAuthStore } from '@/store';
+
 
 const Signup = () => {
   const [name, setName] = useState('');
@@ -8,12 +10,19 @@ const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const { setUser } = useAuthStore();
+
   const router = useRouter();
 
   const handleSignup = (e: React.FormEvent) => {
     e.preventDefault();
-    router.push('/'); // Redirect to home
+    if (password == 'dudu@123') {
+      setUser({ username, email });
+    }
   };
+
+  const currentUser =  useAuthStore((state) => state.user);
+  console.log("currentUser",currentUser);
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row bg-white">
