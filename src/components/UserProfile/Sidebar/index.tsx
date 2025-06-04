@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 
 const profileLinks = [
   { href: "/profile/dashboard", label: "Dashboard" },
@@ -12,9 +13,12 @@ const profileLinks = [
 ];
 
 export default function ProfileSidebar() {
+    const router = useRouter();
   const pathname = usePathname();
 
   const handleLogout = () => {
+    router.push('/')
+    
     console.log("Logging out...");
   };
 
