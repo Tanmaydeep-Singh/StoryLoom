@@ -1,12 +1,13 @@
-import { useState, ChangeEvent, FormEvent } from 'react';
-import Link from 'next/link';
-import emailjs from 'emailjs-com';
+"use client";
+
+import { useState, ChangeEvent, FormEvent } from "react";
+import Link from "next/link";
+import emailjs from "emailjs-com";
 
 const StoryloomSubscription = () => {
-  const [email, setEmail] = useState<string>('');
-  const [isSubscribed, setIsSubscribed] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
+  const [email, setEmail] = useState("");
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
 
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -16,12 +17,12 @@ const StoryloomSubscription = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setError(null);
+    setStatusMessage(null);
 
     const formData = {
-      name: 'Storyloom Submission',
+      name: "Storyloom Submission",
       email,
-      message: 'Subscribed to Storyloom',
+      message: "Subscribed to Storyloom",
     };
 
     try {
@@ -32,62 +33,51 @@ const StoryloomSubscription = () => {
         process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
       );
 
-      if (result.text === 'OK') {
-        setStatusMessage('Your subscription was successful!');
+      if (result.text === "OK") {
+        setStatusMessage("You're subscribed! 🎉");
         setIsSubscribed(true);
-        setEmail(''); // Clear the email input
+        setEmail("");
       } else {
-        setStatusMessage('Something went wrong. Please try again later.');
+        setStatusMessage("Something went wrong. Please try again.");
       }
     } catch (error) {
-      console.error('EmailJS Error:', error);
-      setStatusMessage('An error occurred. Please try again later.');
+      console.error("EmailJS Error:", error);
+      setStatusMessage("An error occurred. Please try again.");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <section className="flex items-center text-white">
-      <div className="max-w-4xl mx-auto text-center">
-        {!isSubscribed ? (
-          <div >
-            <form onSubmit={handleSubmit} className="flex flex-row items-center justify-center">
+    <section className="">
+      <div className="w-full text-left">
+          <>
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col sm:flex-row items-center gap-3 sm:gap-0"
+            >
               <input
                 type="email"
                 placeholder="Enter your email"
                 value={email}
                 onChange={handleEmailChange}
                 required
-                className="p-3 rounded-l-xl  border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-56 h-10"
+                className="w-full sm:w-64 px-4 py-2 rounded-l-xl sm:rounded-l-xl sm:rounded-r-none bg-white dark:bg-[#1a1a1a] border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
               />
               <button
                 type="submit"
                 disabled={loading}
-                className={`w-24 h-10 p-4 text-white rounded-r-xl flex items-center justify-center text-center ${loading ? 'bg-gray-400' : 'bg-blue-400 hover:shadow-lg'
-                  }`}
+                className={`w-full sm:w-28 py-2 px-4 text-white rounded-r-xl sm:rounded-r-xl sm:rounded-l-none transition ${
+                  loading
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-blue-500 hover:bg-blue-600"
+                }`}
               >
-                {loading ? 'Subscribing...' : 'Subscribe'}
+                {loading ? "Subscribing..." : "Subscribe"}
               </button>
             </form>
-            {statusMessage && (
-              <p className="text-center mt-4 text-lg">{statusMessage}</p>
-            )}
-          </div>
-        ) : (
-          <div>
-            <h2 className="text-4xl font-bold mb-6">Subscribed to Storyloom</h2>
-            <p className="text-lg mb-8">
-              You will now receive updates on new stories. Stay tuned!
-            </p>
-            <Link
-              href="/storie"
-              className="bg-gradient-to-r from-blue-400 to-blue-500 text-white px-4 py-2 rounded-full shadow hover:shadow-lg transition duration-300"
-            >
-              Explore Stories
-            </Link>
-          </div>
-        )}
+          </>
+
       </div>
     </section>
   );
