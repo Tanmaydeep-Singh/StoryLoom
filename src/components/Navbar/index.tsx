@@ -1,6 +1,10 @@
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React from 'react';
+import { Moon, Sun } from 'lucide-react';
+import { useUIStore } from '@/store';
 
 const navLinks = [
   { label: 'Explore', href: '/explore' },
@@ -11,6 +15,13 @@ const navLinks = [
 
 const Navbar: React.FC = () => {
   const { pathname } = useRouter();
+  const { toggleTheme } = useUIStore();
+  const theme = useUIStore((state) => state.theme);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+  }, [theme]);
+
 
   return (
     <nav
@@ -18,33 +29,28 @@ const Navbar: React.FC = () => {
       aria-label="Primary Navigation"
       className={`
         fixed top-4 left-1/2 transform -translate-x-1/2
-        w-[95%] max-w-6xl
+        w-[92vw] max-w-7xl
         flex items-center justify-between
         px-6 py-3
-        bg-white bg-opacity-10 backdrop-blur-md
-        rounded-[1.5rem] shadow-md
+        rounded-2xl shadow-lg z-50
+        bg-white/10 dark:bg-black/20
+        backdrop-blur-xl
         transition-all duration-300
-        z-50
-        ${pathname !== '/' ? 'bg-opacity-30 shadow-lg' : 'bg-opacity-10'}
+        ${pathname !== '/' ? 'bg-opacity-30' : 'bg-opacity-10'}
       `}
     >
       {/* Logo */}
-      <Link
-        href="/"
-        aria-label="Go to homepage"
-        className="flex items-center space-x-1 select-none"
-        tabIndex={0}
-      >
-        <span className="text-2xl font-serif font-bold text-white tracking-tight leading-tight">
+      <Link href="/" className="flex items-center space-x-1 select-none" aria-label="Go to homepage">
+        <span className="text-2xl font-serif font-bold text-black dark:text-white tracking-tight">
           story
         </span>
-        <span className="text-2xl font-serif font-bold text-gray-300 tracking-tight leading-tight">
+        <span className="text-2xl font-serif font-bold text-gray-500 dark:text-gray-300 tracking-tight">
           loom
         </span>
       </Link>
 
-      {/* Navigation Links */}
-      <div className="hidden md:flex space-x-10">
+      {/* Navigation */}
+      <div className="hidden md:flex space-x-8">
         {navLinks.map(({ label, href }) => {
           const isActive = pathname === href;
           return (
@@ -52,14 +58,9 @@ const Navbar: React.FC = () => {
               key={href}
               href={href}
               className={`
-                relative text-base font-semibold
-                transition-colors duration-200
+                relative text-sm font-medium transition-colors duration-200
                 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 rounded-md
-                ${
-                  isActive
-                    ? 'text-blue-400'
-                    : 'text-white hover:text-blue-400'
-                }
+                ${isActive ? 'text-blue-500 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300 hover:text-blue-500'}
               `}
               aria-current={isActive ? 'page' : undefined}
             >
@@ -67,7 +68,7 @@ const Navbar: React.FC = () => {
               {isActive && (
                 <span
                   aria-hidden="true"
-                  className="absolute bottom-[-6px] left-0 w-full h-1 rounded-full bg-blue-400"
+                  className="absolute -bottom-1 left-0 w-full h-0.5 rounded-full bg-blue-400"
                 />
               )}
             </Link>
@@ -75,28 +76,39 @@ const Navbar: React.FC = () => {
         })}
       </div>
 
-      {/* Right Controls */}
-      <div className="flex items-center space-x-6">
+      {/* Actions */}
+      <div className="flex items-center space-x-4">
+        {/* Theme Toggle */}
+        <button
+          onClick={() => {toggleTheme()}}
+          aria-label="Toggle Theme"
+          className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-white/10 transition"
+        >
+          {theme === 'dark' ? (
+            <Sun className="w-5 h-5 text-yellow-300" />
+          ) : (
+            <Moon className="w-5 h-5 text-gray-800" />
+          )}
+        </button>
+
+        {/* Login */}
         <Link
           href="/session/login"
-          className="text-white text-base font-medium hover:text-blue-400 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 rounded-md"
+          className="text-sm font-medium text-gray-800 dark:text-white hover:text-blue-500 transition-colors"
         >
           Login
         </Link>
 
+        {/* Sign Up */}
         <Link
           href="/session/signup"
           className="
-            px-5 py-2
-            border border-blue-400
-            text-blue-400
-            rounded-full
-            text-sm font-semibold
-            hover:bg-blue-400 hover:text-white
-            transition-colors duration-300
-            shadow-sm
-            focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2
-            select-none
+            px-4 py-1.5 text-sm font-semibold
+            text-white bg-blue-500 hover:bg-blue-600
+            dark:bg-blue-600 dark:hover:bg-blue-700
+            rounded-full shadow
+            focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400
+            transition-all duration-300
           "
         >
           Sign Up
