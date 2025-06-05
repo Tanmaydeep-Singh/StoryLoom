@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Moon, Sun } from 'lucide-react';
 import { useUIStore } from '@/store';
+import storyloomLogoDark from "../../../public/favicon/storyloomLogoDark.png";
+import Image from 'next/image';
 
 const navLinks = [
   { label: 'Explore', href: '/explore' },
@@ -41,13 +43,14 @@ const Navbar: React.FC = () => {
     >
       {/* Logo */}
       <Link href="/" className="flex items-center space-x-1 select-none" aria-label="Go to homepage">
-        <span className="text-2xl font-serif font-bold text-black dark:text-white tracking-tight">
-          story
-        </span>
-        <span className="text-2xl font-serif font-bold text-gray-500 dark:text-gray-300 tracking-tight">
-          loom
-        </span>
-      </Link>
+           <Image
+            src={theme == 'dark' ? storyloomLogoDark : storyloomLogoDark}
+            alt="Storyloom logo"
+            width={24}
+            height={24}
+            className="rounded-md"
+          />
+     </Link>
 
       {/* Navigation */}
       <div className="hidden md:flex space-x-8">
