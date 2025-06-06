@@ -1,16 +1,16 @@
-import React from 'react';
-import PricingDetails from './PricingDetails';
+import React from "react";
+import PricingDetails from "./PricingDetails";
 
 const SubPlans = () => {
   return (
-    <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16">
+    <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-24">
       {/* Header */}
-      <div className="text-center mb-12">
-        <h2 className="text-3xl sm:text-4xl xl:text-5xl font-serif font-bold text-[#e8d5b7] mb-4">
+      <div className="text-center mb-10">
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">
           Discover the Perfect Plan for You
         </h2>
-        <p className="text-[#b8a58c] text-base sm:text-lg xl:text-xl leading-relaxed max-w-2xl mx-auto">
-          Whether you&apos;re looking for a free plan or something more, we&apos;ve got you covered. Explore our plans to find the one that fits your needs.
+        <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base max-w-xl mx-auto">
+          Whether you&apos;re starting out or ready to unlock more features, our plans are designed to suit every reader’s journey.
         </p>
       </div>
 
