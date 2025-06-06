@@ -5,15 +5,14 @@ import { useEffect, useRef, useCallback } from "react";
 import Head from "next/head";
 
 import Hero from "@/components/HomePage/Hero";
-import HighlightSection from "@/components/HomePage/HighlightSection";
 import StoryCategorySection from "@/components/HomePage/StorySection";
 import FeaturedStorie from "@/components/HomePage/FeaturedStories";
 import FAQ from "@/components/HomePage/FAQ";
 import YTranslateCubic from "@/components/AnimationSection/YTranslateCubic";
 import ExploreSection from "@/components/HomePage/ExploreSection";
 import ContributeAsWriter from "@/components/HomePage/Contribute/Writer";
-import NewsletterSubscription from "@/components/HomePage/NewsletterSubscription";
 import SubPlans from "@/components/HomePage/SubPlans";
+import Discover from "@/components/HomePage/Discover";
 
 export default function Home() {
   const controls = useAnimation();
@@ -25,7 +24,6 @@ export default function Home() {
       const scrollY = window.scrollY;
       const opacity = Math.min(scrollY / heroHeight, 1);
 
-      // Use rAF for performance
       requestAnimationFrame(() => {
         controls.start({ opacity });
       });
@@ -67,12 +65,12 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center justify-between md:p-24">
-          <YTranslateCubic>
-            <ExploreSection />
-          </YTranslateCubic>
+        <YTranslateCubic>
+          <Discover/>
+        </YTranslateCubic>
 
           <YTranslateCubic>
-            <HighlightSection />
+            <ExploreSection />
           </YTranslateCubic>
 
           <section className="my-10 md:mt-20">
@@ -95,10 +93,6 @@ export default function Home() {
             <FAQ />
           </section>
 
-          {/* Optional future section */}
-          {/* <section className="my-10 md:mt-20">
-            <NewsletterSubscription />
-          </section> */}
         </div>
       </main>
     </>

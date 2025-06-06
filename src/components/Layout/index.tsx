@@ -57,18 +57,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 
   return (
-    <main className='bg-gradient-to-r from-black via-gray-900 to-black shadow-md backdrop-blur-md bg-opacity-30 '>
-      <div className={` ${pathname == '/' ? 'bg-gradient-to-b from-black to-transparent' : 'bg-gradient-to-b from-[rgba(0,0,0,0.2)] to-transparent'} `}>
+    <main className='bg-white dark:bg-[#0f1116] text-gray-900 dark:text-white transition-colors duration-300 relative '>
 
-        {pathname !== '/' && <Navbar />}
+      {pathname !== '/' && <Navbar />}
 
-        <GoogleAnalytics />
+      <GoogleAnalytics />
 
 
-        {children}
-        <Analytics />
+      {children}
+      <Analytics />
 
-      </div>
       <Footer />
 
     </main>
