@@ -33,7 +33,7 @@ interface accordian {
 const FAQ = () => {
     return (
         <div className="mt-8 px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white shadow-lg">
+            <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">
                 FAQ
             </h1>
             {AccordianData.map((data) => (
