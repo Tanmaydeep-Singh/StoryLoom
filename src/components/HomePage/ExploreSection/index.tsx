@@ -25,7 +25,7 @@ const ExploreCultures = () => {
           </div>
         </div>
         {/* Right: Marquee */}
-        <div className="w-screen xl:w-3/5">
+        <div className="mx-auto w-[90vw] md:w-[80vw] xl:w-3/5">
           <FolktailsMarquess />
         </div>
       </div>

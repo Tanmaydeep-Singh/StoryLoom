@@ -13,6 +13,8 @@ import ExploreSection from "@/components/HomePage/ExploreSection";
 import ContributeAsWriter from "@/components/HomePage/Contribute/Writer";
 import SubPlans from "@/components/HomePage/SubPlans";
 import Discover from "@/components/HomePage/Discover";
+import Ipad from "@/components/MockUp/Ipad";
+import Iphone from "@/components/MockUp/Iphone";
 
 export default function Home() {
   const controls = useAnimation();
@@ -65,17 +67,21 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center justify-between md:p-24">
-        <YTranslateCubic>
-          <Discover/>
-        </YTranslateCubic>
+
+          <Ipad />
+          <Iphone />  
+
+          <YTranslateCubic>
+            <Discover />
+          </YTranslateCubic>
 
           <YTranslateCubic>
             <ExploreSection />
           </YTranslateCubic>
 
-          <section className="my-10 md:mt-20">
+          {/* <section className="my-10 md:mt-20">
             <StoryCategorySection />
-          </section>
+          </section> */}
 
           <section className="my-10 md:mt-20">
             <SubPlans />
