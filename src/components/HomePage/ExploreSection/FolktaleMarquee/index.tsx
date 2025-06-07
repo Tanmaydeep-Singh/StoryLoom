@@ -15,8 +15,8 @@ export function FolktailsMarquess() {
   return (
     <div className="relative w-full overflow-hidden">
       {/* Gradient overlays */}
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-[15%] bg-gradient-to-r from-[#050505] via-transparent to-transparent z-10" />
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-[15%] bg-gradient-to-l from-[#050505] via-transparent to-transparent z-10" />
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-[15%] bg-gradient-to-r from-white via-transparent to-transparent dark:from-[#0f1116] z-10" />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-[15%] bg-gradient-to-l from-white via-transparent to-transparent dark:from-[#0f1116] z-10" />
 
       {/* Marquee content */}
       <div className="flex gap-8 py-6 w-max animate-marquee hover:[animation-play-state:paused]">

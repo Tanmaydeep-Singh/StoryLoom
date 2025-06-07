@@ -15,7 +15,7 @@ const CountryCard = ({ title, genre, imageUrl }: CountryCardProps) => {
     <motion.div
       whileHover={{ scale: 1.045 }}
       whileTap={{ scale: 0.97 }}
-      className="relative min-w-[10rem] sm:min-w-[12rem] h-64 sm:h-72 rounded-2xl overflow-hidden border border-white/10 backdrop-blur-md shadow-[0_10px_40px_rgba(0,0,0,0.3)] transition-transform"
+      className="relative min-w-[10rem] sm:min-w-[12rem] h-64 sm:h-72 rounded-2xl overflow-hidden border border-white/10 backdrop-blur-md  transition-transform"
     >
       <Link href={`/folktales/${genre}`}>
         <div className="cursor-pointer w-full h-full relative group">
