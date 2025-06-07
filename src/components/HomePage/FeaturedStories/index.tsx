@@ -36,8 +36,8 @@ export default function FeaturedStories() {
 
   return (
     <div className="mt-8 px-4 sm:px-6 lg:px-8 text-center">
-      <h2 className="text-2xl sm:text-3xl xl:text-4xl font-serif font-bold text-white pb-10">
-        FEATURED STORIES
+      <h2 className="text-2xl sm:text-3xl xl:text-4xl font-bold pb-10">
+        Featured Stories
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 

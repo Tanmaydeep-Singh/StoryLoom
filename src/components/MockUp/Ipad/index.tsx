@@ -77,7 +77,7 @@ const Ipad = () => {
                 </div>
 
                 {/* Left Panel: Video */}
-                <div className="hidden md:flex w-1/2 bg-gray-100 dark:bg-gray-900 items-center justify-center pr-4">
+                <div className="hidden md:flex w-1/2 bg-gray-100 dark:bg-gray-900 items-center justify-center">
                     <video
                         src="/signupVid.webm"
                         autoPlay
@@ -90,8 +90,18 @@ const Ipad = () => {
                 </div>
 
                 {/* Right Panel: Story */}
-                <div className="w-full md:w-1/2 flex items-center justify-center p-10 sm:p-12 md:p-16">
-                    STORY
+                <div className="w-full md:w-1/2 flex items-center justify-center p-10 sm:p-12 ">
+                    <div className="max-w-md space-y-6 text-left">
+                        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            The Sound of Stillness
+                        </h1>
+                        <p className="text-base  text-gray-700 dark:text-gray-300 leading-relaxed">
+                            As the last train rumbled past the edge of the sleeping town, Mira stood by the window, her fingers tracing shapes in the foggy glass. She had always wondered what silence sounded like, and tonight, in the hush between the ticking of the clock and the rustling of the leaves, she thought she finally heard it — soft, sacred, and slow.
+                        </p>
+                        <p className="text-base  text-gray-700 dark:text-gray-300 leading-relaxed">
+                            The letter lay unopened on the kitchen counter. She didn’t need to read it to know what it said. Some stories don’t ask for an ending, they just fade into the quiet — and in that stillness, Mira smiled, not because she was certain of tomorrow, but because she had finally made peace with yesterday.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

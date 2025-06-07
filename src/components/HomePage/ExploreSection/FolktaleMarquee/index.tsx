@@ -19,7 +19,7 @@ export function FolktailsMarquess() {
       <div className="pointer-events-none absolute right-0 top-0 h-full w-[15%] bg-gradient-to-l from-white via-transparent to-transparent dark:from-[#0f1116] z-10" /> */}
 
       {/* Marquee content */}
-      <div className="flex gap-8 py-6 w-max animate-marquee hover:[animation-play-state:paused]">
+      <div className="flex gap-8 py-6 w-max animate-marquee ">
         {[...Array(2)].map((_, i) => (
           <div key={i} className="flex gap-8">
             {countries.map((country) => (

@@ -12,9 +12,9 @@ import YTranslateCubic from "@/components/AnimationSection/YTranslateCubic";
 import ExploreSection from "@/components/HomePage/ExploreSection";
 import ContributeAsWriter from "@/components/HomePage/Contribute/Writer";
 import SubPlans from "@/components/HomePage/SubPlans";
-import Discover from "@/components/HomePage/Discover";
 import Ipad from "@/components/MockUp/Ipad";
 import Iphone from "@/components/MockUp/Iphone";
+import Discover from "@/components/HomePage/Discover";
 
 export default function Home() {
   const controls = useAnimation();
@@ -65,24 +65,18 @@ export default function Home() {
           <Ipad />
           <Iphone />
 
-          <YTranslateCubic>
-            <Discover />
-          </YTranslateCubic>
 
-          <YTranslateCubic>
+      
+          <section className="my-10 md:mt-20">
             <ExploreSection />
-          </YTranslateCubic>
-
-          {/* <section className="my-10 md:mt-20">
-            <StoryCategorySection />
-          </section> */}
+          </section>
 
           <section className="my-10 md:mt-20">
             <SubPlans />
           </section>
 
           <section className="my-10 md:mt-20">
-            <FeaturedStorie />
+            <Discover/>
           </section>
 
           <section className="my-10 md:mt-20">
