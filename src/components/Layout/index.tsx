@@ -59,8 +59,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <main className='bg-white dark:bg-[#0f1116] text-gray-900 dark:text-white transition-colors duration-300 relative '>
 
-      {pathname !== '/' && <Navbar />}
-
+       <Navbar />
       <GoogleAnalytics />
 
 

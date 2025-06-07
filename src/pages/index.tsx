@@ -57,19 +57,13 @@ export default function Home() {
       </Head>
 
       <main className="relative">
-        <div ref={heroRef} className="relative">
-          <Hero />
-          <motion.div
-            className="absolute inset-0 bg-black pointer-events-none"
-            initial={{ opacity: 0 }}
-            animate={controls}
-          />
-        </div>
 
         <div className="flex flex-col items-center justify-between md:p-24">
+          <Hero />
+
 
           <Ipad />
-          <Iphone />  
+          <Iphone />
 
           <YTranslateCubic>
             <Discover />
