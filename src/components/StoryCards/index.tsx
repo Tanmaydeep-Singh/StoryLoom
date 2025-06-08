@@ -1,45 +1,62 @@
 import Link from 'next/link';
 import Image from 'next/image';
-
-type LanguageCode = 'en' | 'es' | 'de'  | 'fr' | 'РУ';
+import { motion } from "framer-motion";
+import { useState } from 'react';
 
 interface storyCards {
-  id: any;
-  title: string;
-  story: any;
-  image: string;
+    id: any;
+    title: string;
+    story: any;
+    image: string;
 }
 
 
-const StoryCards = ({ id, image, title, story }:storyCards) => {
+const StoryCards = ({ id, image, title, story }: storyCards) => {
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
-        <div
-            key={id}
-            className="bg-background-card bg-opacity-80 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out"
+        <motion.div
+            className="relative  h-48 sm:h-64 rounded-xl overflow-hidden border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.2)] transition-transform"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+
         >
             <Link href={`/story/${id}`} passHref>
-                <div className="cursor-pointer">
-                    <div className="relative w-full h-40 sm:h-44 md:h-48">
+                <div className="relative w-full h-full cursor-pointer">
+                    {/* Background image with zoom effect */}
+                    <motion.div
+                        className="absolute inset-0"
+                        initial={{ scale: 1 }}
+                        animate={{ scale: isHovered ? 1.1  : 1}}
+                        transition={{ duration: 0.4 }}
+                    >
                         <Image
                             src={image}
-                            alt={title}
-                            layout="fill"
-                            objectFit="cover"
-                            className="rounded-t-lg"
+                            alt={title || "Story image"}
+                            fill
+                            className="object-cover"
+                            priority
                         />
-                    </div>
-                    <div className="p-4">
-                        <h3 className="text-lg font-semibold text-primary-100 mb-2">{title}</h3>
-                        <p className="text-primary-200 text-sm sm:text-base">
-                            {story['en'].slice(0, 45) + '...'}
-                        </p>
-                        <span className="text-accent-200 hover:text-darkGreen mt-4 inline-block font-semibold">
-                            Read More
-                        </span>
-                    </div>
+                    </motion.div>
+
+                    {/* Gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10" />
+
+                    {/* Glassmorphism + text content (only on hover) */}
+                    <motion.div
+                        className={`absolute bottom-0 left-0  z-20 p-4 rounded-b-xl text-left w-full backdrop-blur-sm bg-white/10 transition-all duration-300`}
+                    >
+                        <h3 className="text-white text-sm sm:text-lg font-semibold">{title}</h3>
+
+                        {isHovered && <p className="text-white text-xs sm:text-sm mt-1 line-clamp-2">                            {story['en'].slice(0, 120) + '...'}</p>
+                        }
+
+                    </motion.div>
                 </div>
             </Link>
-        </div>
+        </motion.div>
+
+
     )
 }
 

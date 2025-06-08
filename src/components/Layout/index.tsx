@@ -1,11 +1,13 @@
 // components/Layout.tsx
 import React, { ReactNode } from 'react';
 import { Metadata } from 'next';
-import Footer from '../Footer';
 import Navbar from '../Navbar';
 import { useRouter } from 'next/router';
 import { Analytics } from "@vercel/analytics/react"
 import GoogleAnalytics from '../GoogleAnalytics';
+import Footer from '../Footer';
+import Sidebar from '../UserProfile/Sidebar';
+import UserNav from '../UserProfile/UserNav';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,19 +21,51 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const { pathname } = useRouter();
 
-  return (
-    <main className='bg-gradient-to-r from-black via-gray-900 to-black shadow-md backdrop-blur-md bg-opacity-30 '>
-            <div className={` ${ pathname  == '/' ?  'bg-gradient-to-b from-black to-transparent' : 'bg-gradient-to-b from-[rgba(0,0,0,0.2)] to-transparent'} `}>
 
-      {pathname !== '/' && <Navbar />}
-      
+  // No Layout
+  const noLayoutPaths = ['/session'];
+
+  if (noLayoutPaths.some((path) => pathname.startsWith(path))) {
+    return (
+      <>
+        <GoogleAnalytics />
+        {children}
+        <Analytics />
+      </>
+    );
+  }
+  // Profile Layout
+  const isProfileRoute = pathname.startsWith("/profile");
+
+  if (isProfileRoute) {
+    const pageTitle = pathname?.split("/")[2] || "Dashboard";
+
+    return (
+      <>
+        <GoogleAnalytics />
+        <main className="flex">
+          <Sidebar />
+          <div className="flex-1 ">
+            <UserNav pageTitle={pageTitle} />
+            <div className=' overflow-y-auto'>{children}</div>
+          </div>
+        </main>
+        <Analytics />
+      </>
+    );
+  }
+
+
+  return (
+    <main className='bg-white dark:bg-[#0f1116] text-gray-900 dark:text-white transition-colors duration-300 relative '>
+
+       <Navbar />
       <GoogleAnalytics />
 
-     
+
       {children}
       <Analytics />
 
-      </div>
       <Footer />
 
     </main>

@@ -1,17 +1,23 @@
+'use client';
+
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { useUIStore } from '@/store';
+import { Mail, Instagram, Twitter, Linkedin } from 'lucide-react';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [statusMessage, setStatusMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: any) => {
+  const theme = useUIStore((state) => state.theme);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -38,64 +44,106 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-6">
-      <div className="bg-white bg-opacity-10 p-8 rounded-lg shadow-md w-full max-w-lg text-white">
-        <h1 className="text-3xl font-bold mb-6 text-center">Contact Us</h1>
-        <p className="mb-4 text-center">We would love to hear from you! Whether you have a question about the stories, need assistance, or just want to share your thoughts, feel free to reach out.</p>
-
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full px-3 py-2 bg-gray-700 bg-opacity-50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
-              placeholder="Your Name"
-            />
+    <div className="min-h-screen bg-white dark:bg-[#0f1116] text-gray-900 dark:text-white flex flex-col md:flex-row transition-colors duration-300 pt-14 md:pt-0">
+      
+      {/* Left: Contact Form */}
+      <div className="w-full md:w-1/2 p-8 sm:p-12 lg:p-16 flex items-center justify-center">
+        <div className="w-full max-w-lg space-y-8">
+          <div className="w-full max-w-md space-y-8">
+            <h1 className="text-4xl font-bold mb-2">Contact Us</h1>
+            <p className="text-base text-gray-600 dark:text-gray-400">
+              Got a suggestion, a story to tell, or a question? We’d love to hear from you.
+            </p>
           </div>
 
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full px-3 py-2 bg-gray-700 bg-opacity-50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
-              placeholder="Your Email"
-            />
-          </div>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label htmlFor="name" className="text-sm font-medium block mb-1">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                placeholder="Your Name"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm"
+              />
+            </div>
 
-          <div className="mb-4">
-            <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              rows={5}
-              className="w-full px-3 py-2 bg-gray-700 bg-opacity-50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
-              placeholder="Your Message"
-            ></textarea>
-          </div>
+            <div>
+              <label htmlFor="email" className="text-sm font-medium block mb-1">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                placeholder="you@example.com"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm"
+              />
+            </div>
 
-          {statusMessage && <p className="text-center mb-4 text-sm text-green-400">{statusMessage}</p>}
+            <div>
+              <label htmlFor="message" className="text-sm font-medium block mb-1">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                value={formData.message}
+                onChange={handleChange}
+                rows={5}
+                required
+                placeholder="Your message..."
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm"
+              />
+            </div>
 
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="bg-gradient-to-r from-blue-400 to-blue-500 text-white px-4 py-2 rounded-full shadow hover:shadow-lg transition duration-300 w-full"
-          >
-            {isSubmitting ? 'Sending...' : 'Send Message'}
-          </button>
-        </form>
+            {statusMessage && (
+              <p className="text-sm text-green-600 dark:text-green-400">{statusMessage}</p>
+            )}
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full py-3 text-white font-medium rounded-lg bg-blue-600 hover:bg-blue-700 transition disabled:opacity-60"
+            >
+              {isSubmitting ? 'Sending...' : 'Send Message'}
+            </button>
+          </form>
+        </div>
+      </div>
+
+      {/* Right: Contact Info */}
+      <div className="w-full md:w-1/2 p-8 sm:p-12 lg:p-16 flex flex-col justify-center items-center text-center space-y-8">
+        <div className="space-y-2">
+          <h2 className="text-2xl font-semibold">Reach Us</h2>
+          <p className="text-base text-gray-600 dark:text-gray-400">
+            For collaborations, partnerships, or feedback—feel free to drop us a line.
+          </p>
+        </div>
+
+        <div className="flex items-center gap-3 text-gray-800 dark:text-gray-300 text-sm">
+          <Mail className="w-5 h-5" />
+          <span>work@storyloom.in</span>
+        </div>
+
+        <div className="flex gap-6 pt-4 text-gray-500">
+          <a href="https://instagram.com/storyloom" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <Instagram className="w-5 h-5 hover:text-pink-500 transition" />
+          </a>
+          <a href="https://twitter.com/storyloom" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <Twitter className="w-5 h-5 hover:text-sky-500 transition" />
+          </a>
+          <a href="https://linkedin.com/company/storyloom" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <Linkedin className="w-5 h-5 hover:text-blue-600 transition" />
+          </a>
+        </div>
+
+        <div className="pt-6 text-sm text-gray-500 dark:text-gray-400">
+          <p>StoryLoom Inc.</p>
+          {/* <p>Kota, Rajasthan, India</p> */}
+        </div>
       </div>
     </div>
   );

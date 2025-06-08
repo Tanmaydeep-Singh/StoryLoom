@@ -1,24 +1,42 @@
-// pages/_document.js
+/* eslint-disable @next/next/no-title-in-document-head */
 import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html>
+    <Html lang="en">
       <Head>
         {/* SEO Meta Tags */}
         <title>StoryLoom - Discover the World Around</title>
-        <meta name="description" content="Explore a world of stories with Storyloom. Read and contribute to folktales from around the globe and enhance your language skills." />
-        <meta name="keywords" content="stories, folktales, language learning, Storyloom, literature, multilingual stories, cultural tales, global literature, language practice, storytelling, traditional stories, language immersion, reading for language learners, cultural heritage, narrative, folklore, cultural preservation, global cultures, cultural understanding, Japan, cultural diversity, traditional culture, world heritage, international stories, Adventure, Romance, Mystery, Fantasy, Science Fiction, Thriller, Horror, Comedy, Russian, German, French, Spanish, Japanese, Indian" />
+        <meta
+          name="description"
+          content="Explore a world of stories with Storyloom. Read and contribute to folktales from around the globe and enhance your language skills."
+        />
+        <meta
+          name="keywords"
+          content="stories, folktales, language learning, Storyloom, literature, multilingual stories, cultural tales, global literature, language practice, storytelling, traditional stories, language immersion, reading for language learners, cultural heritage, narrative, folklore, cultural preservation, global cultures, cultural understanding, Japan, cultural diversity, traditional culture, world heritage, international stories, Adventure, Romance, Mystery, Fantasy, Science Fiction, Thriller, Horror, Comedy, Russian, German, French, Spanish, Japanese, Indian"
+        />
         <meta name="author" content="Storyloom Team" />
-        <meta property="og:title" content="Storyloom - Explore and Contribute to Global Folktales" />
-        <meta property="og:description" content="Discover and share folktales from various cultures with Storyloom. Join a community of readers and writers to explore the world through stories." />
+        <meta
+          property="og:title"
+          content="Storyloom - Explore and Contribute to Global Folktales"
+        />
+        <meta
+          property="og:description"
+          content="Discover and share folktales from various cultures with Storyloom. Join a community of readers and writers to explore the world through stories."
+        />
         <meta property="og:image" content="/Logos/logo.png" />
         <meta property="og:url" content="https://storyloom.in/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@storyloom" />
-        <meta name="twitter:title" content="Storyloom - Explore and Contribute to Global Folktales" />
-        <meta name="twitter:description" content="Discover and share folktales from various cultures with Storyloom. Join a community of readers and writers to explore the world through stories." />
+        <meta
+          name="twitter:title"
+          content="Storyloom - Explore and Contribute to Global Folktales"
+        />
+        <meta
+          name="twitter:description"
+          content="Discover and share folktales from various cultures with Storyloom. Join a community of readers and writers to explore the world through stories."
+        />
         <meta name="twitter:image" content="/Logos/logo.png" />
 
         {/* Favicon */}
@@ -29,9 +47,31 @@ export default function Document() {
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#000000" />
 
-        {/* Add other head elements if needed */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                try {
+                  const theme = localStorage.getItem('ui-theme') || '"light"';
+                  const parsedTheme = JSON.parse(theme);
+                  if (parsedTheme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
         <Main />
         <NextScript />
       </body>

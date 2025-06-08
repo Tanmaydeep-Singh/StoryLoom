@@ -2,31 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
-  font-family: 'Poppins', sans-serif;
- }
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 .parallax-tile {
   display: inline-block;
   white-space: nowrap;
-  overflow: hidden; /* Ensures the tiles don't overflow the container */
+  overflow: hidden;
+  /* Ensures the tiles don't overflow the container */
 }
 
 .word-cloud {
   position: relative;
   animation: float 10s ease-in-out infinite;
-  color: rgba(255, 255, 255, 0.5); /* Subtle color to blend with the background */
+  color: rgba(255, 255, 255, 0.5);
+  /* Subtle color to blend with the background */
 }
 
 @keyframes float {
-  0%, 100% {
-      transform: translateY(0) translateX(0);
+
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
   }
+
   50% {
-      transform: translateY(-20px) translateX(20px);
+    transform: translateY(-20px) translateX(20px);
   }
 }
-
 
 /* Scrollbar */
 ::-webkit-scrollbar {
@@ -35,22 +41,23 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: none; 
+  background: none;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb:hover {
   background: none;
-background: rgba(4, 0, 9, 0.45);
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 20px );
--webkit-backdrop-filter: blur( 20px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+  background: rgba(4, 0, 9, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb {
-background: rgba( 0, 0, 0, 0 );
+  background: rgba(0, 0, 0, 0);
 }
 
+/*  */
