@@ -23,7 +23,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 
   // No Layout
-  const noLayoutPaths = ['/session'];
+  const noLayoutPaths = ['/session','/404'];
 
   if (noLayoutPaths.some((path) => pathname.startsWith(path))) {
     return (
