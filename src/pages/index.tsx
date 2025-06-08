@@ -6,11 +6,9 @@ import { useEffect, useRef, useCallback } from "react";
 import Head from "next/head";
 
 import Hero from "@/components/HomePage/Hero";
-import StoryCategorySection from "@/components/HomePage/StorySection";
 import FeaturedStorie from "@/components/HomePage/FeaturedStories";
 import FAQ from "@/components/HomePage/FAQ";
 import YTranslateCubic from "@/components/AnimationSection/YTranslateCubic";
-import ExploreSection from "@/components/HomePage/ExploreSection";
 import ContributeAsWriter from "@/components/HomePage/Contribute/Writer";
 import SubPlans from "@/components/HomePage/SubPlans";
 import Ipad from "@/components/MockUp/Ipad";
@@ -127,10 +125,7 @@ export default function Home() {
           </section>
 
 
-          <section className="my-10 md:mt-20">
-            <ExploreSection />
-          </section>
-
+        
           <section className="my-10 md:mt-20">
             <SubPlans />
           </section>
