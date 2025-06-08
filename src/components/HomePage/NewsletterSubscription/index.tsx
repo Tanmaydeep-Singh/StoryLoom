@@ -54,7 +54,7 @@ const StoryloomSubscription = () => {
           <>
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row items-center gap-3 sm:gap-0"
+              className="flex sm:flex-row items-center sm:gap-0"
             >
               <input
                 type="email"
@@ -62,7 +62,7 @@ const StoryloomSubscription = () => {
                 value={email}
                 onChange={handleEmailChange}
                 required
-                className="w-full sm:w-64 px-4 py-2 rounded-l-xl sm:rounded-l-xl sm:rounded-r-none bg-white dark:bg-[#1a1a1a] border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                className="w-64 px-4 py-2 rounded-l-xl sm:rounded-l-xl sm:rounded-r-none bg-white dark:bg-[#1a1a1a] border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
               />
               <button
                 type="submit"
