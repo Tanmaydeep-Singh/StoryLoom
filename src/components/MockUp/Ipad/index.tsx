@@ -90,22 +90,64 @@ const Ipad = () => {
                 </div>
 
                 {/* Right Panel: Story */}
-                <div className="w-full md:w-1/2 flex items-center justify-center p-10 sm:p-12 ">
+                <div className="w-full md:w-1/2 flex items-center justify-center px-8 py-16 sm:px-12 md:px-16">
                     <div className="max-w-md space-y-6 text-left">
-                        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            The Sound of Stillness
-                        </h1>
-                        <p className="text-base  text-gray-700 dark:text-gray-300 leading-relaxed">
-                            As the last train rumbled past the edge of the sleeping town, Mira stood by the window, her fingers tracing shapes in the foggy glass. She had always wondered what silence sounded like, and tonight, in the hush between the ticking of the clock and the rustling of the leaves, she thought she finally heard it — soft, sacred, and slow.
+                        {/* Title */}
+                        <div>
+                            <h1 className="text-4xl font-semibold md:text-3xl  tracking-tight leading-snug">
+                                What is <span className="text-indigo-400">Storyloom</span>?
+                            </h1>
+                            <div className="mt-3 w-14 h-[3px] bg-indigo-500 rounded-full" />
+                        </div>
+
+                        {/* Description */}
+                        <p className="text-lg  leading-relaxed font-light">
+                            A storytelling platform reimagined — <span className=" font-medium">Storyloom</span> brings you closer to forgotten legends, cultural wisdom, and modern tales in the language of your soul.
                         </p>
-                        <p className="text-base  text-gray-700 dark:text-gray-300 leading-relaxed">
-                            The letter lay unopened on the kitchen counter. She didn’t need to read it to know what it said. Some stories don’t ask for an ending, they just fade into the quiet — and in that stillness, Mira smiled, not because she was certain of tomorrow, but because she had finally made peace with yesterday.
-                        </p>
+
+                        {/* Features List */}
+                        <div className="space-y-2">
+                            <div className="flex items-start gap-3">
+                                <span className="text-xl">🌏</span>
+                                <p className=" leading-relaxed">
+                                    <strong>Explore</strong> diverse stories from cultures across the globe.
+                                </p>
+                            </div>
+                            <div className="flex items-start gap-3">
+                                <span className="text-xl">🗣</span>
+                                <p className=" leading-relaxed">
+                                    <strong>Listen</strong> in your native tongue — or discover new languages.
+                                </p>
+                            </div>
+                            <div className="flex items-start gap-3">
+                                <span className="text-xl">🎧</span>
+                                <p className=" leading-relaxed">
+                                    <strong>Immerse</strong> in rich narration and ambient storytelling.
+                                </p>
+                            </div>
+                            <div className="flex items-start gap-3">
+                                <span className="text-xl">📚</span>
+                                <p className=" leading-relaxed">
+                                    <strong>Reconnect</strong> with ancestral heritage through timeless narratives.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Call to Action */}
+                        <div className="pt-4">
+                            <p className=" leading-relaxed text-base">
+                                ➡️ <span className="font-medium">Begin your journey through stories that move the soul.</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     );
 };
 
 export default Ipad;
+
+
+
