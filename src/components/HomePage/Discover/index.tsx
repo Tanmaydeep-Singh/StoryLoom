@@ -71,22 +71,14 @@ const Discover = () => {
 
 
       <div className="flex justify-center gap-3 mb-8 flex-wrap px-4 mt-10">
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="relative"
-        >
-          <Link
-            href="/explore"
-            className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-colors duration-300 ease-in-out bg-black text-white dark:bg-white dark:text-black shadow-lg hover:shadow-indigo-400/40"
-          >
-            <Compass className="w-4 h-4" />
-            <span>Explore Stories</span>
-          </Link>
 
-          {/* Optional glow effect on hover */}
-          <span className="absolute inset-0 rounded-full bg-indigo-500 opacity-0 hover:opacity-10 transition duration-300 blur-sm" />
-        </motion.div>
+        <Link href="/explore"
+          className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-colors duration-300 ease-in-out bg-black text-white dark:bg-white dark:text-black shadow-lg hover:shadow-indigo-400/40"
+        >
+          <Compass className="w-4 h-4" />
+          <span>Explore Stories</span>
+        </Link>
+
       </div>
 
     </section>
