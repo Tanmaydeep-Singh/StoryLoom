@@ -1,10 +1,10 @@
+import Explore from '@/components/Explore'
 import React from 'react'
 
-const Explore = () => {
+const ExplorePage = () => {
     return (
-        <div className="min-h-screen flex">
-            Explore</div>
+        <Explore />
     )
 }
 
-export default Explore
+export default ExplorePage
