@@ -68,20 +68,6 @@ export default function Home() {
             <Discover />
           </section>
 
-          {/* TODO */}
-
-          <section className="my-10 md:mt-20">
-
-            <h1 >TODO= 09-06-2025</h1>
-            <h2>Add Content to books.</h2>
-            <h2>Revamp the Read and listen section</h2>
-            <h2>Revamp and link the explore page</h2>
-
-
-
-          </section>
-
-
           <section className="my-10 md:mt-20">
             <section className="w-full px-6 md:px-12 lg:px-24 py-20 bg-gray-50 dark:bg-zinc-900 transition-colors duration-300">
               <div className="flex flex-col md:flex-row items-center justify-between gap-10">
