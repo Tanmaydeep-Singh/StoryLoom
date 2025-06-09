@@ -6,6 +6,8 @@ import StoriesMarquee from './Sections/Stories';
 import BooksMarquee from './Sections/Books';
 import FolktalesMarquee from './Sections/Folktales';
 import { AnimatePresence, motion } from 'framer-motion';
+import Link from 'next/link';
+import { Compass } from 'lucide-react';
 
 const tabs = ['Folktales', 'Stories', 'Books'];
 
@@ -52,6 +54,7 @@ const Discover = () => {
         ))}
       </div>
 
+
       <div className="relative min-h-[280px]">
         <AnimatePresence mode="wait">
           <motion.div
@@ -65,6 +68,19 @@ const Discover = () => {
           </motion.div>
         </AnimatePresence>
       </div>
+
+
+      <div className="flex justify-center gap-3 mb-8 flex-wrap px-4 mt-10">
+
+        <Link href="/explore"
+          className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-colors duration-300 ease-in-out bg-black text-white dark:bg-white dark:text-black shadow-lg hover:shadow-indigo-400/40"
+        >
+          <Compass className="w-4 h-4" />
+          <span>Explore Stories</span>
+        </Link>
+
+      </div>
+
     </section>
   );
 };

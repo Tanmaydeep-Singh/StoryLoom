@@ -23,15 +23,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 
   // No Layout
-  const noLayoutPaths = ['/session'];
+  const noLayoutPaths = ['/session', '/404'];
 
   if (noLayoutPaths.some((path) => pathname.startsWith(path))) {
     return (
-      <>
+      <main className='bg-white dark:bg-[#0f1116] text-gray-900 dark:text-white transition-colors duration-300 relative '>
         <GoogleAnalytics />
         {children}
         <Analytics />
-      </>
+      </main>
     );
   }
   // Profile Layout
@@ -59,7 +59,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <main className='bg-white dark:bg-[#0f1116] text-gray-900 dark:text-white transition-colors duration-300 relative '>
 
-       <Navbar />
+      <Navbar />
       <GoogleAnalytics />
 
 

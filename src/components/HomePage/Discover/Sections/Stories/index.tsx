@@ -1,8 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
 import Marquee from 'react-fast-marquee';
+import data from './data.json';
 
 const StoriesMarquee = () => {
+
+    const arr1 = data.slice(0, data.length / 2);
+    const arr2 = data.slice(data.length / 2,data.length );
+
     return (
         <div>
 
@@ -26,14 +31,14 @@ const StoriesMarquee = () => {
                     play={true}
                     className='my-4'
                 >
-                    {Array(8).fill(null).map((_, index) => (
+                    {arr1.map((story, index) => (
                         <div key={index} className="flex flex-col items-center mx-4">
                             <div
                                 className="relative w-40 h-40 rounded-2xl overflow-hidden border border-indigo-500 bg-zinc-100 dark:bg-zinc-800 shadow-md transition-all duration-300 group"
                             >
                                 {/* Background Image */}
                                 <Image
-                                    src="https://i.pinimg.com/736x/05/ea/50/05ea502f26a243e48e48dd21be9923fb.jpg"
+                                    src={story.image}
                                     width={1000}
                                     height={1000}
                                     alt="Story Cover"
@@ -51,8 +56,8 @@ const StoriesMarquee = () => {
 
                             {/* Title and Genre */}
                             <div className="mt-2 w-full ml-4">
-                                <h3 className="text-sm font-semibold text-gray-900 dark:text-white leading-tight">Story Title</h3>
-                                <p className="text-xs text-gray-600 dark:text-gray-400">Genre</p>
+                                <h3 className="text-sm font-semibold text-gray-900 dark:text-white leading-tight">{story.title.slice(0,20)}</h3>
+                                <p className="text-xs text-gray-600 dark:text-gray-400">{story.genre}</p>
                             </div>
                         </div>
                     ))}
@@ -67,19 +72,20 @@ const StoriesMarquee = () => {
                     className='my-4'
 
                 >
-                    {Array(8).fill(null).map((_, index) => (
+                   {arr2.map((story, index) => (
                         <div key={index} className="flex flex-col items-center mx-4">
                             <div
                                 className="relative w-40 h-40 rounded-2xl overflow-hidden border border-indigo-500 bg-zinc-100 dark:bg-zinc-800 shadow-md transition-all duration-300 group"
                             >
                                 {/* Background Image */}
                                 <Image
-                                    src="https://i.pinimg.com/736x/05/ea/50/05ea502f26a243e48e48dd21be9923fb.jpg"
+                                    src={story.image}
                                     width={1000}
                                     height={1000}
                                     alt="Story Cover"
                                     className="w-full h-full object-cover"
                                 />
+
 
                                 {/* Hover Overlay */}
                                 <div className="absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -91,12 +97,11 @@ const StoriesMarquee = () => {
 
                             {/* Title and Genre */}
                             <div className="mt-2 w-full ml-4">
-                                <h3 className="text-sm font-semibold text-gray-900 dark:text-white leading-tight">Story Title</h3>
-                                <p className="text-xs text-gray-600 dark:text-gray-400">Genre</p>
+                                <h3 className="text-sm font-semibold text-gray-900 dark:text-white leading-tight">{story.title.slice(0,20)}</h3>
+                                <p className="text-xs text-gray-600 dark:text-gray-400">{story.genre}</p>
                             </div>
                         </div>
                     ))}
-
                 </Marquee>
             </div>
 
