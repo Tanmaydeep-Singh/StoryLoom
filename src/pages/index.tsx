@@ -73,8 +73,7 @@ export default function Home() {
           <section className="my-10 md:mt-20">
 
             <h1 >TODO= 09-06-2025</h1>
-            <h2>Add Content to stories and books.</h2>
-            <h2>Clean and filter Stories</h2>
+            <h2>Add Content to books.</h2>
             <h2>Revamp the Read and listen section</h2>
             <h2>Revamp and link the explore page</h2>
 
