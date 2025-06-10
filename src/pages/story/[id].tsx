@@ -2,16 +2,20 @@
 
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import data from '../data.json';
 import { Moon, Sun } from 'lucide-react';
 import storyloomLogoDark from '/public/favicon/storyloomLogoDark.png';
 import { useUIStore } from '@/store';
 import { AnimatePresence, motion } from 'framer-motion';
 
-const DEFAULT_IMAGE =
-  "https://images.unsplash.com/photo-1426840963626-ffdf2d7ef80b?q=80&w=2070&auto=format&fit=crop";
+// --- Constants ---
+const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1426840963626-ffdf2d7ef80b?q=80&w=2070&auto=format&fit=crop";
+const PARAGRAPHS_PER_SIDE_DESKTOP = 3; // paragraphs per side for large screens
+const PARAGRAPHS_PER_PAGE_MOBILE = 6; // paragraphs per single column page for mobile
+const ANIMATION_DURATION = 0.5; // Duration for page transitions
 
+// --- Types ---
 type LanguageCode = 'en' | 'de' | 'fr' | 'ru' | 'ja';
 
 interface StoryDataInterface {
@@ -29,66 +33,106 @@ const Story = () => {
   const { toggleTheme } = useUIStore();
   const theme = useUIStore((state) => state.theme);
 
-  const [storyTitle, setStoryTitle] = useState('');
-  const [genre, setGenre] = useState('');
-  const [storyImage, setStoryImage] = useState(DEFAULT_IMAGE);
+  // --- State Management ---
+  const [storyData, setStoryData] = useState<StoryDataInterface | null>(null);
   const [selectedLanguage, setSelectedLanguage] = useState<LanguageCode>('en');
-  const [availableLanguages, setAvailableLanguages] = useState<LanguageCode[]>([]);
-  const [spreadPages, setSpreadPages] = useState<string[][][]>([]);
+  const [isLangOpen, setIsLangOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
+  const [isMobile, setIsMobile] = useState(false); // New state to detect mobile screen size
 
+  // --- Effect for Mobile Detection ---
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Tailwind's 'md' breakpoint is 768px.
+    };
+
+    handleResize(); // Set initial state
+
+    window.addEventListener('resize', handleResize); // Add event listener for window resize
+    return () => window.removeEventListener('resize', handleResize); // Clean up event listener
+  }, []);
+
+  // --- Data Loading and Initialization ---
   useEffect(() => {
     if (!id) return;
 
-    const storyData = (data as StoryDataInterface[]).find((s) => s.id === id);
-    if (storyData) {
-      setStoryTitle(storyData.title);
-      setGenre(storyData.genre);
-      setStoryImage(storyData.image || DEFAULT_IMAGE);
-      setAvailableLanguages(Object.keys(storyData.story) as LanguageCode[]);
-      paginateStory(storyData.story[selectedLanguage] || storyData.story['en']);
+    const foundStory = (data as StoryDataInterface[]).find((s) => s.id === id);
+
+    if (foundStory) {
+      setStoryData(foundStory);
+      if (!foundStory.story[selectedLanguage]) {
+        setSelectedLanguage('en');
+      }
     } else {
-      setStoryTitle('Story not found');
-      setGenre('');
-      setStoryImage(DEFAULT_IMAGE);
-      paginateStory('Sorry, the story does not exist.');
+      setStoryData({
+        id: 'not-found',
+        title: 'Story not found',
+        genre: '',
+        story: { en: 'Sorry, the story does not exist.' } as Record<LanguageCode, string>,
+        image: DEFAULT_IMAGE,
+      });
+      setSelectedLanguage('en');
     }
-  }, [id, selectedLanguage]);
+    setCurrentPage(0);
+  }, [id]);
 
-  console.log("selectedLanguage", selectedLanguage)
-  const [isLangOpen, setIsLangOpen] = useState(false);
+  // --- Story Pagination Logic (Memoized and responsive) ---
+  const spreadPages = useMemo(() => {
+    if (!storyData) return [];
 
-  const handleLanguageChange = (lang: LanguageCode) => {
+    const fullText = storyData.story[selectedLanguage] || storyData.story['en'] || '';
+    const paragraphs = fullText.split('\n').filter((p) => p.trim() !== '');
+    const pages: string[][][] = [];
+
+    // Page 0: Title/Image (handled separately by conditional rendering)
+    pages.push([]); // Placeholder for the initial page with image/title
+
+    if (isMobile) {
+      // Mobile: Single column layout, more paragraphs per page
+      for (let i = 0; i < paragraphs.length; i += PARAGRAPHS_PER_PAGE_MOBILE) {
+        const pageContent = paragraphs.slice(i, i + PARAGRAPHS_PER_PAGE_MOBILE);
+        pages.push([pageContent, []]); // Left column gets content, right is empty
+      }
+    } else {
+      // Desktop/Tablet: Two-column layout
+      for (let i = 0; i < paragraphs.length; i += PARAGRAPHS_PER_SIDE_DESKTOP * 2) {
+        const left = paragraphs.slice(i, i + PARAGRAPHS_PER_SIDE_DESKTOP);
+        const right = paragraphs.slice(i + PARAGRAPHS_PER_SIDE_DESKTOP, i + PARAGRAPHS_PER_SIDE_DESKTOP * 2);
+        pages.push([left, right]);
+      }
+    }
+    return pages;
+  }, [storyData, selectedLanguage, isMobile]);
+
+  // --- Derived State (Memoized for performance) ---
+  const storyTitle = useMemo(() => storyData?.title || 'Loading...', [storyData]);
+  const genre = useMemo(() => storyData?.genre || '', [storyData]);
+  const storyImage = useMemo(() => storyData?.image || DEFAULT_IMAGE, [storyData]);
+  const availableLanguages = useMemo(() => {
+    if (!storyData) return [];
+    return Object.keys(storyData.story) as LanguageCode[];
+  }, [storyData]);
+
+  // --- Handlers (Memoized with useCallback) ---
+  const handleLanguageChange = useCallback((lang: LanguageCode) => {
     setSelectedLanguage(lang);
     setIsLangOpen(false);
-  };
-
-  const paginateStory = (fullText: string) => {
-    const paragraphs = fullText.split('\n').filter((p) => p.trim() !== '');
-    const perHalf = 3; // paragraphs per side
-    const spreadPages: string[][][] = [];
-
-    // Page 0: Title/Image
-    spreadPages.push([]); // First spread handled separately
-
-    for (let i = 0; i < paragraphs.length; i += perHalf * 2) {
-      const left = paragraphs.slice(i, i + perHalf);
-      const right = paragraphs.slice(i + perHalf, i + perHalf * 2);
-      spreadPages.push([left, right]);
-    }
-
-    setSpreadPages(spreadPages);
     setCurrentPage(0);
-  };
+  }, []);
 
-  const goNext = () => setCurrentPage((prev) => Math.min(prev + 1, spreadPages.length - 1));
-  const goPrev = () => setCurrentPage((prev) => Math.max(prev - 1, 0));
+  const goNext = useCallback(() => {
+    setCurrentPage((prev) => Math.min(prev + 1, spreadPages.length - 1));
+  }, [spreadPages.length]);
+
+  const goPrev = useCallback(() => {
+    setCurrentPage((prev) => Math.max(prev - 1, 0));
+  }, []);
 
   return (
-    <div className="w-full h-screen overflow-hidden bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white relative">
+    <div className="w-full h-screen bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white relative flex flex-col">
       {/* Top Controls */}
       <div className="absolute top-4 left-4 z-20 flex items-center gap-2">
-        <Image src={storyloomLogoDark} alt="Logo" width={24} height={24} />
+        <Image src={storyloomLogoDark} alt="Storyloom Logo" width={24} height={24} />
         <span className="font-semibold text-lg">{storyTitle}</span>
       </div>
 
@@ -96,6 +140,7 @@ const Story = () => {
         <button
           onClick={toggleTheme}
           className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-zinc-800 transition"
+          aria-label="Toggle theme"
         >
           {theme === 'dark' ? (
             <Sun className="w-5 h-5 text-yellow-300" />
@@ -104,94 +149,125 @@ const Story = () => {
           )}
         </button>
         <div className="relative">
-          <button onClick={() => setIsLangOpen((prev) => !prev)} className="p-2 rounded-full text-sm">
+          <button
+            onClick={() => setIsLangOpen((prev) => !prev)}
+            className="p-2 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            aria-haspopup="true"
+            aria-expanded={isLangOpen}
+          >
             {selectedLanguage.toUpperCase()}
           </button>
-          {isLangOpen && (
-            <div className="absolute right-0 mt-2 rounded-md shadow-lg z-30 bg-white dark:bg-zinc-900">
-              {availableLanguages.map((lang) => (
-                <button
-                  key={lang}
-                  onClick={() => handleLanguageChange(lang)}
-                  className={`block px-4 py-2 text-left w-full text-sm ${selectedLanguage === lang ? 'font-semibold' : ''}`}
-                >
-                  {lang.toUpperCase()}
-                </button>
-              ))}
-            </div>
-          )}
-          </div>
+          <AnimatePresence>
+            {isLangOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.2 }}
+                className="absolute right-0 mt-2 rounded-md shadow-lg z-30 bg-white dark:bg-zinc-900 origin-top-right"
+              >
+                {availableLanguages.map((lang) => (
+                  <button
+                    key={lang}
+                    onClick={() => handleLanguageChange(lang)}
+                    className={`block px-4 py-2 text-left w-full text-sm hover:bg-gray-100 dark:hover:bg-zinc-800 transition ${selectedLanguage === lang ? 'font-semibold text-indigo-600 dark:text-indigo-400' : ''}`}
+                    role="menuitem"
+                  >
+                    {lang.toUpperCase()}
+                  </button>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
 
-        {/* Page Content */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentPage}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 0.5 }}
-            className="w-full h-full flex"
-          >
-            {/* Left Column */}
-            <div className="w-1/2 h-full p-12 overflow-y-auto flex flex-col justify-center">
-              {currentPage === 0 ? (
-                <Image
-                  src={storyImage}
-                  alt="Story Cover"
-                  width={1000}
-                  height={1000}
-                  className="w-full h-[90vh] rounded-xl shadow-lg object-cover"
-                />
-              ) : (
-                spreadPages[currentPage]?.[0]?.map((para, idx) => (
-                  <p key={idx} className="mb-4 text-base leading-relaxed">
-                    {para}
-                  </p>
-                ))
-              )}
-            </div>
+      {/* Page Content - Adjusted to take available space and handle overflow */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentPage}
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -50 }}
+          transition={{ duration: ANIMATION_DURATION }}
+          // `flex-1` makes this div take up all available vertical space
+          // `overflow-hidden` ensures its children don't cause overflow on this div
+          className="w-full flex flex-col md:flex-row flex-1 overflow-hidden pt-16 pb-20" // Added pt/pb to account for header/footer
+        >
+          {/* Left Column (or full-width on mobile) */}
+          <div className="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center overflow-y-auto"> {/* Added overflow-y-auto here */}
+            {currentPage === 0 ? (
+              <Image
+                src={storyImage}
+                alt="Story Cover"
+                sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw"
+                width={1000}
+                height={1000}
+                className="w-full md:h-[90vh] h-auto max-h-[80vh] md:max-h-none rounded-xl shadow-lg object-contain md:object-cover" // Added max-h for mobile image
+                priority
+              />
+            ) : (
+              (isMobile ? spreadPages[currentPage]?.[0]?.concat(spreadPages[currentPage]?.[1] || []) : spreadPages[currentPage]?.[0])?.map((para, idx) => (
+                <p key={idx} className="mb-4 text-base leading-relaxed">
+                  {para}
+                </p>
+              ))
+            )}
+          </div>
 
-            {/* Right Column */}
-            <div className="w-1/2 h-full p-12 overflow-y-auto flex flex-col justify-center">
+          {/* Right Column (or second half of mobile content) */}
+          {!isMobile || currentPage === 0 ? (
+            <div className="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center overflow-y-auto"> {/* Added overflow-y-auto here */}
               {currentPage === 0 ? (
                 <div>
-                  <h1 className="text-4xl font-bold mb-2">{storyTitle}</h1>
+                  <h1 className="text-3xl md:text-4xl font-bold mb-2">{storyTitle}</h1>
                   <p className="text-indigo-500 text-sm mb-6">{genre}</p>
                   <div className="w-20 h-1 bg-indigo-500 rounded-full mb-8"></div>
-                  <p className="text-lg">
+                  <p className="text-base md:text-lg">
                     Welcome to your story. Use the navigation buttons to read just like a real book.
                   </p>
                 </div>
               ) : (
-                spreadPages[currentPage]?.[1]?.map((para, idx) => (
+                !isMobile && spreadPages[currentPage]?.[1]?.map((para, idx) => (
                   <p key={idx} className="mb-4 text-base leading-relaxed">
                     {para}
                   </p>
                 ))
               )}
             </div>
-          </motion.div>
-        </AnimatePresence>
+          ) : null}
+        </motion.div>
+      </AnimatePresence>
 
-        <div className="absolute bottom-6 right-6 z-30 flex gap-4">
+      {/* Navigation Controls and Page Indicator */}
+      {/* Moved these into a single flex container for better layout control */}
+      <div className="absolute bottom-0 left-0 right-0 z-30 flex justify-between items-center p-6 bg-white dark:bg-zinc-900 border-t border-gray-200 dark:border-zinc-700 md:relative md:p-0 md:border-t-0 md:bg-transparent">
+        {/* Current Page / Total Pages Indicator */}
+        <div className="text-sm text-zinc-600 dark:text-zinc-400">
+          Page {currentPage + 1} of {spreadPages.length}
+        </div>
+
+        <div className="flex gap-4">
           <button
             onClick={goPrev}
             disabled={currentPage === 0}
-            className="bg-zinc-200 dark:bg-zinc-700 px-4 py-2 rounded-full text-sm hover:bg-zinc-300 dark:hover:bg-zinc-600 disabled:opacity-50"
+            className="bg-zinc-200 dark:bg-zinc-700 px-4 py-2 rounded-full text-sm hover:bg-zinc-300 dark:hover:bg-zinc-600 disabled:opacity-50 transition-colors duration-200"
+            aria-label="Previous page"
           >
             Previous
           </button>
           <button
             onClick={goNext}
             disabled={currentPage >= spreadPages.length - 1}
-            className="bg-indigo-600 text-white px-4 py-2 rounded-full text-sm hover:bg-indigo-700 disabled:opacity-50"
+            className="bg-indigo-600 text-white px-4 py-2 rounded-full text-sm hover:bg-indigo-700 disabled:opacity-50 transition-colors duration-200"
+            aria-label="Next page"
           >
             Next
           </button>
         </div>
       </div>
-      );
+    </div>
+  );
 };
 
-      export default Story;
+export default Story;
