@@ -15,15 +15,10 @@ const navLinks = [
   { label: 'Contact', href: '/contact' },
 ];
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const { pathname } = useRouter();
   const { toggleTheme } = useUIStore();
   const theme = useUIStore((state) => state.theme);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', theme === 'dark');
-  }, [theme]);
-
 
   return (
     <nav

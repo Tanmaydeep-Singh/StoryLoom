@@ -1,5 +1,5 @@
 // components/Layout.tsx
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect } from 'react';
 import { Metadata } from 'next';
 import Navbar from '../Navbar';
 import { useRouter } from 'next/router';
@@ -8,6 +8,7 @@ import GoogleAnalytics from '../GoogleAnalytics';
 import Footer from '../Footer';
 import Sidebar from '../UserProfile/Sidebar';
 import UserNav from '../UserProfile/UserNav';
+import { useUIStore } from '@/store';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,12 +19,22 @@ interface LayoutProps {
   children: ReactNode;
 }
 
+
+
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+
+  const theme = useUIStore((state) => state.theme);
+  const router = useRouter();
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+  }, [theme]);
+
   const { pathname } = useRouter();
 
 
   // No Layout
-  const noLayoutPaths = ['/session', '/404'];
+  const noLayoutPaths = ['/session', '/404', '/story'];
 
   if (noLayoutPaths.some((path) => pathname.startsWith(path))) {
     return (
@@ -67,7 +78,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Analytics />
 
       <Footer />
-
     </main>
   );
 };

@@ -1,8 +1,13 @@
-import { useRouter } from 'next/router'; 
+'use client';
+
+import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import data from '../data.json';
 import ShareIcon from '/public/Logos/share.svg';
+import storyloomLogoDark from '/public/favicon/storyloomLogoDark.png';
+import { Moon, Sun } from 'lucide-react';
+import { useUIStore } from '@/store';
 
 const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1426840963626-ffdf2d7ef80b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
@@ -16,110 +21,143 @@ interface StoryDataInterface {
   image: string;
 }
 
-export default function Story() {
-  const [storyTitle, setStoryTitle] = useState('Title Loading...');
-  const [story, setStory] = useState('Story Loading...');
-  const [genre, setGenre] = useState(' Genre Loading...');
+const Story = () => {
+  const router = useRouter();
+  const { id } = router.query;
+
+  const { toggleTheme } = useUIStore();
+  const theme = useUIStore((state) => state.theme);
+  console.log("theme", theme)
+  const [storyTitle, setStoryTitle] = useState('Loading...');
+  const [storyText, setStoryText] = useState('Please wait...');
+  const [genre, setGenre] = useState('');
   const [storyImage, setStoryImage] = useState(DEFAULT_IMAGE);
   const [selectedLanguage, setSelectedLanguage] = useState<LanguageCode>('en');
   const [availableLanguages, setAvailableLanguages] = useState<LanguageCode[]>([]);
-  const router = useRouter();
+  const [isLangOpen, setIsLangOpen] = useState(false);
+
+
 
   useEffect(() => {
-    const { id } = router.query;
+    if (!id) return;
 
-    if (id) {
-      const storyData = (data as unknown as StoryDataInterface[]).find((s) => s.id === id);
-
-      setTimeout(() => {
-        if (storyData) {
-          setStoryTitle(storyData.title);
-          setGenre(storyData.genre);
-          setStory(storyData.story[selectedLanguage] || storyData.story.en);
-          setStoryImage(storyData.image || DEFAULT_IMAGE);
-          setAvailableLanguages(Object.keys(storyData.story) as LanguageCode[]);
-        } else {
-          setStoryTitle('Story not found');
-          setStory('Sorry, the story you are looking for does not exist.');
-          setStoryImage(DEFAULT_IMAGE);
-          setAvailableLanguages([]);
-        }
-      }, 1000);
+    const storyData = (data as unknown as StoryDataInterface[]).find((s) => s.id === id);
+    if (storyData) {
+      setStoryTitle(storyData.title);
+      setGenre(storyData.genre);
+      setStoryImage(storyData.image || DEFAULT_IMAGE);
+      setAvailableLanguages(Object.keys(storyData.story) as LanguageCode[]);
+      setStoryText(storyData.story[selectedLanguage] || storyData.story['en']);
+    } else {
+      setStoryTitle('Story not found');
+      setStoryText('Sorry, the story you are looking for does not exist.');
+      setStoryImage(DEFAULT_IMAGE);
     }
-  }, [router.query.id, selectedLanguage]);
+  }, [id, selectedLanguage]);
 
-  const handleLanguageChange = (language: LanguageCode) => {
-    setSelectedLanguage(language);
+  const handleLanguageChange = (lang: LanguageCode) => {
+    setSelectedLanguage(lang);
+    setIsLangOpen(false);
   };
 
   const handleShare = () => {
     if (navigator.share) {
-      navigator.share({
-        title: storyTitle,
-        text: 'Check out this amazing story!',
-        url: window.location.href,
-      }).then(() => console.log('Successful share'))
-        .catch((error) => console.log('Error sharing:', error));
+      navigator
+        .share({
+          title: storyTitle,
+          text: 'Check out this amazing story!',
+          url: window.location.href,
+        })
+        .then(() => console.log('Shared successfully'))
+        .catch((err) => console.error('Error sharing:', err));
     } else {
-      console.log('Web Share API is not supported in this browser.');
+      alert('Web Share API not supported.');
     }
   };
 
-  const handleBack = () => {
-    router.back();
-  };
-
-  // Split the story into paragraphs
-  const storyParagraphs = story.split('\n').filter((paragraph) => paragraph.trim() !== '');
+  const storyParagraphs = storyText.split('\n').filter((p) => p.trim() !== '');
 
   return (
-    <div className="min-h-screen py-12 flex flex-col items-center text-white">
-      <div className="max-w-3xl w-full sm:w-[95vw] md:w-[90vw] lg:w-[80vw] rounded-lg shadow-2xl overflow-hidden transform transition-transform duration-500">
-        <div className="relative w-full h-48 sm:h-72 md:h-96 lg:h-[30rem] bg-black">
-          <img src={storyImage} alt={storyTitle} className="object-cover w-full h-full opacity-80" />
-        </div>
-        <div className="pt-6 px-4 sm:px-6 md:px-8 lg:px-12">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
-            {storyTitle}
-          </h1>
-          <h1 className="text-md sm:text-xl md:text-xl font-bold mb-4 text-gray-800">
-            {genre}
-          </h1>
-          <div className="flex items-center space-x-4 justify-between">
-            <div className="flex text-gray-300 space-x-2">
-              {availableLanguages.map((language) => (
+    <div className="inset-0 rounded-[1.5rem] overflow-hidden    flex">
+      {/* Top Controls */}
+      <div className="absolute top-4 left-4 z-20 flex items-center gap-2">
+        <Image src={storyloomLogoDark} alt="Storyloom logo" width={24} height={24} className="rounded-md" />
+        <span className="font-semibold text-xl">{storyTitle}</span>
+      </div>
+
+      <div className="absolute top-4 right-4 z-20 flex items-center gap-2">
+        <button onClick={toggleTheme} className="p-2 rounded-full hover:bg-gray-200 dark:hover: /10 transition">
+          {theme === 'dark' ? (
+            <Sun className="w-5 h-5 text-yellow-300" />
+          ) : (
+            <Moon className="w-5 h-5 text-gray-800" />
+          )}
+        </button>
+
+        <div className="relative">
+          <button
+            onClick={() => setIsLangOpen((prev) => !prev)}
+            className="p-2 rounded-full transition text-sm"
+          >
+            {selectedLanguage.toUpperCase()}
+          </button>
+
+          {isLangOpen && (
+            <div className="absolute right-0 mt-2    rounded-md shadow-lg z-30">
+              {availableLanguages.map((lang) => (
                 <button
-                  key={language}
-                  onClick={() => handleLanguageChange(language)}
-                  className={`p-2 text-xs sm:text-sm md:text-base rounded-lg transition-all duration-300 ${
-                    selectedLanguage === language ? 'bg-gray-700 text-white' : 'hover:bg-gray-700 hover:text-white'
-                  }`}
+                  key={lang}
+                  onClick={() => handleLanguageChange(lang)}
+                  className={`w-full px-4 py-2 text-left text-sm ${selectedLanguage === lang ? 'font-semibold' : ''
+                    }`}
                 >
-                  {language}
+                  {lang.toUpperCase()}
                 </button>
               ))}
             </div>
-            <div className="flex items-center space-x-2">
-              <button onClick={handleShare}>
-                <Image src={ShareIcon} alt="Share" width={18} height={18} />
-              </button>
-            </div>
-          </div>
+          )}
         </div>
-        <div className="p-4 sm:p-6 md:p-8 lg:p-12 bg-opacity-80">
-          <div className="text-base sm:text-lg md:text-xl leading-relaxed">
-            {storyParagraphs.map((paragraph, index) => (
-              <p key={index} className="mb-4">{paragraph}</p>
+      </div>
+
+      {/* Left Video (optional) */}
+      <div className="hidden md:flex w-1/2 items-center justify-center">
+        <Image
+          src={storyImage}
+          alt={storyTitle}
+          width={1000}
+          height={1000}
+          className="w-full h-screen object-cover rounded-l-2xl shadow-lg"
+        />
+
+      </div>
+
+      {/* Right Content */}
+      <div className="w-full md:w-1/2 flex items-center justify-center px-8 py-16 sm:px-12 md:px-16">
+        <div className="max-w-md space-y-6 text-left">
+          <div>
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight">{storyTitle}</h1>
+            <p className="text-sm mt-1 text-indigo-400">{genre}</p>
+            <div className="mt-3 w-14 h-[3px] bg-indigo-500 rounded-full" />
+          </div>
+
+
+          <div className="space-y-4 text-base leading-relaxed">
+            {storyParagraphs.map((para, idx) => (
+              <p key={idx}>{para}</p>
             ))}
           </div>
-          <button
-            onClick={handleBack}
-            className="mt-6 px-4 py-2 bg-gradient-to-r from-blue-400 to-blue-500 text-white rounded-lg transition-all duration-300"
-          >
-            Back
-          </button>
+
+          <div className="pt-4 flex gap-4">
+            <button onClick={handleShare} className="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700">
+              Share
+            </button>
+            <button onClick={() => router.back()} className="border border-gray-400 px-4 py-2 rounded-full hover:bg-gray-100 dark:hover: /10">
+              Go Back
+            </button>
+          </div>
         </div>
       </div>
     </div>
   );
 }
+export default Story
