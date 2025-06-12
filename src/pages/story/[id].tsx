@@ -8,6 +8,7 @@ import { Moon, Sun } from 'lucide-react';
 import storyloomLogoDark from '/public/favicon/storyloomLogoDark.png';
 import { useUIStore } from '@/store';
 import { AnimatePresence, motion } from 'framer-motion';
+import Link from 'next/link';
 
 // --- Constants ---
 const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1426840963626-ffdf2d7ef80b?q=80&w=2070&auto=format&fit=crop";
@@ -132,7 +133,9 @@ const Story = () => {
     <div className="w-full h-screen bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white relative flex flex-col">
       {/* Top Controls */}
       <div className="absolute top-4 left-4 z-20 flex items-center gap-2">
-        <Image src={storyloomLogoDark} alt="Storyloom Logo" width={24} height={24} />
+        <Link href={'/'} >
+          <Image src={storyloomLogoDark} alt="Storyloom Logo" width={24} height={24} />
+        </Link>
         <span className="font-semibold text-lg">{storyTitle}</span>
       </div>
 
