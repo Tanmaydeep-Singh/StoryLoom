@@ -13,7 +13,7 @@ interface StoryCardProps {
 
 const StoryCard = ({ id, title, genre, image }: StoryCardProps) => {
     return (
-        <Link href={`/stories/${id}`} className="group">
+        <Link href={`/story/${id}`} className="group">
             {/* Card Container */}
             <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden border border-indigo-500 bg-zinc-100 dark:bg-zinc-800 shadow-md transition-all duration-300 transform group-hover:scale-[1.03]">
                 {/* Story Image */}
