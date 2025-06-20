@@ -6,7 +6,6 @@ export default function Document() {
     <Html lang="en">
       <Head>
         {/* SEO Meta Tags */}
-        <title>StoryLoom - Discover the World Around</title>
         <meta
           name="description"
           content="Explore a world of stories with Storyloom. Read and contribute to folktales from around the globe and enhance your language skills."
