@@ -75,9 +75,9 @@ export default function Home() {
 
 
 
-          <section className="my-10 md:mt-20">
+          {/* <section className="my-10 md:mt-20">
             <SubPlans />
-          </section>
+          </section> */}
 
 
           <section className="my-10 md:mt-20">
