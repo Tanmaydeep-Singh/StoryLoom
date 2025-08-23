@@ -15,6 +15,7 @@ import Ipad from "@/components/MockUp/Ipad";
 import Iphone from "@/components/MockUp/Iphone";
 import Discover from "@/components/HomePage/Discover";
 import AudioFeature from "@/components/HomePage/AudioFeature";
+import FeedbackCTA from "@/components/FeedBackCTA";
 
 export default function Home() {
   const controls = useAnimation();
@@ -72,6 +73,12 @@ export default function Home() {
           <section className="my-10 md:mt-20">
             <AudioFeature />
           </section>
+
+          <section className="my-10 md:mt-20">
+            <FeedbackCTA />
+          </section>
+
+
 
 
 

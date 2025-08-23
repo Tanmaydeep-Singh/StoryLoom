@@ -58,7 +58,7 @@ const ContactPage = () => {
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="text-sm font-medium block mb-1">Name</label>
+              <label htmlFor="name" className="text-sm font-medium block mb-1" >Name</label>
               <input
                 type="text"
                 name="name"
