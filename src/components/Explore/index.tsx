@@ -3,12 +3,20 @@ import Searchbar from './Searchbar'
 import StoryCard from './StoryCard'
 import data from '../../pages/data.json'
 
-const Explore = () => {
-  const [queryState, setQueryState] = useState<string>('')
+interface ExploreQuery {
+    query ?:string
+}
+
+const Explore = ({query} : ExploreQuery ) => {
+  const [queryState, setQueryState] = useState<string>(query || '');
   const [storyData, setStoryData] = useState(data)
   const [loading, setLoading] = useState(false)
 
+  
+
   useEffect(() => {
+
+    console.log(" initial query" + query + queryState); 
     setLoading(true)
 
     const timer = setTimeout(() => {
@@ -40,6 +48,7 @@ const Explore = () => {
 
       {/* Searchbar */}
       <Searchbar
+        passedQuery={query}
         onSearch={query => {
           setQueryState(query)
         }}
@@ -59,7 +68,7 @@ const Explore = () => {
             {storyData.map((story, index) => (
               <StoryCard
                 key={index}
-                id={`${index}`}
+                id={`${story?.id}`}
                 title={story?.title}
                 genre={story.genre}
                 image={story.image}
