@@ -18,7 +18,7 @@ const FeedbackCTA = () => {
                     </p>
                 </div>
                 <Link
-                    href="/contribute"
+                    href="/feedback"
                     className="px-4 py-2 rounded-full text-sm font-medium transition-colors  bg-black text-white dark:bg-white dark:text-black">
                     Give Feedback & Join Beta
                 </Link>
