@@ -55,7 +55,7 @@ const translations: Record<Language, Translation> = {
   },
 };
 
-const Ipad: React.FC = () => {
+const Ipad = () => {
   const { toggleTheme } = useUIStore();
   const theme = useUIStore((state) => state.theme);
 
@@ -128,7 +128,7 @@ const Ipad: React.FC = () => {
         {/* Left: Video */}
         <div className="hidden md:flex w-1/2 bg-gray-100 dark:bg-gray-900 items-center justify-center">
           <video
-            src="/signupVid.webm"
+            src="/WithNightFilterSlow.mp4"
             autoPlay
             muted
             loop
