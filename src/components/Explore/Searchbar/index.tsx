@@ -4,15 +4,25 @@ import React, { useEffect, useState } from 'react';
 import { Search } from 'lucide-react';
 
 interface SearchbarProps {
+    passedQuery?: string;
     onSearch: (query: string) => void;
     delay?: number;
 }
 
-const Searchbar = ({ onSearch, delay = 400 }: SearchbarProps) => {
+const Searchbar = ({ passedQuery , onSearch, delay = 400 }: SearchbarProps) => {
     const [input, setInput] = useState('');
     const [debouncedValue, setDebouncedValue] = useState('');
 
     useEffect(() => {
+
+        console.log("passed",passedQuery);
+        setInput(passedQuery || '');
+
+    },[]);
+
+    useEffect(() => {
+
+
         const handler = setTimeout(() => {
             setDebouncedValue(input);
         }, delay);

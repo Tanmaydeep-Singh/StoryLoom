@@ -9,7 +9,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import { Compass } from 'lucide-react';
 
-const tabs = ['Folktales', 'Stories', 'Books'];
+const tabs = ['Folktales', 'Stories'];
 
 const Discover = () => {
   const [activeTab, setActiveTab] = useState(tabs[1]);

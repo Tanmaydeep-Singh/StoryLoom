@@ -34,7 +34,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 
   // No Layout
-  const noLayoutPaths = ['/session', '/404', '/story'];
+  const noLayoutPaths = ['/session', '/404', '/story' , '/feedback'];
 
   if (noLayoutPaths.some((path) => pathname.startsWith(path))) {
     return (

@@ -10,8 +10,10 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
+    { label: 'Home', href: '/' },
+
   { label: 'Explore', href: '/explore' },
-  { label: 'Pricing', href: '/pricing' },
+  // { label: 'Pricing', href: '/pricing' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -100,13 +102,13 @@ const Navbar = () => {
             );
           })}
           {/* Desktop Login and Sign Up */}
-          <Link
+          {/* <Link
             href="/session/login"
             className="text-sm font-medium text-gray-800 dark:text-white hover:text-blue-500 transition-colors"
           >
             Login
-          </Link>
-          <Link
+          </Link> */}
+          {/* <Link
             href="/session/signup"
             className="
               px-4 py-1.5 text-sm font-semibold
@@ -118,7 +120,7 @@ const Navbar = () => {
             "
           >
             Sign Up
-          </Link>
+          </Link> */}
           {/* Desktop Theme Toggle */}
           <button
             onClick={toggleTheme}

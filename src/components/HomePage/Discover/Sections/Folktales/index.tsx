@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import Marquee from 'react-fast-marquee';
 const countries = [
@@ -50,9 +51,13 @@ const FolktalesMarquee = () => {
 
                                 {/* Hover Overlay */}
                                 <div className="absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <button className="px-5 py-2 text-sm font-semibold bg-white text-black rounded-full shadow-lg hover:bg-zinc-100 transition">
-                                        Read Now
-                                    </button>
+                                    <Link 
+                                    href={`/explore?q=${story.genre}`}
+                                     className="px-5 py-2 text-sm font-semibold bg-white text-black rounded-full shadow-lg hover:bg-zinc-100 transition"
+                                     >
+                                        
+                                     Read Now
+                                    </Link>
                                 </div>
                             </div>
 
