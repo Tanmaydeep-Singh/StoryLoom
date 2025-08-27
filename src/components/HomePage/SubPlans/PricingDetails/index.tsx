@@ -11,50 +11,52 @@ interface Plan {
   features?: string[];
 }
 
-const pricingData: Plan[] = [
+const pricingData: Plan[] =[
   {
-    name: "Basic Plan",
-    price: "0",
-    details: "base",
-    description: "For casual readers",
-    features: [
+    "name": "Explorer",
+    "price": "0",
+    "details": "free",
+    "description": "For casual readers",
+    "features": [
       "Unlimited stories",
-      "All supported languages",
-      "Basic AI translations",
-      "Ads displayed",
-    ],
+      "All available languages",
+      "Bookmark & Like stories",
+      "Reading history access",
+      "Ads displayed"
+    ]
   },
   {
-    name: "Plus Plan",
-    price: "5",
-    details: "plus",
-    discount: "15%",
-    description: "Enhanced features",
-    features: [
+    "name": "Seeker",
+    "price": "199",
+    "details": "tier-2",
+    "discount": "15%",
+    "description": "Ad-free reading with audio and offline support",
+    "features": [
       "Ad-free experience",
       "Offline access to saved stories",
-      "TTS-based audio narration",
-      "Enhanced translations",
-      "Bookmarks & Dark Mode",
-      "Reading history sync",
-    ],
+      "Audio playback for 5 stories/month",
+      "On-request language translation (1/month)",
+      "Priority support",
+      "All Explorer features"
+    ]
   },
   {
-    name: "Pro Plan",
-    price: "15",
-    details: "pro",
-    discount: "20%",
-    description: "Power users & enthusiasts",
-    features: [
-      "Everything in Plus",
-      "Unlimited downloads",
-      "Priority story access",
-      "Narration speed control",
-      "Reading dashboard",
-      "Smart recommendations",
-    ],
-  },
-];
+    "name": "Loom Master",
+    "price": "499",
+    "details": "tier-3",
+    "discount": "20%",
+    "description": "Unlimited features for power readers and institutions",
+    "features": [
+      "Unlimited audio playback",
+      "Unlimited custom language translations",
+      "Early access to premium stories",
+      "Beta access to new features",
+      "VIP badge on profile",
+      "All Seeker features"
+    ]
+  }
+]
+
 
 const PricingDetails = () => {
   const [isAnnual, setIsAnnual] = useState(true);
